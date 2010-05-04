@@ -1,36 +1,134 @@
-# This script supplies the release_name function that gets path in its first
-# positional variable and work interactively with the user to release it, (if
-# it exists), either by deleting it or by moving it to new name (backup it)
+# This script supplies the release_name function.
+# release_name gets path ($1) and work interactively with the user to release it, (if
+# it isn't of course), by deleting, renaming or backuping it
 
 # if fixed_release_name_action holds eligible action key, it'll be used instead
 # of asking the user to choose one.
 fixed_release_name_action=""
-function release_name {
-    # If the path supplied at ($1), 
-    while [ -e $1 ]
+
+actions=(
+    # "action_char" "action name" "all_possible" "needs approval"
+    # if "all_possible" is set to 1 the user can choose to perform that action
+    # on all the files that has to be released.
+    "b" "backup" 1 0
+    "d" "diff" 0 0
+    "p" "print" 0 0
+    "r" "remove file" 0 1
+    "s" "skip" 1 1
+    "x" "remove directory (recursive)" 0 1
+)
+
+function _get_action_name {
+    # Gets action_char ($1) and returns its name
+    local i
+
+    for ((i=0; i<${#actions[@]}; i=i+4))
     do
+        if [[ ${actions[$i]} = $1 ]]
+        then
+            echo -n ${actions[$(( $i + 1 ))]}
+            return 0
+        fi
+    done
+    return 1
+}
+
+function _fixed_ok {
+    # Gets action_char ($1) and returns 0 if it can be used as the fixed_release_name_action
+    # example:
+    # if `fixed_ok 's'`
+    # then
+    #     echo 1;
+    # fi
+    local i
+
+    for ((i=0; i<${#actions[@]}; i=i+4))
+    do
+        if [[ ${actions[$i]} = $1 ]]
+        then
+            if (( ${actions[$(( $i + 2 ))]} != 0 ))
+            then
+                return 0 # o.k.
+            else
+                return 1
+            fi
+        fi
+    done
+}
+
+function release_name {
+    # If the path supplied at ($1) isn't free
+    # If the function managed to release the name it should return 0 otherwise
+    # it returns 1
+    while [ -e "$1" ]
+    do
+        echo "$1 (`file "$1"`) already exists"
+
+        local available_actions="s"
         local action
 
-        if [[ $fixed_release_name_action == '' ]]
+        if [ -d "$1" ]
         then
-            echo "$1 (`file "$1"`) already exists"
-            echo "what do you want to do?"
-            echo "[p]rint it"
-            echo "[b]ackup it (default), [d]elete it, [s]kip"
-            echo "[ba] - backup always, [da] - delete always, [sa] - skip always"
+            # Actions available for dirs
+            available_actions+="bx"
+        else
+            available_actions+="pdbr"
+        fi
 
-            read action
+        # If $fixed_release_name_action is empty or it isn't one of the
+        # available actions
+        if [[ -z "$fixed_release_name_action" || "$available_actions" = *$fixed_release_name_action* ]]
+        then
+            local i
 
-            # set fixed action for all files need to be released.
-            if [[ ${action: -1} == 'a' && 'bds' =~ ${action:0:1} ]]
+            for ((i=0; i<${#available_actions}; i++))
+            do
+                action_char=${available_actions:$i:1}
+                echo -n $action_char" "
+                _get_action_name $action_char
+                echo
+            done
+
+            for ((i=0; i<${#available_actions}; i++))
+            do
+                action_char=${available_actions:$i:1}
+                # print the actions the user can set as the fixed actions
+                if _fixed_ok $action_char 
+                then
+                    echo -n $action_char"a "
+                    _get_action_name $action_char
+                    echo -n ' all'
+                    echo
+                fi 
+            done
+
+            action="#" # "#" is for char for sure isn't in $available_actions
+            # While the user didn't choose eligible action
+            while [[ ! "$available_actions" = *${action:0:1}* ]]
+            do
+                echo -n "Choose action: "
+                read -r action
+            done
+
+            if [[ ${action: -1} == 'a' ]]
             then
-                fixed_release_name_action=${action:0:1}
+                if _fixed_ok ${action:0:1}
+                then
+                    fixed_release_name_action=${action:0:1}
+                else
+                    echo -n "Cant use "
+                    _get_action_name ${action:0:1}
+                    echo -n " as the fixed action... Using only for this case."
+                fi
             fi
         else
             action=$fixed_release_name_action
         fi
 
-        case ${action:0:1} in
+        # If there is another chars they are not interest us anymore
+        action=${action:0:1}
+
+        case $action in
             'p' )   local print_sym_link="n"
 
                     if [ -L "$1" ]
@@ -63,3 +161,5 @@ function release_name {
 
     return 0
 }
+
+release_name ~/example.txt
