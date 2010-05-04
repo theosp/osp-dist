@@ -7,12 +7,11 @@ shopt -s extglob
 files_to_copy=( )
 
 # linking is better than copying and should be used where possible.
-# linked file automatically "updated" in all the other servers with `svn
-# update` without the need to rerun this script.
-# it also makes it much easier to commit changes to the main repository, since
-# it only require `svn ci`.
+# linked file "updates" automatically after pulling new versions, and simple pull share it with others.
 files_to_link=(
-    $scriptDirname/sys-root/home/osp/.!(.|)
+    # This glob picks all the files from the home dir that begins with . except
+    # of . and ..
+    $scriptDirname/sys-root/home/theosp/.!(.|) 
 )
 shopt -u extglob
 
@@ -21,7 +20,7 @@ do
     # determine the path for the link
     target=${file#$scriptDirname}
     # replace /home/osp with the user's home dir
-    target=${target/\/home\/osp/~}
+    target=${target/\/home\/theosp/~}
     if release_name $target
     then
         ln -s $file $target
