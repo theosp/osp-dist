@@ -1,0 +1,28 @@
+# Generated א' נוב 29 09:10:23 GMT 2009 by circo - graphviz version 2.24.0 (20090616.2323)
+#
+# 
+# real	0m0.013s
+# user	0m0.009s
+# sys	0m0.003s
+
+digraph G {
+	node [label="\N"];
+	graph [bb="0,0,516.25,506.7",
+		_draw_="c 9 -#ffffffff C 9 -#ffffffff P 4 0 -1 0 507 517 507 517 -1 ",
+		xdotversion="1.2"];
+	xyz [label="hello\nworld", color=slateblue, fontsize=24, fontname="Palatino-Italic", style=filled, fontcolor=hotpink, pos="305.09,294.21", width="1.6111", height="1.2917", _draw_="c 9 -#6a5acdff C 9 -#6a5acdff E 305 294 58 47 ", _ldraw_="F 24.000000 15 -Palatino-Italic c 9 -#ff69b4ff T 305 299 0 59 5 -hello F 24.000000 15 -Palatino-Italic c 9 -#ff69b4ff T 305 270 \
+0 66 5 -world "];
+	red [color=red, style=filled, pos="85.093,85.212", width="0.75", height="0.5", _draw_="c 9 -#ff0000ff C 9 -#ff0000ff E 85 85 27 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 85 78 0 18 3 -red "];
+	green [color=green, style=filled, pos="362.68,85.212", width="0.80556", height="0.5", _draw_="c 9 -#00ff00ff C 9 -#00ff00ff E 363 85 29 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 363 78 0 31 5 -green "];
+	blue [color=blue, style=filled, fontcolor=black, pos="100.62,362.37", width="0.75", height="0.5", _draw_="c 9 -#0000ffff C 9 -#0000ffff E 101 362 27 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 101 355 0 23 4 -blue "];
+	cyan [color=cyan, style=filled, pos="173.88,480.26", width="0.75", height="0.5", _draw_="c 9 -#00ffffff C 9 -#00ffffff E 174 480 27 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 174 473 0 26 4 -cyan "];
+	magenta [color=magenta, style=filled, pos="41,487.7", width="1.1111", height="0.5", _draw_="c 9 -#ff00ffff C 9 -#ff00ffff E 41 488 40 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 41 481 0 47 7 -magenta "];
+	yellow [color=yellow, style=filled, pos="481.25,19", width="0.88889", height="0.5", _draw_="c 9 -#ffff00ff C 9 -#ffff00ff E 481 19 32 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 481 12 0 35 6 -yellow "];
+	orange [color=orange, style=filled, pos="481.25,151.42", width="0.94444", height="0.5", _draw_="c 9 -#ffa500ff C 9 -#ffa500ff E 481 151 34 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 481 144 0 38 6 -orange "];
+	red -> green [pos="e,333.37,85.212 112.22,85.212 161.53,85.212 266.07,85.212 323.27,85.212", _draw_="c 9 -#000000ff B 4 112 85 162 85 266 85 323 85 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 323 89 333 85 323 82 "];
+	red -> blue [pos="e,99.601,344.12 86.112,103.4 88.756,150.57 95.849,277.17 99.036,334.03", _draw_="c 9 -#000000ff B 4 86 103 89 151 96 277 99 334 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 96 334 100 344 103 334 "];
+	blue -> cyan [pos="e,163.35,463.32 110.96,379.01 123.22,398.73 143.77,431.81 158.04,454.77", _draw_="c 9 -#000000ff B 4 111 379 123 399 144 432 158 455 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 155 457 163 463 161 453 "];
+	blue -> magenta [pos="e,49.451,469.94 92.458,379.53 82.491,400.48 65.52,436.16 53.808,460.78", _draw_="c 9 -#000000ff B 4 92 380 82 400 66 436 54 461 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 51 459 49 470 57 462 "];
+	green -> yellow [pos="e,458.43,31.744 384.43,73.067 402.63,62.902 428.86,48.256 449.43,36.771", _draw_="c 9 -#000000ff B 4 384 73 403 63 429 48 449 37 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 451 40 458 32 448 34 "];
+	green -> orange [pos="e,457.61,138.22 384.43,97.356 402.4,107.39 428.19,121.79 448.64,133.21", _draw_="c 9 -#000000ff B 4 384 97 402 107 428 122 449 133 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 447 136 458 138 451 130 "];
+}

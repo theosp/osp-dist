@@ -1,0 +1,11 @@
+fbsetbg -f ~/.fluxbox/backgrounds/98790-LightFish1920X1200a.jpg
+
+xrdb -load -quiet $HOME/.Xdefaults &
+
+setxkbmap # A bug with xkb and xorg on gentoo requires this
+
+if [ -x /usr/bin/setxkbmap ]; then
+    /usr/bin/setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,il
+fi
+
+exec /usr/bin/fluxbox

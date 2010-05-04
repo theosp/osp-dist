@@ -1,0 +1,20 @@
+[app] (name=aterm) (class=XTerm)
+  [Workspace]	{0}
+  [Position]	(UPPERLEFT)	{28 30}
+[end]
+[app] (name=xterm) (class=XTerm)
+  [Workspace]	{0}
+  [Dimensions]	{1188 864}
+  [Position]	(UPPERLEFT)	{43 69}
+[end]
+[app] (name=Navigator) (class=Firefox) (role=browser)
+  [Workspace]	{1}
+  [Dimensions]	{1276 768}
+  [Position]	(UPPERLEFT)	{-2 0}
+[end]
+[app] (name=pidgin) (class=Pidgin) (role=buddy_list)
+  [Workspace]	{2}
+  [Dimensions]	{257 485}
+  [Position]	(UPPERLEFT)	{79 109}
+  [Close]	{yes}
+[end]

@@ -1,0 +1,76 @@
+# Generated א' נוב 29 09:10:26 GMT 2009 by fdp - graphviz version 2.24.0 (20090616.2323)
+#
+# 
+# real	0m0.089s
+# user	0m0.082s
+# sys	0m0.006s
+
+digraph G {
+	graph [rankdir=LR, nodesep=0];
+	node [label="\N", shape=none, margin=0];
+	edge [color=white];
+	graph [bb="0,0,794,666",
+		_draw_="c 9 -#ffffffff C 9 -#ffffffff P 4 0 -1 0 666 795 666 795 -1 ",
+		xdotversion="1.2"];
+	"AvantGarde-Book" [fontname="AvantGarde-Book", pos="545.7,81.665", width="1.6944", height="0.5", _ldraw_="F 14.000000 15 -AvantGarde-Book c 9 -#000000ff T 546 77 0 123 15 -AvantGarde-Book "];
+	"AvantGarde-Demi" [fontname="AvantGarde-Demi", pos="717.91,87.549", width="1.7222", height="0.5", _ldraw_="F 14.000000 15 -AvantGarde-Demi c 9 -#000000ff T 718 82 0 124 15 -AvantGarde-Demi "];
+	"AvantGarde-BookOblique" [fontname="AvantGarde-BookOblique", pos="640.13,132.11", width="2.4722", height="0.5", _ldraw_="F 14.000000 22 -AvantGarde-BookOblique c 9 -#000000ff T 640 127 0 178 22 -AvantGarde-BookOblique "];
+	"AvantGarde-DemiOblique" [fontname="AvantGarde-DemiOblique", pos="636.34,181.11", width="2.5556", height="0.5", _ldraw_="F 14.000000 22 -AvantGarde-DemiOblique c 9 -#000000ff T 636 176 0 184 22 -AvantGarde-DemiOblique "];
+	"Bookman-Light" [fontname="Bookman-Light", pos="137.08,18.873", width="1.4444", height="0.5", _ldraw_="F 14.000000 13 -Bookman-Light c 9 -#000000ff T 137 13 0 105 13 -Bookman-Light "];
+	"Bookman-Demi" [fontname="Bookman-Demi", pos="290.99,24.077", width="1.4722", height="0.5", _ldraw_="F 14.000000 12 -Bookman-Demi c 9 -#000000ff T 291 19 0 106 12 -Bookman-Demi "];
+	"Bookman-LightItalic" [fontname="Bookman-LightItalic", pos="221.64,69.232", width="1.8333", height="0.5", _ldraw_="F 14.000000 19 -Bookman-LightItalic c 9 -#000000ff T 222 64 0 133 19 -Bookman-LightItalic "];
+	"Bookman-DemiItalic" [fontname="Bookman-DemiItalic", pos="219.4,119.19", width="2.0278", height="0.5", _ldraw_="F 14.000000 18 -Bookman-DemiItalic c 9 -#000000ff T 219 114 0 146 18 -Bookman-DemiItalic "];
+	Courier [fontname=Courier, pos="617.55,523.06", width="0.80556", height="0.5", _ldraw_="F 14.000000 7 -Courier c 9 -#000000ff T 618 516 0 58 7 -Courier "];
+	"Courier-Bold" [fontname="Courier-Bold", pos="743.66,530.68", width="1.3611", height="0.5", _ldraw_="F 14.000000 12 -Courier-Bold c 9 -#000000ff T 744 524 0 99 12 -Courier-Bold "];
+	"Courier-Oblique" [fontname="Courier-Oblique", pos="686.84,575.38", width="1.7222", height="0.5", _ldraw_="F 14.000000 15 -Courier-Oblique c 9 -#000000ff T 687 568 0 124 15 -Courier-Oblique "];
+	"Courier-BoldOblique" [fontname="Courier-BoldOblique", pos="684.68,625.22", width="2.1667", height="0.5", _ldraw_="F 14.000000 19 -Courier-BoldOblique c 9 -#000000ff T 685 618 0 157 19 -Courier-BoldOblique "];
+	Helvetica [fontname=Helvetica, pos="197.12,544.38", width="0.77778", height="0.5", _ldraw_="F 14.000000 9 -Helvetica c 9 -#000000ff T 197 538 0 57 9 -Helvetica "];
+	"Helvetica-Bold" [fontname="Helvetica-Bold", pos="321.24,549.76", width="1.3333", height="0.5", _ldraw_="F 14.000000 14 -Helvetica-Bold c 9 -#000000ff T 321 544 0 97 14 -Helvetica-Bold "];
+	"Helvetica-Oblique" [fontname="Helvetica-Oblique", pos="263.82,596.39", width="1.4722", height="0.5", _ldraw_="F 14.000000 17 -Helvetica-Oblique c 9 -#000000ff T 264 590 0 107 17 -Helvetica-Oblique "];
+	"Helvetica-BoldOblique" [fontname="Helvetica-BoldOblique", pos="263.63,647.32", width="2.0278", height="0.5", _ldraw_="F 14.000000 21 -Helvetica-BoldOblique c 9 -#000000ff T 264 641 0 146 21 -Helvetica-BoldOblique "];
+	"Helvetica-Narrow" [fontname="Helvetica-Narrow", pos="474.73,355.43", width="1.4722", height="0.5", _ldraw_="F 14.000000 16 -Helvetica-Narrow c 9 -#000000ff T 475 349 0 107 16 -Helvetica-Narrow "];
+	"Helvetica-Narrow-Bold" [fontname="Helvetica-Narrow-Bold", pos="649.22,360.95", width="2.0556", height="0.5", _ldraw_="F 14.000000 21 -Helvetica-Narrow-Bold c 9 -#000000ff T 649 355 0 149 21 -Helvetica-Narrow-Bold "];
+	"Helvetica-Narrow-Oblique" [fontname="Helvetica-Narrow-Oblique", pos="568.29,407.73", width="2.1944", height="0.5", _ldraw_="F 14.000000 24 -Helvetica-Narrow-Oblique c 9 -#000000ff T 568 402 0 158 24 -Helvetica-Narrow-Oblique "];
+	"Helvetica-Narrow-BoldOblique" [fontname="Helvetica-Narrow-BoldOblique", pos="565.69,457.06", width="2.7778", height="0.5", _ldraw_="F 14.000000 28 -Helvetica-Narrow-BoldOblique c 9 -#000000ff T 566 451 0 200 28 -Helvetica-Narrow-BoldOblique "];
+	"NewCenturySchlbk-Roman" [fontname="NewCenturySchlbk-Roman", pos="193.03,187.49", width="2.4167", height="0.5", _ldraw_="F 14.000000 22 -NewCenturySchlbk-Roman c 9 -#000000ff T 193 183 0 174 22 -NewCenturySchlbk-Roman "];
+	"NewCenturySchlbk-Bold" [fontname="NewCenturySchlbk-Bold", pos="421.1,187.01", width="2.5278", height="0.5", _ldraw_="F 14.000000 21 -NewCenturySchlbk-Bold c 9 -#000000ff T 421 183 0 182 21 -NewCenturySchlbk-Bold "];
+	"NewCenturySchlbk-Italic" [fontname="NewCenturySchlbk-Italic", pos="310.81,231.83", width="2.2222", height="0.5", _ldraw_="F 14.000000 23 -NewCenturySchlbk-Italic c 9 -#000000ff T 311 228 0 161 23 -NewCenturySchlbk-Italic "];
+	"NewCenturySchlbk-BoldItalic" [fontname="NewCenturySchlbk-BoldItalic", pos="310.33,281.97", width=3, height="0.5", _ldraw_="F 14.000000 27 -NewCenturySchlbk-BoldItalic c 9 -#000000ff T 310 278 0 216 27 -NewCenturySchlbk-BoldItalic "];
+	"Palatino-Roman" [fontname="Palatino-Roman", pos="244.31,397.34", width="1.5", height="0.5", _ldraw_="F 14.000000 14 -Palatino-Roman c 9 -#000000ff T 244 392 0 108 14 -Palatino-Roman "];
+	"Palatino-Bold" [fontname="Palatino-Bold", pos="398.42,402.35", width="1.5278", height="0.5", _ldraw_="F 14.000000 13 -Palatino-Bold c 9 -#000000ff T 398 397 0 110 13 -Palatino-Bold "];
+	"Palatino-Italic" [fontname="Palatino-Italic", pos="328.79,449.09", width="1.3333", height="0.5", _ldraw_="F 14.000000 15 -Palatino-Italic c 9 -#000000ff T 329 444 0 97 15 -Palatino-Italic "];
+	"Palatino-BoldItalic" [fontname="Palatino-BoldItalic", pos="328.25,500.31", width="2.0556", height="0.5", _ldraw_="F 14.000000 19 -Palatino-BoldItalic c 9 -#000000ff T 328 495 0 149 19 -Palatino-BoldItalic "];
+	"Times-Roman" [fontname="Times-Roman", pos="439.76,570.88", width="1.1111", height="0.5", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 440 564 0 80 11 -Times-Roman "];
+	"Times-Bold" [fontname="Times-Bold", pos="541.96,571.4", width="0.94444", height="0.5", _ldraw_="F 14.000000 10 -Times-Bold c 9 -#000000ff T 542 564 0 68 10 -Times-Bold "];
+	"Times-Italic" [fontname="Times-Italic", pos="497.57,522.95", width="0.94444", height="0.5", _ldraw_="F 14.000000 12 -Times-Italic c 9 -#000000ff T 498 516 0 68 12 -Times-Italic "];
+	"Times-BoldItalic" [fontname="Times-BoldItalic", pos="496.9,626.12", width="1.3611", height="0.5", _ldraw_="F 14.000000 16 -Times-BoldItalic c 9 -#000000ff T 497 619 0 98 16 -Times-BoldItalic "];
+	"ZapfChancery-MediumItalic" [fontname="ZapfChancery-MediumItalic", pos="61.365,509.26", width="1.6667", height="0.5", _ldraw_="F 14.000000 25 -ZapfChancery-MediumItalic c 9 -#000000ff T 61 503 0 120 25 -ZapfChancery-MediumItalic "];
+	ZapfDingbats [fontname=ZapfDingbats, pos="123.93,464.29", width="1.2778", height="0.5", _ldraw_="F 14.000000 12 -ZapfDingbats c 9 -#000000ff T 124 459 0 92 12 -ZapfDingbats "];
+	Symbol [fontname=Symbol, pos="126.41,418.5", width="0.75", height="0.5", _ldraw_="F 14.000000 6 -Symbol c 9 -#000000ff T 126 413 0 50 6 -Symbol "];
+	"AvantGarde-Book" -> "AvantGarde-Demi" [pos="e,655.74,85.425 606.9,83.756 619.41,84.183 632.69,84.637 645.55,85.076", _draw_="c 9 -#ffffffff B 4 607 84 619 84 633 85 646 85 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 646 89 656 85 646 82 "];
+	"AvantGarde-Demi" -> "AvantGarde-BookOblique" [pos="e,671.74,114 686.27,105.67 684.48,106.7 682.66,107.74 680.83,108.79", _draw_="c 9 -#ffffffff B 4 686 106 684 107 683 108 681 109 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 679 106 672 114 682 112 "];
+	"AvantGarde-BookOblique" -> "AvantGarde-DemiOblique" [pos="e,637.74,163.01 638.72,150.35 638.66,151.13 638.6,151.91 638.54,152.7", _draw_="c 9 -#ffffffff B 4 639 150 639 151 639 152 639 153 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 635 153 638 163 642 153 "];
+	"Bookman-Light" -> "Bookman-Demi" [pos="e,237.89,22.281 189.18,20.635 201.57,21.053 214.92,21.505 227.74,21.938", _draw_="c 9 -#ffffffff B 4 189 21 202 21 215 22 228 22 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 228 25 238 22 228 18 "];
+	"Bookman-Demi" -> "Bookman-LightItalic" [pos="e,249.45,51.122 263.18,42.183 261.49,43.287 259.77,44.406 258.04,45.529", _draw_="c 9 -#ffffffff B 4 263 42 261 43 260 44 258 46 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 256 43 249 51 260 49 "];
+	"Bookman-LightItalic" -> "Bookman-DemiItalic" [pos="e,220.22,101.02 220.83,87.27 220.78,88.388 220.73,89.526 220.68,90.674", _draw_="c 9 -#ffffffff B 4 221 87 221 88 221 90 221 91 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 217 91 220 101 224 91 "];
+	Courier -> "Courier-Bold" [pos="e,694.32,527.69 646.8,524.82 657.94,525.5 671.07,526.29 684.02,527.07", _draw_="c 9 -#ffffffff B 4 647 525 658 525 671 526 684 527 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 684 531 694 528 685 524 "];
+	"Courier-Bold" -> "Courier-Oblique" [pos="e,709.75,557.36 720.55,548.86 719.66,549.56 718.76,550.26 717.86,550.97", _draw_="c 9 -#ffffffff B 4 721 549 720 550 719 550 718 551 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 715 548 710 557 720 554 "];
+	"Courier-Oblique" -> "Courier-BoldOblique" [pos="e,685.47,606.94 686.05,593.65 686,594.74 685.95,595.84 685.9,596.95", _draw_="c 9 -#ffffffff B 4 686 594 686 595 686 596 686 597 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 682 597 685 607 689 597 "];
+	Helvetica -> "Helvetica-Bold" [pos="e,273.22,547.68 225.29,545.6 236.57,546.09 250.02,546.67 263.21,547.25", _draw_="c 9 -#ffffffff B 4 225 546 237 546 250 547 263 547 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 263 551 273 548 263 544 "];
+	"Helvetica-Bold" -> "Helvetica-Oblique" [pos="e,286.22,578.2 298.88,567.92 297.32,569.19 295.73,570.47 294.14,571.76", _draw_="c 9 -#ffffffff B 4 299 568 297 569 296 570 294 572 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 292 569 286 578 296 575 "];
+	"Helvetica-Oblique" -> "Helvetica-BoldOblique" [pos="e,263.7,629.28 263.75,614.49 263.75,615.99 263.74,617.53 263.73,619.08", _draw_="c 9 -#ffffffff B 4 264 614 264 616 264 618 264 619 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 260 619 264 629 267 619 "];
+	"Helvetica-Narrow" -> "Helvetica-Narrow-Bold" [pos="e,575.05,358.6 528.03,357.11 539.73,357.49 552.4,357.89 564.99,358.29", _draw_="c 9 -#ffffffff B 4 528 357 540 357 552 358 565 358 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 565 362 575 359 565 355 "];
+	"Helvetica-Narrow-Bold" -> "Helvetica-Narrow-Oblique" [pos="e,599.59,389.64 617.7,379.17 614.63,380.94 611.5,382.76 608.36,384.57", _draw_="c 9 -#ffffffff B 4 618 379 615 381 611 383 608 385 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 607 382 600 390 610 388 "];
+	"Helvetica-Narrow-Oblique" -> "Helvetica-Narrow-BoldOblique" [pos="e,566.65,438.97 567.34,425.82 567.29,426.76 567.24,427.71 567.19,428.67", _draw_="c 9 -#ffffffff B 4 567 426 567 427 567 428 567 429 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 564 429 567 439 571 429 "];
+	"NewCenturySchlbk-Roman" -> "NewCenturySchlbk-Bold" [pos="e,329.78,187.2 280.23,187.31 293.15,187.28 306.57,187.25 319.75,187.22", _draw_="c 9 -#ffffffff B 4 280 187 293 187 307 187 320 187 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 320 191 330 187 320 184 "];
+	"NewCenturySchlbk-Bold" -> "NewCenturySchlbk-Italic" [pos="e,355.16,213.81 376.56,205.11 372.59,206.72 368.54,208.37 364.51,210.01", _draw_="c 9 -#ffffffff B 4 377 205 373 207 369 208 365 210 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 363 207 355 214 366 213 "];
+	"NewCenturySchlbk-Italic" -> "NewCenturySchlbk-BoldItalic" [pos="e,310.5,263.73 310.63,249.94 310.62,251.06 310.61,252.2 310.6,253.35", _draw_="c 9 -#ffffffff B 4 311 250 311 251 311 252 311 253 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 307 254 311 264 314 254 "];
+	"Palatino-Roman" -> "Palatino-Bold" [pos="e,343.28,400.56 298.64,399.11 309.84,399.47 321.73,399.86 333.26,400.23", _draw_="c 9 -#ffffffff B 4 299 399 310 399 322 400 333 400 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 333 404 343 401 333 397 "];
+	"Palatino-Bold" -> "Palatino-Italic" [pos="e,355.95,430.86 371.3,420.56 369.09,422.04 366.84,423.55 364.59,425.06", _draw_="c 9 -#ffffffff B 4 371 421 369 422 367 424 365 425 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 362 422 356 431 366 428 "];
+	"Palatino-Italic" -> "Palatino-BoldItalic" [pos="e,328.44,482.17 328.6,467.29 328.58,468.8 328.57,470.35 328.55,471.91", _draw_="c 9 -#ffffffff B 4 329 467 329 469 329 470 329 472 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 325 472 328 482 332 472 "];
+	"Times-Roman" -> "Times-Bold" [pos="e,507.93,571.23 479.86,571.08 485.66,571.11 491.66,571.14 497.54,571.17", _draw_="c 9 -#ffffffff B 4 480 571 486 571 492 571 498 571 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 498 575 508 571 498 568 "];
+	"Times-Bold" -> "Times-Italic" [pos="e,514.26,541.17 525.43,553.36 524.06,551.87 522.66,550.34 521.26,548.8", _draw_="c 9 -#ffffffff B 4 525 553 524 552 523 550 521 549 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 524 546 514 541 518 551 "];
+	"Times-Italic" -> "Times-BoldItalic" [pos="e,497.02,607.83 497.45,541.39 497.35,557.02 497.2,579.68 497.08,597.63", _draw_="c 9 -#ffffffff B 4 497 541 497 557 497 580 497 598 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 494 598 497 608 501 598 "];
+	Symbol -> ZapfDingbats [pos="e,124.92,446.02 125.43,436.59 125.43,436.69 125.42,436.79 125.42,436.89", _draw_="c 9 -#ffffffff B 4 125 437 125 437 125 437 125 437 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 122 436 125 446 129 436 "];
+	ZapfDingbats -> "ZapfChancery-MediumItalic" [pos="e,86.459,491.22 98.845,482.32 97.442,483.33 96.023,484.35 94.597,485.37", _draw_="c 9 -#ffffffff B 4 99 482 97 483 96 484 95 485 ", _hdraw_="S 5 -solid c 9 -#ffffffff C 9 -#ffffffff P 3 93 483 86 491 97 488 "];
+}

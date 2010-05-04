@@ -1,0 +1,15 @@
+# Generated Χ' Χ Χ•Χ‘ 29 09:10:29 GMT 2009 by dot - graphviz version 2.24.0 (20090616.2323)
+#
+# 
+# real	0m0.010s
+# user	0m0.007s
+# sys	0m0.003s
+
+digraph G {
+	graph [charset=latin1];
+	node [label="\N", fontsize=10];
+	graph [bb="0,0,174,36",
+		_draw_="c 9 -#ffffffff C 9 -#ffffffff P 4 0 -1 0 36 175 36 175 -1 ",
+		xdotversion="1.2"];
+	a [label=αβγδεζηθικλμνξοπρςστυφψωϊϋό, pos="87,18", width="2.4167", height="0.5", _draw_="c 9 -#000000ff e 87 18 87 18 ", _ldraw_="F 10.000000 11 -Times-Roman c 9 -#000000ff T 87 14 0 133 54 -Γ΅ΓΆΓ£Γ¤Γ¥Γ¦Γ§Γ¨Γ©ΓªΓ«Γ¬Γ­Γ®Γ―Γ°Γ±Γ²Γ³Γ΄ΓµΓ¶ΓΈΓΉΓΊΓ»ΓΌ "];
+}

@@ -1,0 +1,16 @@
+# locale-gen he_IL.UTF-8
+# locale-gen en_US.UTF-8
+
+export LANG="en_US.UTF-8"
+export LC_CTYPE="he_IL.UTF-8"
+export LC_NUMERIC="he_IL.UTF-8"
+export LC_TIME="he_IL.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_MONETARY="he_IL.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_PAPER="he_IL.UTF-8"
+export LC_NAME="he_IL.UTF-8"
+export LC_ADDRESS="he_IL.UTF-8"
+export LC_TELEPHONE="he_IL.UTF-8"
+export LC_MEASUREMENT="en_US.UTF-8"
+export LC_IDENTIFICATION="he_IL.UTF-8"

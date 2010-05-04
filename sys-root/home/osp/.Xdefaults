@@ -1,0 +1,133 @@
+! UBUNTU ang Gentoo users read the comments bellow!
+*customization: -color
+
+XTerm*faceName: dejavu sans mono:pixelsize=20
+
+XTerm*visualBell:     false
+XTerm*termName:       xterm-256color
+
+XTerm*background:     black
+XTerm*foreground:     white
+XTerm*cursorColor:    purple
+XTerm*internalBorder: 0
+XTerm*scrollBar:      false
+XTerm*underLine:      on
+
+! urxvt
+urxvt*visualBell:     false
+urxvt*termName:       rxvt-256color
+
+urxvt*font: xft:dejavu sans mono:pixelsize=20
+
+!System colors :: Desert Style:
+urxvt*background:     #000000
+urxvt*foreground:     #7f7f7f
+
+! Black
+urxvt*color0:      #000000
+urxvt*color8:      #666666
+
+! Red
+urxvt*color1:      #9e1828
+urxvt*color9:      #cf6171
+
+! Green
+urxvt*color2:      #aece92
+urxvt*color10:     #c5f779
+
+! Yellow
+urxvt*color3:      #968a38
+urxvt*color11:     #fff796
+
+! Blue
+urxvt*color4:      #414171
+urxvt*color12:     #4186be
+
+! Magenta
+urxvt*color5:      #963c59
+urxvt*color13:     #cf9ebe
+
+! Cyan
+urxvt*color6:      #418179
+urxvt*color14:     #71bebe
+
+! White
+urxvt*color7:      #bebebe
+urxvt*color15:     #ffffff
+
+urxvt*cursorColor:    purple
+urxvt*internalBorder: 0
+urxvt*scrollBar:      false
+urxvt*underLine:      on
+
+urxvt.perl-ext-common: default,matcher
+urxvt.urlLauncher: firefox
+urxvt.matcher.button: 1
+
+! transparency
+urxvt.transparent: true
+urxvt.shading: 15
+urxvt.inheritPixmap: true
+
+! Ubuntu and urxvt
+! NOTE: a patch might be needed check the essential-patches dir
+!
+! apt-get source rxvt-unicode
+! sudo apt-get build-dep rxvt-unicode
+! cd rxvt-unicode*
+! patch -p1 < doc/urxvt-8.2-256color.patch
+! sudo dpkg-buildpackage -us -uc
+! sudo dpkg -i rxvt-unicode_9.05-4_i386.deb
+! echo "rxvt-unicode hold" | sudo dpkg --set-selections
+
+! Apply changes by: xrdb -load .Xdefaults
+
+! helpful programs for fonts:
+! fontforge to edit fonts - keep in mind the highest width of all the chars in the font will be the width xterm will use for all the chars
+! fc-list
+! xfd -fa "font name" - to explore certain font
+!
+! for system fonts: xlsfonts, xfontsel
+
+! Under Gentoo:
+! enable the 'fontforge' for media-fonts/dejavu and install it
+! eselect fontconfig to enable dejavu
+!
+! you might want to install media-fonts/font-misc-misc
+
+! Color Systems:
+!   System colors :: Desert Style:
+!     urxvt*background:     #000000
+!     urxvt*foreground:     #7f7f7f
+!
+!     ! Black
+!     urxvt*color0:      #000000
+!     urxvt*color8:      #666666
+!
+!     ! Red
+!     urxvt*color1:      #9e1828
+!     urxvt*color9:      #cf6171
+!
+!     ! Green
+!     urxvt*color2:      #aece92
+!     urxvt*color10:     #c5f779
+!
+!     ! Yellow
+!     urxvt*color3:      #968a38
+!     urxvt*color11:     #fff796
+!
+!     ! Blue
+!     urxvt*color4:      #414171
+!     urxvt*color12:     #4186be
+!
+!     ! Magenta
+!     urxvt*color5:      #963c59
+!     urxvt*color13:     #cf9ebe
+!
+!     ! Cyan
+!     urxvt*color6:      #418179
+!     urxvt*color14:     #71bebe
+!
+!     ! White
+!     urxvt*color7:      #bebebe
+!     urxvt*color15:     #ffffff

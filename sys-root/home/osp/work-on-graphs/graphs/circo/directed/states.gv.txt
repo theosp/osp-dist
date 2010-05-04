@@ -1,0 +1,23 @@
+# Generated א' נוב 29 09:10:34 GMT 2009 by circo - graphviz version 2.24.0 (20090616.2323)
+#
+# 
+# real	0m0.012s
+# user	0m0.008s
+# sys	0m0.003s
+
+digraph states {
+	graph [size="3,2", rankdir=LR];
+	node [label="\N", shape=ellipse];
+	graph [bb="0,0,251.79,227.79",
+		_draw_="c 9 -#ffffffff C 9 -#ffffffff P 4 0 -1 0 228 253 228 253 -1 ",
+		xdotversion="1.2"];
+	empty [label=Empty, pos="128.9,19", width="0.91667", height="0.5", _draw_="c 9 -#000000ff e 129 19 33 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 129 12 0 37 5 -Empty "];
+	stolen [label=Stolen, pos="34,113.9", width="0.91667", height="0.5", _draw_="c 9 -#000000ff e 34 114 33 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 34 107 0 36 6 -Stolen "];
+	waiting [label=Waiting, pos="128.9,208.79", width="1.0556", height="0.5", _draw_="c 9 -#000000ff e 129 209 38 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 129 202 0 45 7 -Waiting "];
+	full [label=Full, pos="223.79,113.9", width="0.75", height="0.5", _draw_="c 9 -#000000ff e 224 114 27 18 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 224 107 0 23 4 -Full "];
+	empty -> full [label=return, pos="e,208.56,98.664 145,35.098 160.4,50.506 183.79,73.897 201.09,91.195", lp="186.04,50.147", _draw_="c 9 -#000000ff B 4 145 35 160 51 184 74 201 91 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 199 94 209 99 204 89 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 186 43 0 35 6 -return "];
+	empty -> stolen [label=dispatch, wt=28, pos="e,49.86,98.037 112.8,35.098 97.575,50.323 74.556,73.341 57.322,90.575", lp="72.061,49.836", _draw_="c 9 -#000000ff B 4 113 35 98 50 75 73 57 91 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 54 88 50 98 59 93 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 72 43 0 47 8 -dispatch "];
+	stolen -> full [label=return, pos="e,196.64,113.9 67.06,113.9 100.36,113.9 151.66,113.9 186.42,113.9", lp="126.74,105.9", _draw_="c 9 -#000000ff B 4 67 114 100 114 152 114 186 114 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 187 117 197 114 187 110 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 127 99 0 35 6 -return "];
+	stolen -> waiting [label=touch, pos="e,112.4,192.3 50.098,130 65.139,145.04 87.788,167.69 104.95,184.85", lp="65.524,169.42", _draw_="c 9 -#000000ff B 4 50 130 65 145 88 168 105 185 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 103 188 112 192 108 183 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 66 162 0 32 5 -touch "];
+	waiting -> full [label=return, pos="e,208.71,128.99 145.43,192.26 160.9,176.79 184.14,153.55 201.3,136.39", lp="160.36,151.33", _draw_="c 9 -#000000ff B 4 145 192 161 177 184 154 201 136 ", _hdraw_="S 5 -solid c 9 -#000000ff C 9 -#000000ff P 3 204 139 209 129 199 134 ", _ldraw_="F 14.000000 11 -Times-Roman c 9 -#000000ff T 160 144 0 35 6 -return "];
+}

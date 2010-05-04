@@ -1,0 +1,5 @@
+[begin] (fluxbox)
+   [reconfig] (Reconfigure)
+   [restart] (Restart)
+   [exit] (Exit)
+[end]
