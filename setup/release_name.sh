@@ -13,6 +13,8 @@ actions=(
     "b" "backup" 1 0
     "d" "diff" 0 0
     "p" "print" 0 0
+    # The print command uses the enviromental $PAGER if it set otherwise it
+    # uses less
     "r" "remove file" 0 1
     "s" "skip" 1 1
     "x" "remove directory (recursive)" 0 1
@@ -56,18 +58,59 @@ function _fixed_ok {
     done
 }
 
+function _exec {
+    # Executes the command after the positional arg that holds --, if it was
+    # called with -v it also prints the command first.
+
+    # v - verbosity
+    while getopts v o
+    do  case "$o" in
+        "v" )  local verbose="yes";; # if the function was called with the -v option set local var "verbose"
+        esac
+    done
+
+    for param in "$@"
+    do
+        if [[ "$param" = '--' ]]
+        then
+            shift
+            break
+        fi
+        shift
+    done
+
+    # execute
+    "$@"
+
+    if [[ -n "$verbose" ]]
+    then
+        echo '    (log)$ '"$@"
+    fi
+}
+
 function release_name {
-    # If the path supplied at ($1) isn't free
+    # v - verbosity
+    # s - source (optional), the path to the name we want to mv to target (will be used for diffs).
+    # t - target, the path to the name we want to release.
+    while getopts vs:t: o
+    do  case "$o" in
+        "v" )  local verbose="yes";; # if the function was called with the -v option set local var "verbose"
+        "s" )  local source=${OPTARG};;
+        "t" )  local target=${OPTARG};;
+        esac
+    done
+
+    # If the target path isn't free
     # If the function managed to release the name it should return 0 otherwise
     # it returns 1
-    while [ -e "$1" ]
+    while [ -e "$target" ]
     do
-        echo "$1 (`file "$1"`) already exists"
+        echo "$target (`file "$target"`) already exists"
 
         local available_actions="s"
         local action
 
-        if [ -d "$1" ]
+        if [ -d "$target" ]
         then
             # Actions available for dirs
             available_actions+="bx"
@@ -127,39 +170,47 @@ function release_name {
 
         # If there is another chars they are not interest us anymore
         action=${action:0:1}
-
+        local command
         case $action in
-            'p' )   local print_sym_link="n"
+            'b' ) # backup
+                    local backup_file=$target.bak-`date +%s`
+                    # the date is added to avoid the possibility of overriding
+                    # previous backup
 
-                    if [ -L "$1" ]
+                    command=('mv' $target $backup_file)
+                    _exec "${a:+"-v"}" '--' "${command[@]}" # exec the command pass -v for verbose mode.
+            ;;
+            'd' ) # diff
+            ;;
+            'p' ) # print
+                    pager=${PAGER:-"less"}
+                    local print_sym_link="n"
+
+                    if [ -L "$target" ]
                     then
-                        echo $1 is a symbolic link to `readlink "$1"`, do you want to print it? [y/N]
+                        echo "Symbolic link $target -> `readlink "$target"`, still want to print it? [y/N]"
                         read print_sym_link
                     fi
 
-                    if [ ! -L "$1" ] || [ "$print_sym_link" = "y" ]
+                    if [ ! -L "$target" ] || [ "$print_sym_link" = "y" ]
                     then
-                        less $1
+                        command=($pager $target)
+                        _exec "${a:+"-v"}" '--' "${command[@]}" # exec the command pass -v for verbose mode.
                     fi
+            ;;
+            'r' ) # remove file
 
-                    ;;
-            'b' )   local backup_file=$1.bak-`date +%s`
+            ;;
+            's' ) # skip
 
-                    mv $1 $backup_file
-                    echo $1 moved to $backup_file
+            ;;
+            'x' ) # remove directory
 
-                    ;;
-            'd' )   rm $1
-
-                    echo $1 removed
-                    ;;
-            's' )   echo skipping $1
-                    return 1
-                    ;;
+            ;;
         esac
     done
 
     return 0
 }
 
-release_name ~/example.txt
+release_name -v -t ~/example.txt
