@@ -1,14 +1,26 @@
 # This script supplies the release_name function.
-# release_name gets path ($1) and work interactively with the user to release it, (if
-# it isn't of course), by deleting, renaming or backuping it
+# release_name gets a path and release it if it exists.
+# exists work interactively with the user to release it, (if exists course), by deleting, renaming or backuping it
 
 # if fixed_release_name_action holds eligible action key, it'll be used instead
 # of asking the user to choose one.
 fixed_release_name_action=""
 
+# The following array defines the available actions and their properties.
+# Each $elements_per_action elements in it defines one action.
+# The meaning of each action's element by its position is as follow:
+#     * Single char that identify the action for getopts.
+#     * Human readable action name.
+#     * Boolian that determines whether the user can choose to perform the action on all the
+#       files that will need release 1 or not 0.
+#     * Boolian that determines whether we will ask the user to confirm the
+#       execution 1 or not 0.
+#     * number [1-6] that determines the types of file 
+elements_per_action=5
 actions=(
-    # "action_char" "action name" "all_possible" "needs approval"
-    # if "all_possible" is set to 1 the user can choose to perform that action
+    # "action_char" "action name" (bool)"all_possible" (bool)"needs approval" (bool)"required input"
+    # 1 means true 0 false
+    # "all_possible" is set to 1 the user can choose to perform that action
     # on all the files that has to be released.
     "b" "backup" 1 0
     "d" "diff" 0 0
@@ -115,6 +127,7 @@ function release_name {
             # Actions available for dirs
             available_actions+="bx"
         else
+            # Actions for regular files
             available_actions+="pdbr"
         fi
 
