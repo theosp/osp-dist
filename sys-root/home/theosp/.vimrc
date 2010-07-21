@@ -1,11 +1,9 @@
-" Engine Options
-set rtp=$VIMRUNTIME
-
 set nocompatible
 set history=50		             " keep 50 lines of command line history
 set backup
-set backupdir=$VIMRUNTIME/backup
-set directory=$VIMRUNTIME/tmp
+
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 
 set backspace=2
 
@@ -20,9 +18,6 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " bash like tab completion
 set wildmode=longest,list,full
 set wildmenu
-
-" Paths
-helptags $VIMRUNTIME/doc
 
 " Display Options
 syntax on
