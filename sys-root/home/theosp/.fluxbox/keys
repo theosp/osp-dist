@@ -28,8 +28,14 @@ Mod1 x :Workspace 1 # x(term) workspace
 Mod1 s x :MacroCmd {Workspace 1} {ExecCommand urxvt -e screen}
 Mod1 f :Workspace 2 # f(irefox) workspace
 Mod1 s f :MacroCmd {Workspace 2} {ExecCommand firefox}
+Mod1 s c :MacroCmd {Workspace 2} {ExecCommand google-chrome}
 Mod1 g :Workspace 3 # g(imp) workspace
 Mod1 s g :MacroCmd {Workspace 3} {ExecCommand gimp}
+
+Mod1 v :Workspace 4 # v(irtuals) workspace
+Mod1 s v :MacroCmd {Workspace 4} {ExecCommand virtualbox}
+
+Mod1 s t :MacroCmd {ExecCommand pymorfix}
 
 Mod1 s m :ExecCommand urxvt -e alsamixer # m(ixer)
 

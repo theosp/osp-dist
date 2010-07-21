@@ -18,3 +18,19 @@
   [Position]	(UPPERLEFT)	{79 109}
   [Close]	{yes}
 [end]
+[app] (name=Qt-subapplication) (class=VirtualBox)
+  [Workspace]	{3}
+  [Dimensions]	{770 577}
+[end]
+[app] (name=gimp) (class=Gimp) (role=gimp-image-window)
+  [Workspace]	{2}
+[end]
+[app] (name=gimp) (class=Gimp) (role=gimp-toolbox)
+  [Workspace]	{2}
+[end]
+[app] (name=gimp) (class=Gimp) (role=gimp-dock)
+  [Workspace]	{2}
+[end]
+[app] (name=pymorfix) (class=Pymorfix)
+  [Layer]	{2}
+[end]
