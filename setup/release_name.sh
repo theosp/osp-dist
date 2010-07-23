@@ -1,6 +1,6 @@
 # This script supplies the release_name function.
-# release_name gets a path and release it if it exists.
-# exists work interactively with the user to release it, (if exists course), by deleting, renaming or backuping it
+# release_name gets path and works interactively with the user to release it, (if
+# it isn't of course), by deleting, renaming or backuping it
 
 # if fixed_release_name_action holds eligible action key, it'll be used instead
 # of asking the user to choose one.
@@ -71,7 +71,7 @@ function _fixed_ok {
 }
 
 function _exec {
-    # Executes the command after the positional arg that holds --, if it was
+    # Executes the command after the positional var that holds --, if it was
     # called with -v it also prints the command first.
 
     # v - verbosity
@@ -180,9 +180,9 @@ function release_name {
         else
             action=$fixed_release_name_action
         fi
+        
+        action=${action:0:1} # The rest doesn't interest us anymore
 
-        # If there is another chars they are not interest us anymore
-        action=${action:0:1}
         local command
         case $action in
             'b' ) # backup
