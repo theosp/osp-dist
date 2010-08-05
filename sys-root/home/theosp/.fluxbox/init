@@ -87,7 +87,7 @@ session.autoRaiseDelay:	250
 session.modKey:	Mod1
 session.useMod1: false
 session.imageDither:	True
-session.styleFile:	/home/osp/.fluxbox/styles/DanielNyz
+session.styleFile:	~/.fluxbox/styles/DanielNyz
 session.menuFile:	~/.fluxbox/menu
 session.configVersion:	10
 session.opaqueMove:	False
