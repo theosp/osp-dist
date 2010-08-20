@@ -382,3 +382,19 @@ set textwidth=79
 
 " Set window's minimal height
 set wh=40
+
+" Persistent Undo
+au BufReadPost * call ReadUndo()
+au BufWritePost * call WriteUndo()
+func ReadUndo()
+  if filereadable(expand('~'). '/.vim/undo/' . expand('%:t'))
+    rundo /home/osp/.vim/undo/%:t
+  endif
+endfunc
+func WriteUndo()
+  let dirname = expand('~') . '/.vim/undo'
+  if !isdirectory(dirname)
+    call mkdir(dirname)
+  endif
+  wundo /home/osp/.vim/undo/%:t
+endfunc
