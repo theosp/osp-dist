@@ -398,3 +398,6 @@ func WriteUndo()
   endif
   wundo /home/osp/.vim/undo/%:t
 endfunc
+
+map <Leader>gC :!git cola<CR>
+

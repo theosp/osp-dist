@@ -1,0 +1,1 @@
+/home/osp/git-vim/syntax/git-status.vim
