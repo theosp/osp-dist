@@ -111,6 +111,10 @@ fi
 
 alias my_fbcli='fbcli --url razoss.fogbugz.com --user "daniel@razoss.com" --password d43567'
 
+# General alias
+alias l='ls'
+alias lsl='ls -l'
+
 # Git stuffs
 g () {
     cat <<EOF
