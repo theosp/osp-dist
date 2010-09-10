@@ -36,14 +36,3 @@ link /home/theosp/.Xdefaults
 
 sudo mkdir -p /usr/share/images/wallpapers/
 sudoCopy /usr/share/images/wallpapers/light-fish_1920X1200.jpg
-
-# rm -rf /home/theosp/.fluxbox
-# rm -rf /home/theosp/.vim
-# rm -rf /home/theosp/.bash_profile
-# rm -rf /home/theosp/.bashrc
-# rm -rf /home/theosp/.bashrc-aliases
-# rm -rf /home/theosp/.bashrc-exports
-# rm -rf /home/theosp/.bashrc-locale
-# rm -rf /home/theosp/.screenrc
-# rm -rf /home/theosp/.vimrc
-# rm -rf /home/theosp/.Xdefaults
