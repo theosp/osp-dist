@@ -5,7 +5,10 @@ source `dirname $0`/setup/script_path.sh # load $SCRIPT_PWD
 link () {
     local path="$1"
 
-    ln -s $SCRIPT_PWD'/sys-root'$path $path
+    if [[ ! -e $path ]]
+    then
+        ln -s $SCRIPT_PWD'/sys-root'$path $path
+    fi
 }
 
 copy () {
