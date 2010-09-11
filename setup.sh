@@ -7,7 +7,7 @@ link () {
 
     if [[ ! -e $path ]]
     then
-        ln -s $SCRIPT_PWD'/sys-root'$path $path
+        ln -s $SCRIPT_PWD'/sys-root'$path ${path/\/home\/theosp/$HOME}
     fi
 }
 
