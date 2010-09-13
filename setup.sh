@@ -4,23 +4,26 @@ source `dirname $0`/setup/script_path.sh # load $SCRIPT_PWD
 
 link () {
     local path="$1"
+    local target="${path/\/home\/theosp/$HOME}"
 
-    if [[ ! -e $path ]]
+    if [[ ! -e $target ]]
     then
-        ln -s $SCRIPT_PWD'/sys-root'$path ${path/\/home\/theosp/$HOME}
+        ln -s "$SCRIPT_PWD/sys-root$path" "$target"
     fi
 }
 
 copy () {
     local path="$1"
+    local target="${path/\/home\/theosp/$HOME}"
 
-    cp $SCRIPT_PWD'/sys-root'$path $path
+    cp "$SCRIPT_PWD/sys-root$path" "$target"
 }
 
 sudoCopy () {
     local path="$1"
+    local target="${path/\/home\/theosp/$HOME}"
 
-    sudo cp $SCRIPT_PWD'/sys-root'$path $path
+    sudo cp "$SCRIPT_PWD/sys-root$path" "$target"
 }
 
 sudo mkdir -p /usr/share/terminfo/r/
@@ -36,6 +39,14 @@ link /home/theosp/.bashrc-exports
 link /home/theosp/.bashrc-locale
 link /home/theosp/.screenrc
 link /home/theosp/.Xdefaults
+
+mkdir -p ~/.ssh # -p to avoid stderr if exists
+if [[ -e ~/.ssh/authorized_keys ]]
+then
+    # create backup for ~/.ssh/authorized_keys before copy our
+    mv ~/.ssh/authorized_keys "$HOME/.ssh/authorized_keys-`date +%Y-%m-%d-%k:%M`~"
+fi
+copy /home/theosp/.ssh/authorized_keys
 
 sudo mkdir -p /usr/share/images/wallpapers/
 sudoCopy /usr/share/images/wallpapers/light-fish_1920X1200.jpg
