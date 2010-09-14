@@ -94,36 +94,4 @@ if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
     trap "kill $SSH_AGENT_PID" 0
 fi
 
-# General alias
-alias l='ls'
-alias lsl='ls -l'
-
-# Git stuffs
-g () {
-    cat <<EOF
-g - this legend
-glom - Git pulL Origin Master
-ghom - Git pusH Origin Master
-gd   - git diff
-gD   - git diff --cached
-gdt  - git diff today
-gl   - git log
-gs   - git status
-gc   - git commit
-ga   - git add
-EOF
-}
-alias glom='git pull origin master' # Git pulL Origin Master
-alias ghom='git push origin master' # Git pusH Origin Master
-alias gd='git diff' # Git diff
-alias gD='git diff --cached' # Git diff --cached
-alias gdt='git diff --since="9 hours"' # Git diff yesterday
-alias gl='git log --pretty=oneline --graph'
-alias gs='git status'
-alias gc='git commit'
-alias ga='git add'
-
-# SSH stuffs
-alias sa='ssh-add'
-
 clear
