@@ -1,12 +1,14 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-if [ -n $linuxDistPath ]; then
-    export linuxDistPath=~/linux-dist/trunk
-fi
-
 # set vim the default editor
 export EDITOR="vim"
+# source locale conf
+. ~/.bashrc-locale
+# source alias definitions
+. ~/.bashrc-aliases
+# source exports definitions
+. ~/.bashrc-exports
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
@@ -67,20 +69,6 @@ case "$TERM" in
     ;;
 esac
 
-# locale conf:
-if [ -f ${linuxDistPath}/config/bash/.bashrc-locale ]; then
-    . ${linuxDistPath}/config/bash/.bashrc-locale
-fi
-
-# Alias definitions.
-if [ -f ${linuxDistPath}/config/bash/.bashrc-aliases ]; then
-    . ${linuxDistPath}/config/bash/.bashrc-aliases
-fi
-
-# Exports definitions.
-if [ -f ${linuxDistPath}/config/bash/.bashrc-exports ]; then
-    . ${linuxDistPath}/config/bash/.bashrc-exports
-fi
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ] && [ -x /usr/bin/dircolors ]; then
