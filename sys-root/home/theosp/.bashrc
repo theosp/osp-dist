@@ -50,12 +50,12 @@ fi
 
 if [ "$TERM" != 'dumb' ] && [ -n "$BASH" ] && [ -n "$PS1" ]
 then
-        if [ `/usr/bin/whoami` = 'root' ]
-        then
-                export PS1='\[\033[01;31m\]\h \[\033[01;34m\]\W \$ \[\033[00m\]'
-        else
-                export PS1='\[\033[01;32m\]\u@\h \[\033[01;34m\]\W \$ \[\033[00m\]'
-        fi
+    if [ `/usr/bin/whoami` = 'root' ]
+    then
+            export PS1='\[\033[01;31m\]\h \[\033[01;34m\]\W \$ \[\033[00m\]'
+    else
+            export PS1='\[\033[01;32m\]\u@\h \[\033[01;34m\]\W \$ \[\033[00m\]'
+    fi
 fi
 
 unset color_prompt force_color_prompt
@@ -89,18 +89,12 @@ if [ -x /usr/bin/xset ]; then
     xset b 0 0 0
 fi
 
-#PATH=${linuxDistPath}/bin:$PATH
-
-export DJANGO_SETTINGS_MODULE=lobservers.settings
-
 SSHAGENT=/usr/bin/ssh-agent
 SSHAGENTARGS="-s"
 if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
     eval `$SSHAGENT $SSHAGENTARGS`
     trap "kill $SSH_AGENT_PID" 0
 fi
-
-alias my_fbcli='fbcli --url razoss.fogbugz.com --user "daniel@razoss.com" --password d43567'
 
 # General alias
 alias l='ls'
