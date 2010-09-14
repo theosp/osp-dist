@@ -33,9 +33,10 @@ Git Shortcuts:
 
     gC   - git cola
 
+    gb   - git branch
     gch  - git checkout
-    gchb  - git checkout -b
-    gcht  - git checkout -t
+    gchb - git checkout -b
+    gcht - git checkout -t
 
     gm   - git merge
 EOF
@@ -63,6 +64,7 @@ EOF
 
     alias gC='git cola' # git cola
 
+    alias gb='git branch' # git branch
     alias gch='git checkout' # git checkout
     alias gchb='git checkout -b' # git checkout -b
     alias gcht='git checkout -t' # git checkout -t
