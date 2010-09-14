@@ -1,5 +1,1 @@
 export EDITOR=vim
-
-# This is not smart thing to do. If you want to set specific name to
-# virtual terminal program use the ~/.Xdefaults file
-#export TERM=rxvt-256color
