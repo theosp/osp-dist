@@ -50,3 +50,6 @@ copy /home/theosp/.ssh/authorized_keys
 
 sudo mkdir -p /usr/share/images/wallpapers/
 sudoCopy /usr/share/images/wallpapers/light-fish_1920X1200.jpg
+
+sudo locale-gen he_IL.UTF-8
+sudo locale-gen en_US.UTF-8
