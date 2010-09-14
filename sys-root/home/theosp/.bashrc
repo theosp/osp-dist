@@ -1,8 +1,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# set vim the default editor
-export EDITOR="vim"
 # source locale conf
 . ~/.bashrc-locale
 # source alias definitions
