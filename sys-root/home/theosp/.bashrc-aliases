@@ -1,6 +1,10 @@
 alias vi="vim"
 alias rdesktop="rdesktop -g 1024x768"
 
+# <mplayer_shortcuts>
+    alias ma='mplayer *'
+# </mplayer_shortcuts>
+
 # <ls_shortcuts>
     alias l='ls'
     alias lsl='ls -l'
@@ -27,7 +31,7 @@ Git Shortcuts:
     gf   - git fetch
 
     gS   - git stash
-    gp   - git pop 
+    gp   - git stash pop 
 
     ga   - git add
     gc   - git commit
@@ -65,7 +69,7 @@ EOF
     alias gf='git fetch' # git fetch
 
     alias gS='git stash' # git stash
-    alias gp='git pop' # git pop 
+    alias gp='git stash pop' # git pop 
 
     alias ga='git add' # git add
     alias gc='git commit' # git commit
