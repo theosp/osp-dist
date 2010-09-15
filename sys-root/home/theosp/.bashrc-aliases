@@ -10,6 +10,8 @@ alias rdesktop="rdesktop -g 1024x768"
     g () {
         cat <<EOF
 Git Shortcuts:
+    glo  - Git pulL Origin
+    gho  - Git pusH Origin
     glom - Git pulL Origin Master
     ghom - Git pusH Origin Master
     gl   - Git pulL
@@ -46,6 +48,8 @@ Git Shortcuts:
     gmv  - git mv
 EOF
     }
+    alias glo='git pull origin' # Git pulL Origin
+    alias gho='git push origin' # Git pusH Origin
     alias glom='git pull origin master' # Git pulL Origin Master
     alias ghom='git push origin master' # Git pusH Origin Master
     alias gl='git pull' # Git pulL
