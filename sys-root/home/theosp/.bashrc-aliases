@@ -31,6 +31,7 @@ Git Shortcuts:
     gc   - git commit
     gcA  - git commit --amend
     gca  - git commit -a
+    gcm  - git commit -m
     gcam - git commit -a -m
 
     gC   - git cola
@@ -66,6 +67,7 @@ EOF
     alias gc='git commit' # git commit
     alias gcA='git commit --amend' # git commit --amend
     alias gca='git commit -a' # git commit -a
+    alias gcm='git commit -m' # git commit -m
     alias gcam='git commit -a -m' # git commit -a -m
 
     alias gC='git cola' # git cola
