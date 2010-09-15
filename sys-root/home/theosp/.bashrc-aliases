@@ -42,6 +42,8 @@ Git Shortcuts:
     gcm  - git commit -m
     gcam - git commit -a -m
 
+    gcl  - git clone
+
     gC   - git cola
 
     gb   - git branch
@@ -54,6 +56,8 @@ Git Shortcuts:
     gmm  - git merge master
 
     gmv  - git mv
+
+    gi  - git init 
 EOF
     }
     alias glo='git pull origin' # Git pulL Origin
@@ -84,6 +88,8 @@ EOF
     alias gcm='git commit -m' # git commit -m
     alias gcam='git commit -a -m' # git commit -a -m
 
+    alias gcl='git clone' # git clone
+
     alias gC='git cola' # git cola
 
     alias gb='git branch' # git branch
@@ -96,6 +102,9 @@ EOF
     alias gmm='git merge master' # git merge master
 
     alias gmv='git mv' # git mv
+
+    alias gi='git init' # git init
+
 # <git_shortcuts>
 
 # <ssh_shortcuts>
