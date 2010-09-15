@@ -48,6 +48,7 @@ Git Shortcuts:
     gch  - git checkout
     gchb - git checkout -b
     gcht - git checkout -t
+    gchm - git checkout master
 
     gm   - git merge
     gmm  - git merge master
@@ -89,6 +90,7 @@ EOF
     alias gch='git checkout' # git checkout
     alias gchb='git checkout -b' # git checkout -b
     alias gcht='git checkout -t' # git checkout -t
+    alias gchm='git checkout master' # git checkout master
 
     alias gm='git merge' # git merge
     alias gmm='git merge master' # git merge master
