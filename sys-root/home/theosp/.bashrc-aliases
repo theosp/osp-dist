@@ -18,6 +18,8 @@ Git Shortcuts:
     gho  - Git pusH Origin
     glom - Git pulL Origin Master
     ghom - Git pusH Origin Master
+    glo  - Git pulL Origin
+    gho  - Git pusH Origin
     gl   - Git pulL
     gh   - Git pusH
 
@@ -48,6 +50,7 @@ Git Shortcuts:
     gcht - git checkout -t
 
     gm   - git merge
+    gmm  - git merge master
 
     gmv  - git mv
 EOF
@@ -56,6 +59,8 @@ EOF
     alias gho='git push origin' # Git pusH Origin
     alias glom='git pull origin master' # Git pulL Origin Master
     alias ghom='git push origin master' # Git pusH Origin Master
+    alias glo='git pull origin' # Git pulL Origin
+    alias gho='git push origin' # Git pusH Origin
     alias gl='git pull' # Git pulL
     alias gh='git push' # Git pusH
 
@@ -86,6 +91,7 @@ EOF
     alias gcht='git checkout -t' # git checkout -t
 
     alias gm='git merge' # git merge
+    alias gmm='git merge master' # git merge master
 
     alias gmv='git mv' # git mv
 # <git_shortcuts>
