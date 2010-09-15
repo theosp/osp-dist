@@ -39,6 +39,8 @@ Git Shortcuts:
     gcht - git checkout -t
 
     gm   - git merge
+
+    gmv  - git mv
 EOF
     }
     alias glom='git pull origin master' # Git pulL Origin Master
@@ -70,6 +72,8 @@ EOF
     alias gcht='git checkout -t' # git checkout -t
 
     alias gm='git merge' # git merge
+
+    alias gmv='git mv' # git mv
 # <git_shortcuts>
 
 # <ssh_shortcuts>
