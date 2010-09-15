@@ -78,6 +78,7 @@ set ignorecase
 
 map <F3> :set invrl<CR>
 map <F4> :set invspell<CR>
+map <F5> :set invpaste<CR>
 
 " Plugins Options
     " NERDTree options
