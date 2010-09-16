@@ -5,6 +5,10 @@ alias rdesktop="rdesktop -g 1024x768"
     alias ma='mplayer *'
 # </mplayer_shortcuts>
 
+# <ssh_shortcuts>
+    alias s='ssh'
+# </ssh_shortcuts>
+
 # <ls_shortcuts>
     alias l='ls'
     alias lsl='ls -l'
