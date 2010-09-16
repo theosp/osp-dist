@@ -22,6 +22,7 @@ Git Shortcuts:
     gho  - Git pusH Origin
     gl   - Git pulL
     gh   - Git pusH
+    ght  - Git pusH tags
 
     gd   - Git diff
     gD   - Git diff --cached
@@ -59,6 +60,9 @@ Git Shortcuts:
 
     gi  - git init 
 
+    gt  - git tag
+    gtl - git tag -l
+
 Git Functions: 
     gig(project_name, user_name=theosp)  - Git Init Github
     gclg(project_name, user_name=theosp) - Git Clone GitHub
@@ -72,6 +76,7 @@ EOF
     alias gho='git push origin' # Git pusH Origin
     alias gl='git pull' # Git pulL
     alias gh='git push' # Git pusH
+    alias ght='git push --tags' # Git pusH tags
 
     alias gd='git diff' # Git diff
     alias gD='git diff --cached' # Git diff --cached
@@ -108,6 +113,9 @@ EOF
     alias gmv='git mv' # git mv
 
     alias gi='git init' # git init
+
+    alias gt='git tag' # git tag
+    alias gtl='git tag -l' # git tag -l
 
     # Git Init Github - gig(project_name, user_name=theosp)
     gig ()
