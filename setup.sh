@@ -28,6 +28,13 @@ sudoCopy () {
 
 sudo mkdir -p /usr/share/terminfo/r/
 sudoCopy /usr/share/terminfo/r/rxvt-256color
+sudo mkdir -p /usr/share/terminfo/s/
+sudoCopy /usr/share/terminfo/s/screen
+sudoCopy /usr/share/terminfo/s/screen-256color
+sudoCopy /usr/share/terminfo/s/screen-256color-bce
+sudoCopy /usr/share/terminfo/s/screen-bce
+sudoCopy /usr/share/terminfo/s/screen-s
+sudoCopy /usr/share/terminfo/s/screen-w
 
 link /home/theosp/.fluxbox
 link /home/theosp/.vim
