@@ -2,4 +2,4 @@
 
 # Installs my favorites packages on ubuntu
 
-sudo aptitude install tree curl
+sudo aptitude install tree curl screen
