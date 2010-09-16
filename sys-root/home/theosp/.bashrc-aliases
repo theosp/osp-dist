@@ -66,6 +66,7 @@ Git Shortcuts:
 Git Functions: 
     gig(project_name, user_name=theosp)  - Git Init Github
     gclg(project_name, user_name=theosp) - Git Clone GitHub
+    gta(tag_name, message=tag_name)      - Git Tag Annotated
 EOF
     }
     alias glo='git pull origin' # Git pulL Origin
@@ -140,6 +141,15 @@ EOF
         user_name="${2:-theosp}"
 
         gcl git@github.com:"$user_name"/"$project_name".git
+    }
+
+    # Git Tag Annotated - gta(tag_name, message=tag_name)
+    gta ()
+    {
+        tag_name="$1"
+        message="${2:-$tag_name}"
+
+        gt -a "$tag_name" -m "$message"
     }
 # <git_shortcuts>
 
