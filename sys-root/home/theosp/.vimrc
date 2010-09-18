@@ -1,3 +1,5 @@
+let $UNDER_VIM='True'
+
 set nocompatible
 set history=50		             " keep 50 lines of command line history
 set backup
@@ -391,5 +393,7 @@ set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 map <Leader>gC :!git cola<CR>
+
+set shell=/bin/bash\ -l\ -O\ expand_aliases
 
 command W w !sudo tee % > /dev/null

@@ -1,5 +1,5 @@
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+# If not running interactively or under vim, don't do anything
+[ -z "$PS1" ] && [ -z "$UNDER_VIM" ] && return
 
 # source locale conf
 . ~/.bashrc-locale
