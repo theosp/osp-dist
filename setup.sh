@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source `dirname $0`/setup/script_path.sh # load $SCRIPT_PWD
+. $(dirname $0)/bupler-lib/modules/bupler
+SCRIPT_PWD=$(bupler.script_pwd 1)
 
 link () {
     local path="$1"
