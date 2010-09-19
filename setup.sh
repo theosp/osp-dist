@@ -1,7 +1,11 @@
 #!/bin/bash
 
-. $(dirname $0)/bupler-lib/modules/bupler
-SCRIPT_PWD=$(bupler.script_pwd 1)
+cd "$(dirname $0)"
+git submodule init
+git submodule update
+
+. "$(dirname $0)/bupler-lib/modules/bupler"
+SCRIPT_PWD="$(bupler.script_pwd 1)"
 
 link () {
     local path="$1"
