@@ -9,3 +9,5 @@ sys-root/home/theosp/.vim/tmp/*
 sys-root/home/theosp/.vim/.netrwhist
 vim-7.3.tar.bz2
 vim73
+
+ebuilds/ubuntu/all/rxvt-*
