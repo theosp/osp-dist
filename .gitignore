@@ -1,10 +1,10 @@
-sys-root/home/theosp/.vim/view/
+sys-root/home/theosp/.vim/view/*
 !sys-root/home/theosp/.vim/view/.placeholder
-sys-root/home/theosp/.vim/undo/
+sys-root/home/theosp/.vim/undo/*
 !sys-root/home/theosp/.vim/undo/.placeholder
-sys-root/home/theosp/.vim/backup/
+sys-root/home/theosp/.vim/backup/*
 !sys-root/home/theosp/.vim/backup/.placeholder
-sys-root/home/theosp/.vim/tmp/
+sys-root/home/theosp/.vim/tmp/*
 !sys-root/home/theosp/.vim/tmp/.placeholder
 sys-root/home/theosp/.vim/.netrwhist
 vim-7.3.tar.bz2
