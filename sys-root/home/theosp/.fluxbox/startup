@@ -1,4 +1,4 @@
-fbsetbg -f ~/.fluxbox/backgrounds/98790-LightFish1920X1200a.jpg
+fbsetbg -f /usr/share/images/wallpapers/light-fish_1920X1200.jpg
 
 xrdb -load -quiet $HOME/.Xdefaults &
 

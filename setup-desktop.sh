@@ -35,6 +35,7 @@ sudoCopy /usr/share/images/wallpapers/light-fish_1920X1200.jpg
 
 case "$(lsb_release -s -i)" in
     "Ubuntu")
-        sudo aptitude install git-cola fluxbox
+        sudo aptitude install git-cola fluxbox eterm
+        # we need eterm since fluxbox uses its background setter
     ;;
 esac
