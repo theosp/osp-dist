@@ -2,4 +2,4 @@
 
 # Installs my favorites packages on ubuntu
 
-sudo aptitude install tree curl screen
+sudo aptitude install tree curl screen git-cola
