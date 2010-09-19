@@ -1,8 +1,7 @@
 #!/bin/bash
 
 cd "$(dirname $0)"
-git submodule init
-git submodule update
+./init_submodules.sh
 
 . "$(dirname $0)/bupler-lib/modules/bupler"
 SCRIPT_PWD="$(bupler.script_pwd 1)"
