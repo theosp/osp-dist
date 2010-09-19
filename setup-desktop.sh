@@ -32,3 +32,9 @@ link /home/theosp/.Xdefaults
 
 sudo mkdir -p /usr/share/images/wallpapers/
 sudoCopy /usr/share/images/wallpapers/light-fish_1920X1200.jpg
+
+case "$(lsb_release -s -i)" in
+    "Ubuntu")
+        sudo aptitude install git-cola fluxbox
+    ;;
+esac
