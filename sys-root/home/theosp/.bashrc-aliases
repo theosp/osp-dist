@@ -65,6 +65,7 @@ Git Shortcuts:
     gl   - Git log (--pretty=oneline --graph)
 
     gs   - git status
+    gss  - git status --short
 
     gsma - git submodule add
     gsmi - git submodule init
@@ -125,6 +126,7 @@ EOF
     alias gl='git log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
 
     alias gs='git status' # git status
+    alias gss='git status --short' # git status --short
 
     alias gsma='git submodule add' # git submodule add
     alias gsmi='git submodule init' # git submodule init
