@@ -46,7 +46,7 @@ unset -f add_chmod_alias
 # </chmod_shortcuts>
 
 # <git_shortcuts>
-    g () {
+    ghelp () {
         cat <<EOF
 Git Shortcuts:
     glo  - Git pulL Origin
@@ -110,59 +110,60 @@ Git Functions:
     gsmag(project_name, user_name=theosp) - Git Submodule Add GitHub
 EOF
     }
-    alias glo='git pull origin' # Git pulL Origin
-    alias gho='git push origin' # Git pusH Origin
-    alias glom='git pull origin master' # Git pulL Origin Master
-    alias ghom='git push origin master' # Git pusH Origin Master
-    alias glo='git pull origin' # Git pulL Origin
-    alias gho='git push origin' # Git pusH Origin
-    alias gl='git pull' # Git pulL
-    alias gh='git push' # Git pusH
-    alias ght='git push --tags' # Git pusH tags
+    alias g='git' # Git
+    alias glo='g pull origin' # Git pulL Origin
+    alias gho='g push origin' # Git pusH Origin
+    alias glom='g pull origin master' # Git pulL Origin Master
+    alias ghom='g push origin master' # Git pusH Origin Master
+    alias glo='g pull origin' # Git pulL Origin
+    alias gho='g push origin' # Git pusH Origin
+    alias gl='g pull' # Git pulL
+    alias gh='g push' # Git pusH
+    alias ght='g push --tags' # Git pusH tags
 
-    alias gd='git diff' # Git diff
-    alias gD='git diff --cached' # Git diff --cached
-    alias gdt='git diff --since="9 hours"' # Git diff yesterday
-    alias gl='git log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
+    alias gd='g diff' # Git diff
+    alias gD='g diff --cached' # Git diff --cached
+    alias gdt='g diff --since="9 hours"' # Git diff yesterday
+    alias gl='g log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
 
-    alias gs='git status' # git status
-    alias gss='git status --short' # git status --short
+    alias gs='g status' # git status
+    alias gss='g status --short' # git status --short
 
-    alias gsma='git submodule add' # git submodule add
-    alias gsmi='git submodule init' # git submodule init
-    alias gsmu='git submodule update' # git submodule update
+    alias gsma='g submodule add' # git submodule add
+    alias gsmi='g submodule init' # git submodule init
+    alias gsmu='g submodule update' # git submodule update
 
-    alias gf='git fetch' # git fetch
+    alias gf='g fetch' # git fetch
 
-    alias gS='git stash' # git stash
-    alias gp='git stash pop' # git pop 
+    alias gS='g stash' # git stash
+    alias gp='g stash pop' # git pop 
 
-    alias ga='git add' # git add
-    alias gc='git commit' # git commit
-    alias gcA='git commit --amend' # git commit --amend
-    alias gca='git commit -a' # git commit -a
-    alias gcm='git commit -m' # git commit -m
-    alias gcam='git commit -a -m' # git commit -a -m
+    alias ga='g add' # git add
+    alias gc='g commit' # git commit
+    alias gcA='g commit --amend' # git commit --amend
+    alias gca='g commit -a' # git commit -a
+    alias gcm='g commit -m' # git commit -m
+    alias gcam='g commit -a -m' # git commit -a -m
 
-    alias gcl='git clone' # git clone
+    alias gcl='g clone' # git clone
 
-    alias gC='git cola' # git cola
+    alias gC='g cola' # git cola
 
-    alias gb='git branch' # git branch
-    alias gch='git checkout' # git checkout
-    alias gchb='git checkout -b' # git checkout -b
-    alias gcht='git checkout -t' # git checkout -t
-    alias gchm='git checkout master' # git checkout master
+    alias gb='g branch' # git branch
+    alias gch='g checkout' # git checkout
+    alias gchb='g checkout -b' # git checkout -b
+    alias gcht='g checkout -t' # git checkout -t
+    alias gchm='g checkout master' # git checkout master
 
-    alias gm='git merge' # git merge
-    alias gmm='git merge master' # git merge master
+    alias gm='g merge' # git merge
+    alias gmm='g merge master' # git merge master
 
-    alias gmv='git mv' # git mv
+    alias gmv='g mv' # git mv
 
-    alias gi='git init' # git init
+    alias gi='g init' # git init
 
-    alias gt='git tag' # git tag
-    alias gtl='git tag -l' # git tag -l
+    alias gt='g tag' # git tag
+    alias gtl='g tag -l' # git tag -l
 
     # Git Init Github - gig(project_name, user_name=theosp)
     gig ()
@@ -176,7 +177,7 @@ EOF
         touch README
         ga README
         gcm 'first commit'
-        git remote add origin git@github.com:"$user_name"/"$project_name".git
+        g remote add origin git@github.com:"$user_name"/"$project_name".git
         ghom
     }
 
