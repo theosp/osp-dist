@@ -25,6 +25,10 @@ Mod1 F2 :ExecCommand fbrun
 Mod1 Tab :NextWindow
 Mod1 Shift Tab :PrevWindow
 
+! Programs we don't bind to specific desktop
+Mod1 s e :ExecCommand gedit
+
+! Desktops navigation and programs that bound to specific desktop
 Mod1 x :Workspace 1 # x(term) workspace
 Mod1 s x :MacroCmd {Workspace 1} {ExecCommand urxvt -e screen}
 
@@ -37,12 +41,6 @@ Mod1 s g :MacroCmd {Workspace 3} {ExecCommand gimp}
 
 Mod1 v :Workspace 4 # v(irtuals) workspace
 Mod1 s v :MacroCmd {Workspace 4} {ExecCommand virtualbox}
-
-Mod1 o :Workspace 5 # o(ffice) workspace
-Mod1 s o :MacroCmd {Workspace 5} {ExecCommand ooffice}
-
-Mod1 i :Workspace 6 # i(mages) workspace
-Mod1 s i :MacroCmd {Workspace 6} {ExecCommand gthumb}
 
 Mod1 s t :MacroCmd {ExecCommand pymorfix}
 

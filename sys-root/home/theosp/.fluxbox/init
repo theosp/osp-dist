@@ -42,8 +42,8 @@ session.screen0.slit.direction:	Vertical
 session.screen0.clientMenu.usePixmap:	true
 session.screen0.colPlacementDirection:	TopToBottom
 session.screen0.opaqueMove:	false
-session.screen0.workspaceNames:	= Terminals =,= Browsers =,= Graphics =,= Virtuals =,= Office =,= Images =,
-session.screen0.workspaces:	6
+session.screen0.workspaceNames:	= Terminals =,= Browsers =,= Graphics =,= Virtuals =,
+session.screen0.workspaces:	4
 session.screen0.focusNewWindows:	true
 session.screen0.resizeMode:	Bottom
 session.screen0.maxDisableMove:	false
