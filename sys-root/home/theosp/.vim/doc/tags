@@ -1,0 +1,10 @@
+:HelptagsLocal	vimrc-maps-help.txt	/*:HelptagsLocal*
+:W	vimrc-maps-help.txt	/*:W*
+:Wr	vimrc-maps-help.txt	/*:Wr*
+my	vimrc-maps-help.txt	/*my*
+my-commands-shortcuts	vimrc-maps-help.txt	/*my-commands-shortcuts*
+my-key-mappings	vimrc-maps-help.txt	/*my-key-mappings*
+my-key-mappings-general	vimrc-maps-help.txt	/*my-key-mappings-general*
+my-vimrc	vimrc-maps-help.txt	/*my-vimrc*
+mycs	vimrc-maps-help.txt	/*mycs*
+myk	vimrc-maps-help.txt	/*myk*

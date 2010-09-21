@@ -73,7 +73,9 @@ endif
 
 " Command line shortcuts
     " Allow to use :w!! to write to a file using sudo if you forgot to "sudo vim file" 
-     cmap w!! %!sudo tee > /dev/null % 
+     command Wr !sudo tee % > /dev/null %
+     command W w
+     command HelptagsLocal helptags $HOME/.vim/doc
 
 " Search Options:
 set ignorecase
@@ -396,4 +398,3 @@ map <Leader>gC :!git cola<CR>
 
 set shell=/bin/bash\ -l\ -O\ expand_aliases
 
-command W w !sudo tee % > /dev/null
