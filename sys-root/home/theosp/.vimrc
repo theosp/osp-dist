@@ -73,7 +73,7 @@ endif
 
 " Command line shortcuts
     " Allow to use :w!! to write to a file using sudo if you forgot to "sudo vim file" 
-     command Wr !sudo tee % > /dev/null %
+     command Wr w !sudo tee % > /dev/null %
      command W w
      command HelptagsLocal helptags $HOME/.vim/doc
 
