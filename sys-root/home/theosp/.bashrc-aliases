@@ -122,7 +122,7 @@ EOF
     alias ght='g push --tags' # Git pusH tags
 
     alias gd='g diff --color' # Git diff
-    alias gD='g diff --cached' # Git diff --cached
+    alias gD='g diff --color --cached' # Git diff --cached
     alias gdt='g diff --since="9 hours"' # Git diff yesterday
     alias gl='g log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
 
