@@ -9,6 +9,10 @@ alias rdesktop="rdesktop -g 1024x768"
     alias s='ssh'
 # </ssh_shortcuts>
 
+# <apache_shortcuts>
+    alias ra='sudo /etc/init.d/apache2 restart'
+# </apache_shortcuts>
+
 # <ls_shortcuts>
     alias l='ls'
     alias lsl='ls -l'
