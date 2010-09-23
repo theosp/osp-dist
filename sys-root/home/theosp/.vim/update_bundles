@@ -38,16 +38,16 @@ bundles_dir = File.join(File.dirname(__FILE__), "bundle")
 
 FileUtils.cd(bundles_dir)
 
-notrash = ARGV.include?('--notrash')
+trash = ARGV.include?('--trash')
 
-unless notrash
+if trash
   puts "Trashing everything (lookout!)"
   Dir["*"].each {|d| FileUtils.rm_rf d }
 end
 
 git_bundles.each do |url|
   dir = url.split('/').last.sub(/\.git$/, '')
-  if notrash && File.exists?(dir)
+  if !trash && File.exists?(dir)
     puts " Skipping #{dir}"
     next
   end
@@ -58,7 +58,7 @@ end
 
 vim_org_scripts.each do |name, script_id, script_type|
   local_file = File.join(name, script_type, "#{name}.#{script_type == 'zip' ? 'zip' : 'vim'}")
-  if notrash && File.exists?(local_file)
+  if !trash && File.exists?(local_file)
     puts " Skipping #{local_file}"
     next
   end
