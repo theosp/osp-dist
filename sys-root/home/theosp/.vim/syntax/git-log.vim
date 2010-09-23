@@ -1,1 +1,0 @@
-/home/osp/git-vim/syntax/git-log.vim

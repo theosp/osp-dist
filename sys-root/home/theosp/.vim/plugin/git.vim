@@ -1,1 +1,0 @@
-/home/osp/git-vim/plugin/git.vim
