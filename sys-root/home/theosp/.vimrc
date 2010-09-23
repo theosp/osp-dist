@@ -89,9 +89,9 @@ map <F5> :set invpaste<CR>
     let NERDTreeWinPos = "right"
     map <F2> :NERDTreeToggle<CR>
     " SuperTab Options
-    let g:SuperTabMappingBackward   = '<tab>'
-    let g:SuperTabMappingForward    = '<k-tab>'
-    let g:SuperTabMappingTabLiteral = '<s-tab>'
+    "let g:SuperTabMappingBackward   = '<tab>'
+    "let g:SuperTabMappingForward    = '<k-tab>'
+    "let g:SuperTabMappingTabLiteral = '<s-tab>'
     
     let g:html_indent_inctags = "html,body,head,tbody"
 " About 256-color xterm in ubuntu:
