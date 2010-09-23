@@ -398,5 +398,10 @@ map <Leader>gC :!git cola<CR>
 
 set shell=/bin/bash\ -l\ -O\ expand_aliases
 
+" Load the pathogen plugin
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+
+" Configure the localvimrc plugin
+let g:localvimrc_ask = 0 " Ask before sourcing local vimrc files. 
+let g:localvimrc_sandbox = 0 " Don't source the found local vimrc files in a sandbox
