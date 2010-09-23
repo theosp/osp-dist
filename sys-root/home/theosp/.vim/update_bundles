@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Original: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
-# Gist: https://gist.github.com/589067/a565a5be2c8fe9cda939047c508c776758c31083
+# Gist: http://gist.github.com/593551
 
 git_bundles = [ 
 #  "git://github.com/astashov/vim-ruby-debugger.git",
