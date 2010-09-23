@@ -398,3 +398,5 @@ map <Leader>gC :!git cola<CR>
 
 set shell=/bin/bash\ -l\ -O\ expand_aliases
 
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
