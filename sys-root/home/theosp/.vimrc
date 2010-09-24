@@ -113,6 +113,15 @@
         noremap <silent> <leader>rs :call ReloadAllSnippets()<CR>
         noremap <silent> <leader>rh :HelptagsLocal<CR>
     " </reloading>
+
+    " <diff>
+        " diff undos
+        " (http://stackoverflow.com/questions/945023/undoing-diff-put-when-copying-lines-between-vimdiff-windows)
+        noremap du :wincmd w<CR>:normal u<CR>:wincmd w<CR>
+
+        vnoremap do :diffget<CR>
+        vnoremap dp :diffput<CR>
+    " </diff>
 " </maps>
 
 " <command>

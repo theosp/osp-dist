@@ -3,9 +3,14 @@
 :Wr	vimrc-maps-help.txt	/*:Wr*
 my	vimrc-maps-help.txt	/*my*
 my-commands-shortcuts	vimrc-maps-help.txt	/*my-commands-shortcuts*
+my-do	vimrc-maps-help.txt	/*my-do*
+my-dp	vimrc-maps-help.txt	/*my-dp*
+my-du	vimrc-maps-help.txt	/*my-du*
 my-key-mappings	vimrc-maps-help.txt	/*my-key-mappings*
 my-key-mappings-general	vimrc-maps-help.txt	/*my-key-mappings-general*
 my-key-mappings-normal	vimrc-maps-help.txt	/*my-key-mappings-normal*
+my-key-mappings-visual	vimrc-maps-help.txt	/*my-key-mappings-visual*
+my-key-mappings-visual-diff	vimrc-maps-help.txt	/*my-key-mappings-visual-diff*
 my-rh	vimrc-maps-help.txt	/*my-rh*
 my-rs	vimrc-maps-help.txt	/*my-rs*
 my-vimrc	vimrc-maps-help.txt	/*my-vimrc*

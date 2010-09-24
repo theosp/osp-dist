@@ -3,7 +3,9 @@
 1. Commands					|my-commands-shortcuts|
 2. Key Mappings					|my-key-mappings|
    2.1 All modes				|my-key-mappings-general|
-   2.2 Normal modes				|my-key-mappings-normal|
+   2.2 Normal mode				|my-key-mappings-normal|
+   2.3 Visual mode				|my-key-mappings-visual|
+   	2.3.1 diff				|my-key-mappings-visual-diff|
 
 ==============================================================================
 1. Commands				*mycs*	*my-commands-shortcuts*
@@ -22,7 +24,7 @@
 
 2.1 All modes					*my-key-mappings-general*
 
-2.2 Normal modes				*my-key-mappings-normal*
+2.2 Normal mode					*my-key-mappings-normal*
 
 						*my-rs*
 <leader>rs	:call ReloadAllSnippets() - Reload all the SnipMate plugins
@@ -30,5 +32,20 @@
 
 						*my-rh*
 <leader>rh	:call HelptagsLocal()
+
+2.3 Visual mode					*my-key-mappings-visual*
+
+2.3.1 diff					*my-key-mappings-visual-diff*
+
+						*my-du*
+<leader>du	diff undos - Reverse the effect of diffput and diffget
+
+						*my-do*
+<leader>do	diffget (obtain) - Modify the current buffer to undo the
+		selected lines differences with the other buffer.
+
+						*my-dp*
+<leader>dp	diffput - Just like |my-do| but the other buffer is
+		modified instead of the current one.
 
  vim:tw=78:ts=8:ft=help:norl:noexpandtab:
