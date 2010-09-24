@@ -69,6 +69,11 @@
         filetype indent on
         filetype plugin on " Enable ftplugins
     " </filetype>
+
+    " <statusline>
+        set laststatus=2
+        set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%{&ft}]\ [SYNTAX=%{&syntax}]\ [%p%%]\ %{fugitive#statusline()}
+    " </statusline>
 " </settings>
 
 " <auto>
