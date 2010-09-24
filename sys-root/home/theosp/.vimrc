@@ -78,7 +78,7 @@
 
 " <auto>
     " jump to the last position when reopening a file
-    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") \| exe "normal g'\"" | endif
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
     " Save file's current folding on window close and reload it next time
     au BufWinLeave ?* mkview
