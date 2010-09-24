@@ -363,16 +363,20 @@ endfunction
 " Folding shortcuts
 map <buffer> f za
 map <buffer> F :call ToggleFold()<CR>
-let b:folded = 1
 
 function! ToggleFold()
-    if( b:folded == 0 )
-        exec "normal! zM"
-        let b:folded = 1
-    else
+    try
+        if( b:folded == 0 )
+            exec "normal! zM"
+            let b:folded = 1
+        else
+            exec "normal! zR"
+            let b:folded = 0
+        endif
+    catch /Undefined variable/
         exec "normal! zR"
         let b:folded = 0
-    endif
+    endtry
 endfunction
 
 " Save file's current folding on window close and reload it next time
