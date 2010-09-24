@@ -3,6 +3,7 @@
 1. Commands					|my-commands-shortcuts|
 2. Key Mappings					|my-key-mappings|
    2.1 All modes				|my-key-mappings-general|
+   2.2 Normal modes				|my-key-mappings-normal|
 
 ==============================================================================
 1. Commands				*mycs*	*my-commands-shortcuts*
@@ -21,5 +22,13 @@
 
 2.1 All modes					*my-key-mappings-general*
 
+2.2 Normal modes				*my-key-mappings-normal*
+
+						*my-rs*
+<leader>rs	:call ReloadAllSnippets() - Reload all the SnipMate plugins
+		snippets
+
+						*my-rh*
+<leader>rh	:call HelptagsLocal()
 
  vim:tw=78:ts=8:ft=help:norl:noexpandtab:
