@@ -28,7 +28,7 @@ vim_org_scripts = [
 #  ["IndexedSearch", "7062",  "plugin"],
    ["gist",          "13427", "plugin"],
    ["localvimrc",    "10578", "plugin"],
-#  ["jquery",        "12107", "syntax"],
+   ["jquery",        "12276", "syntax"],
 ]
 
 require 'fileutils'
