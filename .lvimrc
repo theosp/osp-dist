@@ -1,0 +1,7 @@
+let s:script_pwd = expand('<sfile>:h') 
+
+" This project deals with dot file - so we want to see them by default in the
+" NERDTree.
+let NERDTreeShowHidden = 1
+let NERDTreeShowBookmarks = 1
+let NERDTreeBookmarksFile = s:script_pwd . '/.NERDTreeBookmarks'
