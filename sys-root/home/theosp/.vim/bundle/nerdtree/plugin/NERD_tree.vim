@@ -1859,6 +1859,8 @@ endfunction
 let s:Path = {}
 "FUNCTION: Path.AbsolutePathFor(str) {{{3
 function! s:Path.AbsolutePathFor(str)
+    let str = glob(a:str)
+
     let prependCWD = 0
     if s:running_windows
         let prependCWD = a:str !~ '^.:\(\\\|\/\)'
@@ -3604,6 +3606,8 @@ function! s:bindMappings()
     command! -buffer -nargs=0 ClearAllBookmarks call s:Bookmark.ClearAll() <bar> call <SID>renderView()
     command! -buffer -nargs=0 ReadBookmarks call s:Bookmark.CacheBookmarks(0) <bar> call <SID>renderView()
     command! -buffer -nargs=0 WriteBookmarks call s:Bookmark.Write()
+
+    au BufEnter <buffer> call s:Bookmark.CacheBookmarks(0)
 endfunction
 
 " FUNCTION: s:bookmarkNode(name) {{{2
