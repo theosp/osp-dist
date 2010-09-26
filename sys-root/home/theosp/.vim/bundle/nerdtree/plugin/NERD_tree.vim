@@ -1863,12 +1863,12 @@ function! s:Path.AbsolutePathFor(str)
 
     let prependCWD = 0
     if s:running_windows
-        let prependCWD = a:str !~ '^.:\(\\\|\/\)'
+        let prependCWD = str !~ '^.:\(\\\|\/\)'
     else
-        let prependCWD = a:str !~ '^/'
+        let prependCWD = str !~ '^/'
     endif
 
-    let toReturn = a:str
+    let toReturn = str
     if prependCWD
         let toReturn = getcwd() . s:Path.Slash() . a:str
     endif
