@@ -122,6 +122,10 @@
         vnoremap do :diffget<CR>
         vnoremap dp :diffput<CR>
     " </diff>
+
+    " <yankring>
+        nnoremap <silent> <F11> :YRShow<CR>
+    " </yankring>
 " </maps>
 
 " <command>

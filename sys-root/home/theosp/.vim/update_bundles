@@ -15,6 +15,7 @@ git_bundles = [
 #  "git://github.com/tsaleh/vim-align.git",
   "git://github.com/tsaleh/vim-supertab.git",
 #  "git://github.com/tsaleh/vim-tcomment.git",
+#  "http://github.com/chrismetcalf/vim-yankring.git"
 ]
 
 vim_org_scripts = [
@@ -22,6 +23,7 @@ vim_org_scripts = [
    ["gist",          "13427", "plugin"],
    ["localvimrc",    "10578", "plugin"],
    ["jquery",        "12276", "syntax"],
+   ["yankring",      "13554", "plugin"],
 ]
 
 require 'fileutils'
