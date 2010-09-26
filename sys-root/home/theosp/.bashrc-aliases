@@ -223,3 +223,8 @@ EOF
         ssh-keygen -t rsa -C "$1"
     }
 # </ssh_shortcuts>
+
+# <sudo_shortcuts>
+    alias sudo='A=`alias` sudo ' # Enable aliases when using sudo 
+                                 # http://ubuntuforums.org/showthread.php?t=217188
+# </sudo_shortcuts>
