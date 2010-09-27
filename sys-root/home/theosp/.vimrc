@@ -115,6 +115,7 @@
     " <splitted_view>
         " Set window's minimal height
         set wh=40
+        set previewheight=50
     " </splitted_view>
 
     " <persistent_undo>
@@ -142,6 +143,16 @@
     " Save file's current folding on window close and reload it next time
     au BufWinLeave ?* mkview
     au BufWinEnter ?* silent loadview
+    " Workaround for what seems to be a bug with previewheight
+    au BufEnter * call PreviewHeightWorkAround()
+    func PreviewHeightWorkAround()
+        if &previewwindow
+            exec 'setlocal winheight='.&previewheight
+        endif
+    endfunc
+
+    " diff mode specific maps
+    au FilterWritePre * call DiffModeMaps()
 " </auto>
 
 " <maps>
