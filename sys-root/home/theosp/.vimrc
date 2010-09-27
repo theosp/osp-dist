@@ -141,8 +141,9 @@
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
     " Save file's current folding on window close and reload it next time
-    au BufWinLeave ?* mkview
-    au BufWinEnter ?* silent loadview
+    " au BufWinLeave ?* mkview
+    " au BufWinEnter ?* silent loadview
+
     " Workaround for what seems to be a bug with previewheight
     au BufEnter * call PreviewHeightWorkAround()
     func PreviewHeightWorkAround()
