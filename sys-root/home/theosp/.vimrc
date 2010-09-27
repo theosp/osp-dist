@@ -171,6 +171,16 @@
 
     " <git>
         noremap <Leader>gC :!git cola<CR>
+        noremap <Leader>gc :Gcommit<CR>
+        noremap <Leader>gs :Gstatus<CR>
+        noremap <Leader>gS :call GitDiffColorFlawWorkAround()<CR>
+        func GitDiffColorFlawWorkAround()
+            Gdiff
+            redraw!
+            wincmd h
+        endfunc
+        noremap <Leader>gd :!gd<CR>
+        noremap <Leader>gD :!gD<CR>
     " </git>
 
     " <windows_navigation>
