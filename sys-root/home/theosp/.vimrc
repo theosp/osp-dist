@@ -2,6 +2,65 @@
     let $UNDER_VIM='True'
 " </env_var>
 
+" <logging>
+    let Log = {}
+
+    " g:Log.New(log_file="/var/log/vim")
+    fu Log.New(...)
+        let new_log = copy(self)
+
+        if a:0 == 0
+            let new_log.log_file = "/var/log/vim"
+        else
+            let new_log.log_file = a:1
+        endif
+
+        return new_log
+    endfu
+
+    fu Log.log(type, str)
+        exec 'silent:!echo ' . a:type . ': ' . a:str . ' >> ' . self.log_file | redraw!
+    endfu
+
+    fu Log.debug(str)
+        call self.log('debug', a:str)
+    endfu
+
+    fu Log.info(str)
+        call self.log('info', a:str)
+    endfu
+
+    fu Log.warn(str)
+        call self.log('warn', a:str)
+    endfu
+
+    fu Log.error(str)
+        call self.log('error', a:str)
+    endfu
+
+    fu Log.critical(str)
+        call self.log('critical', a:str)
+    endfu
+
+    fu Log.clear()
+        exec 'silent:! > ' . self.log_file | redraw!
+    endfu
+
+    fu Log.view()
+        exec ':pedit ' . self.log_file
+    endfu
+
+    " The default log object
+    let log = Log.New()
+    command! -n=1 LogDebug :call g:log.debug(<f-args>)
+    command! -n=1 LogInfo :call g:log.info(<f-args>)
+    command! -n=1 LogWarn :call g:log.warn(<f-args>)
+    command! -n=1 LogError :call g:log.error(<f-args>)
+    command! -n=1 LogCritical :call g:log.critical(<f-args>)
+    command! -n=1 LogClear :call g:log.clear(<f-args>)
+    command! -n=0 LogView :call g:log.view(<f-args>)
+" </logging>
+
 " <settings>
     " <general>
         set nocompatible
@@ -122,6 +181,11 @@
         vnoremap do :diffget<CR>
         vnoremap dp :diffput<CR>
     " </diff>
+
+    " <logging>
+        noremap <silent> <leader>l :call log.view()<CR>
+        noremap <silent> <leader>cl :call log.clear()<CR>
+    " </logging>
 
     " <yankring>
         nnoremap <silent> <F11> :YRShow<CR>

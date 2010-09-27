@@ -6,6 +6,8 @@
    2.2 Normal mode				|my-key-mappings-normal|
    2.3 Visual mode				|my-key-mappings-visual|
    	2.3.1 diff				|my-key-mappings-visual-diff|
+3. Logging					|my-logging|
+   3.1 Commands					|my-logging-commands|
 
 ==============================================================================
 1. Commands				*mycs*	*my-commands-shortcuts*
@@ -50,5 +52,55 @@
 						*my-dp*
 <leader>dp	diffput - Just like |my-do| but the other buffer is
 		modified instead of the current one.
+
+==============================================================================
+3. Logging					*my-logging*
+
+3.1 Commands					*my-logging-commands*
+
+:LogClear {msg}	Clears /var/log/vim
+
+:LogView {msg}	Opens /var/log/vim in a preview window
+
+:LogDebug {msg}	log {msg} to /var/log/vim as a line in the format:
+		DEBUG: {msg}
+
+:LogInfo {msg}	log {msg} to /var/log/vim as a line in the format:
+		INFO: {msg}
+
+:LogWarn {msg}	log {msg} to /var/log/vim as a line in the format:
+		WARN: {msg}
+
+:LogError {msg}	log {msg} to /var/log/vim as a line in the format:
+		ERROR: {msg}
+
+:LogCritical {msg}
+		log {msg} to /var/log/vim as a line in the format:
+		CRITICAL: {msg}
+
+3.2 The log class				*my-logging-class*
+
+Log.New(log_file="/var/log/vim")
+		Initiate new Log object that save and display log messages
+		to/from a:log_file
+
+Log.log(type, str)
+		log {msg} to self.log_file as a line in the format:
+		a:type: a:str
+
+Log.debug(str)	The same as Log.log('debug', str)
+
+Log.info(str)	The same as Log.log('info', str)
+
+Log.warn(str)	The same as Log.log('warn', str)
+
+Log.error(str)	The same as Log.log('error', str)
+
+Log.critical(str)
+ 		The same as Log.log('critical', str)
+
+Log.clear()	Clear self.log_file
+
+fu Log.view()	Opens self.log_file in a preview window
 
  vim:tw=78:ts=8:ft=help:norl:noexpandtab:

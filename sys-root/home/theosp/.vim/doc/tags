@@ -11,8 +11,12 @@ my-key-mappings-general	vimrc-maps-help.txt	/*my-key-mappings-general*
 my-key-mappings-normal	vimrc-maps-help.txt	/*my-key-mappings-normal*
 my-key-mappings-visual	vimrc-maps-help.txt	/*my-key-mappings-visual*
 my-key-mappings-visual-diff	vimrc-maps-help.txt	/*my-key-mappings-visual-diff*
+my-logging	vimrc-maps-help.txt	/*my-logging*
+my-logging-class	vimrc-maps-help.txt	/*my-logging-class*
+my-logging-commands	vimrc-maps-help.txt	/*my-logging-commands*
 my-rh	vimrc-maps-help.txt	/*my-rh*
 my-rs	vimrc-maps-help.txt	/*my-rs*
+my-show-yankring-plugin	vimrc-maps-help.txt	/*my-show-yankring-plugin*
 my-vimrc	vimrc-maps-help.txt	/*my-vimrc*
 mycs	vimrc-maps-help.txt	/*mycs*
 myk	vimrc-maps-help.txt	/*myk*
