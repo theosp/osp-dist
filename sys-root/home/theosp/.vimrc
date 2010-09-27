@@ -196,12 +196,29 @@
     " </reloading>
 
     " <diff>
-        " diff undos
-        " (http://stackoverflow.com/questions/945023/undoing-diff-put-when-copying-lines-between-vimdiff-windows)
-        noremap du :wincmd w<CR>:normal u<CR>:wincmd w<CR>
+        func DiffModeMaps()
+            " diff undos
+            " (http://stackoverflow.com/questions/945023/undoing-diff-put-when-copying-lines-between-vimdiff-windows)
+            nnoremap du :wincmd w<CR>:normal u<CR>:wincmd w<CR>
 
-        vnoremap do :diffget<CR>
-        vnoremap dp :diffput<CR>
+            vnoremap do :diffget<CR>
+            vnoremap dp :diffput<CR>
+
+            augroup diff
+                au BufWinLeave <buffer> call RemoveDiffModeMaps()
+            augroup END
+        endfunc
+
+        func RemoveDiffModeMaps()
+            nunmap du
+
+            vunmap do
+            vunmap dp
+
+            augroup diff
+                au!
+            augroup END
+        endfunc
     " </diff>
 
     " <logging>
