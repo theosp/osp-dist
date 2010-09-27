@@ -1,6 +1,7 @@
 bashrc /home/osp/osp-dist/sys-root/home/theosp/.bashrc
 bashrc-aliases /home/osp/osp-dist/sys-root/home/theosp/.bashrc-aliases
+my-docs /home/osp/osp-dist/sys-root/home/theosp/.vim/doc/vimrc-maps-help.txt
 vim-plugins-manager /home/osp/osp-dist/sys-root/home/theosp/.vim/update_bundles
 vimrc /home/osp/osp-dist/sys-root/home/theosp/.vimrc
 
-vim-log-plugin /home/osp/osp-dist/sys-root/home/theosp/.vim/plugin/log.vim
+vim-log-plugin ~/osp-dist/sys-root/home/theosp/.vim/plugin/log.vim
