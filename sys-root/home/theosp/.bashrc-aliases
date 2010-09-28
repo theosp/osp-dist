@@ -234,3 +234,5 @@ EOF
     alias sudo='A=`alias` sudo ' # Enable aliases when using sudo 
                                  # http://ubuntuforums.org/showthread.php?t=217188
 # </sudo_shortcuts>
+
+# vim:ft=bash:
