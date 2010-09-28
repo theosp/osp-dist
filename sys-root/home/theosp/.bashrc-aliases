@@ -108,10 +108,10 @@ Git Shortcuts:
     gtl - git tag -l
 
 Git Functions: 
-    gig(project_name, user_name=theosp)   - Git Init Github
-    gclg(project_name, user_name=theosp)  - Git Clone GitHub
-    gta(tag_name, message=tag_name)       - Git Tag Annotated
-    gsmag(project_name, user_name=theosp) - Git Submodule Add GitHub
+    gig(project_name, user_name=theosp)        - Git Init Github
+    gclg(project_name, user_name=theosp)       - Git Clone GitHub
+    gta(tag_name, message=tag_name, commit="") - Git Tag Annotated
+    gsmag(project_name, user_name=theosp)      - Git Submodule Add GitHub
 EOF
     }
     alias g='git' # Git
@@ -203,13 +203,19 @@ EOF
         gsma git@github.com:"$user_name"/"$project_name".git
     }
 
-    # Git Tag Annotated - gta(tag_name, message=tag_name)
+    # Git Tag Annotated - gta(tag_name, message=tag_name, commit="")
     gta ()
     {
         tag_name="$1"
         message="${2:-$tag_name}"
+        commit="$3"
 
-        gt -a "$tag_name" -m "$message"
+        if [[ -z "$commit" ]]
+        then
+            gt -a "$tag_name" -m "$message"
+        else
+            gt -a "$tag_name" -m "$message" "$commit"
+        fi
     }
 # <git_shortcuts>
 
