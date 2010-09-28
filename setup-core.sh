@@ -62,8 +62,8 @@ sudo locale-gen he_IL.UTF-8
 sudo locale-gen en_US.UTF-8
 
 # Enable vim logging
-touch /var/log/vim
-chmod a+rw /var/log/vim
+sudo touch /var/log/vim
+sudo chmod a+rw /var/log/vim
 
 case "$(lsb_release -s -i)" in
     "Ubuntu")
