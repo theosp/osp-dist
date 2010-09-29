@@ -79,6 +79,10 @@
         set wildmenu
     " </bash_like_tab_completion>
 
+    " <folding>
+        set foldcolumn=1
+    " </folding>
+
     " <display>
         syntax on
         set ruler		                 " show the cursor position all the time
