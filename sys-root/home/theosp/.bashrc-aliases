@@ -263,4 +263,7 @@ EOF
                                  # http://ubuntuforums.org/showthread.php?t=217188
 # </sudo_shortcuts>
 
+# <ln_shortcuts>
+    alias lns='ln -s'
+# </ln_shortcuts>
 # vim:ft=bash:
