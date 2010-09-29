@@ -165,8 +165,7 @@
     " </f>
 
     " <folding>
-        noremap <buffer> f za
-        noremap <buffer> F :call ToggleFold()<CR>
+        noremap <leader>f :call ToggleFold()<CR>
     " </folding>
 
     " <git>
