@@ -5,13 +5,22 @@ shopt -s nocasematch
 echo -n "Need SSH key (Y/n)? "
 IFS= read -r gen_ssh
 if [[ "$gen_ssh" =~ [y] ]]
+then
     # Generate an SSH key
     echo -n "Enter your github user email: "
     IFS= read -r email
     ssh-keygen -t rsa -C "$email"
 fi
 
-echo -n "Print public key ([x]clip/[c]at/[N]one)?"
+echo -n "Install Git ([Y]es/[n]o)? "
+IFS= read -r install_git
+case "$install_git" in
+    [^n])
+        sudo apt-get install git-core
+    ;;
+esac
+
+echo -n "Print public key ([x]clip/[c]at/[N]one)? "
 IFS= read -r print_public_key
 case "$print_public_key" in
     [x])
