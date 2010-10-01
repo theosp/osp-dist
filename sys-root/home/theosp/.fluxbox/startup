@@ -10,4 +10,12 @@ fi
 
 nm-applet &
 
+# I've found the use of the <esc> key to be inefficient (it's too far), but
+# since my fingers are so used to it, in order to get rid of the habit of using
+# it I've decided to disable it by remapping it to space.
+#
+# In vim <C-c> should be used instead.
+# Everywhere else <c-[> can be used.
+xmodmap -e "keycode 9 = space"
+
 exec /usr/bin/fluxbox
