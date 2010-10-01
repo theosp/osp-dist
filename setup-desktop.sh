@@ -27,15 +27,15 @@ sudoCopy () {
     sudo cp "$SCRIPT_PWD/sys-root$path" "$target"
 }
 
-link /home/theosp/.fluxbox
-link /home/theosp/.Xdefaults
-
-sudo mkdir -p /usr/share/images/wallpapers/
-sudoCopy /usr/share/images/wallpapers/light-fish_1920X1200.jpg
-
 case "$(lsb_release -s -i)" in
     "Ubuntu")
         sudo aptitude install git-cola fluxbox eterm kdiff3
         # we need eterm since fluxbox uses its background setter
     ;;
 esac
+
+link /home/theosp/.fluxbox
+link /home/theosp/.Xdefaults
+
+sudo mkdir -p /usr/share/images/wallpapers/
+sudoCopy /usr/share/images/wallpapers/light-fish_1920X1200.jpg
