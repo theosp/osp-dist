@@ -10,7 +10,7 @@ tar -xvjf vim-7.3.tar.bz2
 
 cd vim73
 
-./configure --with-x --bindir /usr/bin
+./configure --with-x --bindir /usr/bin --with-features=big
 make
 sudo make install
 
