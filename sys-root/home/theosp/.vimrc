@@ -57,7 +57,7 @@
     command! -n=1 LogWarn :call g:log.warn(<f-args>)
     command! -n=1 LogError :call g:log.error(<f-args>)
     command! -n=1 LogCritical :call g:log.critical(<f-args>)
-    command! -n=1 LogClear :call g:log.clear(<f-args>)
+    command! -n=0 LogClear :call g:log.clear(<f-args>)
     command! -n=0 LogView :call g:log.view(<f-args>)
 " </logging>
 
@@ -235,6 +235,10 @@
     " <yankring>
         nnoremap <silent> <F11> :YRShow<CR>
     " </yankring>
+
+    " <resource_current_file>
+        nnoremap <silent> <F12> :so %<CR>
+    " </resource_current_file>
 " </maps>
 
 " <command>
