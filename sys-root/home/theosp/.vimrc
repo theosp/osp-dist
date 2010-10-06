@@ -246,9 +246,9 @@
 " </maps>
 
 " <command>
-    command Wr w !sudo tee % > /dev/null %
-    command W w
-    command HelptagsLocal helptags $HOME/.vim/doc
+    command! Wr w! !sudo tee % > /dev/null %
+    command! W w
+    command! HelptagsLocal helptags $HOME/.vim/doc
 " </command>
 
 " <plugins>
