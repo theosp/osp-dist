@@ -150,7 +150,7 @@
 
     " Workaround for what seems to be a bug with previewheight
     au BufEnter * call PreviewHeightWorkAround()
-    func PreviewHeightWorkAround()
+    func! PreviewHeightWorkAround()
         if &previewwindow
             exec 'setlocal winheight='.&previewheight
         endif
@@ -180,7 +180,7 @@
         noremap <Leader>gc :Gcommit<CR>
         noremap <Leader>gs :Gstatus<CR>
         noremap <Leader>gS :call GitDiffColorFlawWorkAround()<CR>
-        func GitDiffColorFlawWorkAround()
+        func! GitDiffColorFlawWorkAround()
             Gdiff
             redraw!
             wincmd h
@@ -202,7 +202,7 @@
     " </reloading>
 
     " <diff>
-        func DiffModeMaps()
+        func! DiffModeMaps()
             " diff undos
             " (http://stackoverflow.com/questions/945023/undoing-diff-put-when-copying-lines-between-vimdiff-windows)
             nnoremap du :wincmd w<CR>:normal u<CR>:wincmd w<CR>
@@ -215,7 +215,7 @@
             augroup END
         endfunc
 
-        func RemoveDiffModeMaps()
+        func! RemoveDiffModeMaps()
             nunmap du
 
             vunmap do
