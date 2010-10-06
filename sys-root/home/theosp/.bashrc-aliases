@@ -29,6 +29,18 @@ alias rdesktop="rdesktop -g 1024x768"
     }
 # </reversed_commands>
 
+# <find>
+   # Recursive search string in path's files
+   # rs(needle, path=".")
+   rs ()
+   {
+       local needle="$1"
+       local path="${2:-.}"
+
+       find "$path" -type f -exec grep -Hn "$1" {} \;
+   }
+# </find>
+
 # <mplayer_shortcuts>
     alias ma='mplayer *'
 # </mplayer_shortcuts>
