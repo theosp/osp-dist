@@ -158,6 +158,10 @@
 
     " diff mode specific maps
     au FilterWritePre * call DiffModeMaps()
+
+    " <resource_vimrc_onchange>
+        autocmd! bufwritepost .vimrc source %
+    " </resource_vimrc_onchange>
 " </auto>
 
 " <maps>
