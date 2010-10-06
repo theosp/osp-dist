@@ -156,15 +156,13 @@ Git Functions:
 EOF
     }
     alias g='git' # Git
-    alias glo='g pull origin' # Git pulL Origin
-    alias gho='g push origin' # Git pusH Origin
-    alias glom='g pull origin master' # Git pulL Origin Master
-    alias ghom='g push origin master' # Git pusH Origin Master
-    alias glo='g pull origin' # Git pulL Origin
-    alias gho='g push origin' # Git pusH Origin
     alias gl='g pull' # Git pulL
     alias gh='g push' # Git pusH
-    alias ght='g push --tags' # Git pusH tags
+    alias glo='gl origin' # Git pulL Origin
+    alias gho='gh origin' # Git pusH Origin
+    alias glom='glo master' # Git pulL Origin Master
+    alias ghom='gho master' # Git pusH Origin Master
+    alias ght='gh --tags' # Git pusH tags
 
     alias gd='g diff --color' # Git diff
     alias gD='g diff --color --cached' # Git diff --cached
