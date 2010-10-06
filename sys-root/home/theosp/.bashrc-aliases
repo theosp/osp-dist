@@ -152,6 +152,7 @@ Git Functions:
     gclg(project_name, user_name=theosp)       - Git Clone GitHub
     gta(tag_name, message=tag_name, commit="") - Git Tag Annotated
     gsmag(project_name, user_name=theosp)      - Git Submodule Add GitHub
+    gtdr(tag_name, remote="origin")            - Git Tag Delete (from) Remote
 EOF
     }
     alias g='git' # Git
@@ -257,6 +258,15 @@ EOF
         else
             gt -a "$tag_name" -m "$message" "$commit"
         fi
+    }
+
+    # Git Tag Delete Remote - gtdr(tag_name, remote="origin")
+    gtdr ()
+    {
+        tag_name="$1"
+        remote="${2:-origin}"
+
+        gh "$remote" :"$tag_name"
     }
 # <git_shortcuts>
 
