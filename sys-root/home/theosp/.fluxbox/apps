@@ -34,3 +34,6 @@
 [app] (name=pymorfix) (class=Pymorfix)
   [Layer]	{2}
 [end]
+[app] (name=xcalc) (class=XCalc)
+  [Layer]	{2}
+[end]
