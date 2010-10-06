@@ -106,7 +106,7 @@ Git Shortcuts:
     gd   - Git diff
     gD   - Git diff --cached
     gdt  - Git diff yesterday
-    gl   - Git log (--pretty=oneline --graph)
+    gL   - Git log (--pretty=oneline --graph)
 
     gs   - git status
     gss  - git status --short
@@ -168,7 +168,8 @@ EOF
     alias gd='g diff --color' # Git diff
     alias gD='g diff --color --cached' # Git diff --cached
     alias gdt='g diff --since="9 hours"' # Git diff yesterday
-    alias gl='g log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
+
+    alias gL='g log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
 
     alias gs='g status' # git status
     alias gss='g status --short' # git status --short
