@@ -102,6 +102,7 @@ Git Shortcuts:
     gl   - Git pulL
     gh   - Git pusH
     ght  - Git pusH tags
+    ghto - Git pusH tags origin
 
     gd   - Git diff
     gD   - Git diff --cached
@@ -132,6 +133,8 @@ Git Shortcuts:
     gC   - git cola
 
     gb   - git branch
+    gbd  - git branch -d
+    gbD  - git branch -D
     gch  - git checkout
     gchb - git checkout -b
     gcht - git checkout -t
@@ -141,11 +144,13 @@ Git Shortcuts:
     gmm  - git merge master
 
     gmv  - git mv
+    grm  - git rm
 
     gi  - git init 
 
     gt  - git tag
     gtl - git tag -l
+    gtd - git tag -d
 
 Git Functions: 
     gig(project_name, user_name=theosp)        - Git Init Github
@@ -163,6 +168,7 @@ EOF
     alias glom='glo master' # Git pulL Origin Master
     alias ghom='gho master' # Git pusH Origin Master
     alias ght='gh --tags' # Git pusH tags
+    alias ghto='gh --tags origin' # Git pusH tags to origin
 
     alias gd='g diff --color' # Git diff
     alias gD='g diff --color --cached' # Git diff --cached
@@ -194,6 +200,8 @@ EOF
     alias gC='g cola' # git cola
 
     alias gb='g branch' # git branch
+    alias gbd='g branch -d' # git branch -d
+    alias gbD='g branch -D' # git branch -D
     alias gch='g checkout' # git checkout
     alias gchb='g checkout -b' # git checkout -b
     alias gcht='g checkout -t' # git checkout -t
@@ -203,11 +211,13 @@ EOF
     alias gmm='g merge master' # git merge master
 
     alias gmv='g mv' # git mv
+    alias grm='g rm' # git rm
 
     alias gi='g init' # git init
 
     alias gt='g tag' # git tag
     alias gtl='g tag -l' # git tag -l
+    alias gtd='g tag -d' # git tag -d
 
     # Git Init Github - gig(project_name, user_name=theosp)
     gig ()
