@@ -152,6 +152,9 @@ Git Shortcuts:
     gtl  - git tag -l
     gtd  - git tag -d
 
+Plumbing:
+    grp  - git rev-parse
+    grph - git rev-parse HEAD
 
 Git Functions: 
     gig(project_name, user_name=theosp)        - Git Init Github
@@ -219,6 +222,10 @@ EOF
     alias gt='g tag' # git tag
     alias gtl='g tag -l' # git tag -l
     alias gtd='g tag -d' # git tag -d
+
+    # plumbing
+    alias grp='g rev-parse' # git rev-parse
+    alias grph='g rev-parse HEAD' # git rev-parse HEAD
 
     # Git Init Github - gig(project_name, user_name=theosp)
     gig ()
