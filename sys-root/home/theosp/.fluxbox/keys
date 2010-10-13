@@ -27,6 +27,7 @@ Mod1 Shift Tab :PrevWindow
 
 ! Programs we don't bind to specific desktop
 Mod1 s e :ExecCommand gedit
+Mod1 s 3 :ExecCommand xchat
 Mod1 s 4 :ExecCommand xcalc
 
 ! Desktops navigation and programs that bound to specific desktop
