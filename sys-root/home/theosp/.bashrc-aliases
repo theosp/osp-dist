@@ -146,11 +146,12 @@ Git Shortcuts:
     gmv  - git mv
     grm  - git rm
 
-    gi  - git init 
+    gi   - git init 
 
-    gt  - git tag
-    gtl - git tag -l
-    gtd - git tag -d
+    gt   - git tag
+    gtl  - git tag -l
+    gtd  - git tag -d
+
 
 Git Functions: 
     gig(project_name, user_name=theosp)        - Git Init Github
