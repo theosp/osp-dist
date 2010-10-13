@@ -7,6 +7,9 @@ sys-root/home/theosp/.vim/backup/*
 sys-root/home/theosp/.vim/tmp/*
 !sys-root/home/theosp/.vim/tmp/.placeholder
 sys-root/home/theosp/.vim/.netrwhist
+
+sys-root/home/theosp/.fluxbox/fbrun_history
+
 vim-7.3.tar.bz2
 vim73
 
