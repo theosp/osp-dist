@@ -1,1 +1,1 @@
-nmap <buffer> <silent> <S-e> :!python %
+nnoremap <buffer> <silent> <S-e> :!python %<Cr>
