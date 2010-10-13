@@ -29,7 +29,7 @@ sudoCopy () {
 
 case "$(lsb_release -s -i)" in
     "Ubuntu")
-        sudo aptitude install git-cola fluxbox eterm kdiff3
+        sudo aptitude install git-cola fluxbox eterm kdiff3 xchat
         # we need eterm since fluxbox uses its background setter
     ;;
 esac
