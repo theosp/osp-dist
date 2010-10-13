@@ -136,7 +136,12 @@
 
     " <statusline>
         set laststatus=2
-        set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%{&ft}]\ [SYNTAX=%{&syntax}]\ [%p%%]\ %{fugitive#statusline()}
+        " <full path to the file in the buffer>\
+        " <modified flag><readonly flag><help buffer flag>\
+        " <preview window flag> [<fileformat>/<filetype>/<syntax>] \
+        " [<line>/<column>/<percentage through file in lines>] \
+        " <fugitive plugin git status>
+        set statusline=%F%m%r%h%w\ [%{&ff}/%{&ft}/%{&syntax}]\ [%l,%v\|%p%%]\ %{fugitive#statusline()}
     " </statusline>
 " </settings>
 
