@@ -24,10 +24,6 @@ done
 
 BASHRC_PWD="$(script_pwd)"
 
-# script_pwd will be available later using bupler.script_pwd ()
-# we delete it here for tidiness
-unset -f script_pwd
-
 cd "$BASHRC_PWD/../../.."
 OSP_DIST_PWD="$(pwd -P)"
 cd - > /dev/null
