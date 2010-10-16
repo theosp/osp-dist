@@ -3,8 +3,6 @@
 
 # source locale conf
 . ~/.bashrc-locale
-# source exports definitions
-. ~/.bashrc-exports
 
 # The following is a clone of the bupler lib's bupler.script_pwd function as it
 # was in bupler-lib commit: 01e255794dbcd3d557631e3cea8b414e5be95e89, we define
@@ -50,6 +48,12 @@ done
     return 0
 }
 
+# load programs configurations
+for i in ~/.bash/config/*
+do
+    . "$i"
+done
+
 BASHRC_PWD="$(script_pwd)"
 
 # script_pwd will be available later using bupler.script_pwd ()
@@ -63,21 +67,6 @@ cd - > /dev/null
 # source the Bupler lib base module
 . "$OSP_DIST_PWD/bupler-lib/modules/bupler"
 
-# don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoredups
-# ... and ignore same sucessive entries.
-export HISTCONTROL=ignoreboth
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
-# appends to .bash_history instead of overwriting which is invaluable with 
-# multiple terminals
-shopt -s histappend
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
@@ -126,32 +115,6 @@ case "$TERM" in
     ;;
 esac
 
-
-# enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ] && [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
-
-# turn off the visual bell
-if [ -x /usr/bin/xset ]; then
-    xset b off
-    xset b 0 0 0
-fi
-
-SSHAGENT=/usr/bin/ssh-agent
-SSHAGENTARGS="-s"
-if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
-    eval `$SSHAGENT $SSHAGENTARGS`
-    trap "kill $SSH_AGENT_PID" 0
-fi
 
 # When under a git repository this function adds the bash prompt indicators about
 # the repository status.
