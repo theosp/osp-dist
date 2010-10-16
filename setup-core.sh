@@ -43,6 +43,7 @@ sudoCopy /usr/share/terminfo/s/screen-w
 
 link /home/theosp/.vim
 link /home/theosp/.vimrc
+link /home/theosp/.bash
 link /home/theosp/.bash_profile
 link /home/theosp/.bashrc
 link /home/theosp/.bashrc-aliases

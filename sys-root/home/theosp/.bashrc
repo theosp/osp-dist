@@ -3,8 +3,6 @@
 
 # source locale conf
 . ~/.bashrc-locale
-# source alias definitions
-. ~/.bashrc-aliases
 # source exports definitions
 . ~/.bashrc-exports
 
@@ -21,6 +19,11 @@ script_pwd ()
     then
         physical=1
     fi
+# load aliases
+for i in ~/.bash/alias/*
+do
+    . "$i"
+done
 
     local SCRIPT_PWD="${BASH_SOURCE[1]}"
     if [ -h "${SCRIPT_PWD}" ] 
