@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo aptitude install python-dev
+sudo aptitude install python-dev libjpeg62-dev
 
 wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
 
