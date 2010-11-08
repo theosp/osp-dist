@@ -1,1 +1,1 @@
-nnoremap <buffer> <silent> <S-e> :!python %<Cr>
+nnoremap <unique> <buffer> <silent> <S-e> :!python %<Cr>
