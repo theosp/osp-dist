@@ -56,6 +56,8 @@ Git Shortcuts:
     gmv  - git mv
     grm  - git rm
 
+    gra  - git remote add
+
     gi   - git init 
 
     gt   - git tag
@@ -127,6 +129,8 @@ alias gmm='g merge master' # git merge master
 
 alias gmv='g mv' # git mv
 alias grm='g rm' # git rm
+
+alias gra='g remote add' # git remote add
 
 alias gi='g init' # git init
 
