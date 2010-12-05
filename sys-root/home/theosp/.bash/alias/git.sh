@@ -43,6 +43,7 @@ Git Shortcuts:
     gC   - git cola
 
     gb   - git branch
+    gba  - git branch -a
     gbd  - git branch -d
     gbD  - git branch -D
     gch  - git checkout
@@ -117,6 +118,7 @@ alias gcl='g clone' # git clone
 alias gC='g cola' # git cola
 
 alias gb='g branch' # git branch
+alias gba='gb -a' # git branch -a
 alias gbd='g branch -d' # git branch -d
 alias gbD='g branch -D' # git branch -D
 alias gch='g checkout' # git checkout
