@@ -1,6 +1,20 @@
 # If not running interactively or under vim, don't do anything
 [ -z "$PS1" ] && [ -z "$UNDER_VIM" ] && return
 
+# source script_pwd which is essential for bupler's init
+. ~/.bash/function/script_pwd.sh
+
+# Get this script physical path 
+BASHRC_PWD="$(script_pwd)"
+
+# Get the osp-dist package physical path
+cd "$BASHRC_PWD/../../.."
+OSP_DIST_PWD="$(pwd -P)"
+cd - > /dev/null
+
+# source the Bupler lib base module
+. "$OSP_DIST_PWD/bupler-lib/modules/bupler"
+
 # source locale conf
 . ~/.bashrc-locale
 
@@ -21,17 +35,6 @@ for i in ~/.bash/config/*
 do
     . "$i"
 done
-
-# Get this script physical path 
-BASHRC_PWD="$(script_pwd)"
-
-# Get the osp-dist package physical path
-cd "$BASHRC_PWD/../../.."
-OSP_DIST_PWD="$(pwd -P)"
-cd - > /dev/null
-
-# source the Bupler lib base module
-. "$OSP_DIST_PWD/bupler-lib/modules/bupler"
 
 # load plugins
 for i in ~/.bash/plugin/*
