@@ -5,8 +5,8 @@ ghelp () {
 Git Shortcuts:
     glo  - Git pulL Origin
     gho  - Git pusH Origin
-    glom - Git pulL Origin Master
-    ghom - Git pusH Origin Master
+    gloc - Git pulL Origin Current 
+    ghoc - Git pusH Origin Current
     glo  - Git pulL Origin
     gho  - Git pusH Origin
     gl   - Git pulL
@@ -83,8 +83,24 @@ alias gl='g pull' # Git pulL
 alias gh='g push' # Git pusH
 alias glo='gl origin' # Git pulL Origin
 alias gho='gh origin' # Git pusH Origin
-alias glom='glo master' # Git pulL Origin Master
-alias ghom='gho master' # Git pusH Origin Master
+
+# alias ghoc
+# alias gloc
+if type bupler.import &> /dev/null
+then
+    bupler.import git
+
+    ghoc ()
+    {
+        gho "$(git.current_branch)"
+    }
+
+    gloc ()
+    {
+        glo "$(git.current_branch)"
+    }
+fi
+
 alias ght='gh --tags' # Git pusH tags
 alias ghto='gh --tags origin' # Git pusH tags to origin
 
