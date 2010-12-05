@@ -1,10 +1,193 @@
+snippet #!
+	#!/usr/bin/env node
+
+# commands {{{
 snippet log
 	console.log(${1:var});
+# }}}
 
+# Shortcuts {{{
+snippet export
+	exports.${1:prop} = $1;
+snippet global
+	global.${1:prop} = $1;
+snippet st
+	var self = this;
+snippet jconstructor
+	/*
+	$.${1:ConstructorName}
+
+	AUTHOR: Daniel Chcouri <333222@gmail.com>
+
+	RERUIRES: Node.js's EventEmitter
+	          Daniel Chcouri's ModesManager
+	          Daniel Chcouri's theosp_common_js (theosp.js)
+	*/
+	(function ($) {
+	    $.$1 = function (options) {
+	        var self = this;
+
+	        if (typeof options === 'undefined') {
+	            options = {};
+	        }
+	        self.options = theosp.object.clone(self.options); // clone the prototypical options
+	        $.extend(self.options, options);
+
+	        self.modes_manager = new $.ModesManager({modes_prefix: self.options.css_prefix});
+
+	        self.init();
+	    };
+
+	    $.$1.prototype = new EventEmitter();
+	    $.$1.prototype.constructor = $.$1;
+
+	    $.$1.prototype.$ = function (selector, context) {
+	        var self = this;
+
+	        selector = theosp.string.supplant(selector, {
+	    	    prefix: self.options.css_prefix,
+		        id: self.id
+	        });
+
+	        return $(selector, context);
+	    };
+
+	    $.$1.prototype.options = {
+	        // meta_options
+	        css_prefix: '$1-',
+
+			// options
+	    };
+
+	    $.$1.prototype.init = function () {
+	        var self = this;
+	    };
+	})(jQuery);
+# }}}
+
+# functions {{{
 # Anonymous function
-snippet af
-	function () {${2:body}}${1:;}
+snippet afun
+	function () {
+		${1}
+	}
+snippet afun;
+	function () {
+		${1}
+	};
+snippet pr
+	${1:obj}.prototype.${2:name} = function () {
+	    var self = this;
 
-# Anonymous Function inside an Object
-snippet afo
-	${2:key}: function () {${3:body}}${1:,}
+	    ${3}
+	};
+# }}}
+
+# for blocks {{{
+# for in
+snippet forin
+	for (var ${1:item} in ${2:object}) {
+		if ($2.hasOwnProperty($1)) {
+			${3}
+		}
+	}
+# }}}
+
+# Ifs {{{
+# if defined
+snippet ifd
+	if (typeof ${1:obj} !== 'undefined') {
+		${2}
+	}
+# if undefined
+snippet ifud
+	if (typeof ${1:obj} === 'undefined') {
+		${2}
+	}
+# if true
+snippet ift
+	if (${1:obj} === true) {
+		${2}
+	}
+# if false
+snippet iff
+	if (${1:obj} === false) {
+		${2}
+	}
+# if is object
+snippet ifobj
+	if (typeof ${1:obj} === 'object') {
+		${2}
+	}
+snippet ifnull
+	if (${1:obj} === null) {
+		${2}
+	}
+snippet ifnotempty
+	if (${1:var} !== '') {
+		${2}
+	}
+# if property is in an object
+snippet ifin
+	if (${1:prop} in ${2:obj}) {
+		${2}
+	}
+# if property is not in an object
+snippet ifnotin
+	if (!(${1:prop} in ${2:obj})) {
+		${2}
+	}
+# else if 
+snippet elif
+	else if (${1}) {
+		${2}
+	}
+# else
+snippet else
+	else {
+		${1}
+	}
+# }}}
+
+# Types Tests {{{
+snippet isobj
+	typeof ${1:var} === 'object'${2}
+snippet isnum
+	typeof ${1:var} === 'number'${2}
+snippet isstr
+	typeof ${1:var} === 'string'${2}
+snippet isbool
+	typeof ${1:var} === 'boolean'${2}
+snippet isarray
+	theosp.array.isArray(${1:var});
+snippet isnull
+	${1:var} === null
+snippet notobj
+	typeof ${1:var} !== 'object'${2}
+snippet notnum
+	typeof ${1:var} !== 'number'${2}
+snippet notstr
+	typeof ${1:var} !== 'string'${2}
+snippet notbool
+	typeof ${1:var} !== 'boolean'${2}
+snippet notarray
+	!theosp.array.isArray(${1:var});
+snippet notnull
+	${1:var} !== null
+# }}}
+
+# General Tests {{{
+snippet isin
+	${1:property} in ${2:obj}
+snippet notin
+	!(${1:property} in ${2:obj})
+# }}}
+
+# Boolean Operators {{{
+snippet and
+	&& ${1}
+snippet or 
+	|| ${1}
+# }}}
+
+# vim:foldmethod=marker:
