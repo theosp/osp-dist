@@ -2,79 +2,132 @@
 
 ghelp () {
     cat <<EOF
-Git Shortcuts:
-    glo  - Git pulL Origin
-    gho  - Git pusH Origin
-    gloc - Git pulL Origin Current 
-    ghoc - Git pusH Origin Current
-    glo  - Git pulL Origin
-    gho  - Git pusH Origin
-    gl   - Git pulL
-    gh   - Git pusH
-    ght  - Git pusH tags
-    ghto - Git pusH tags origin
+Git Shortcuts
+=============
 
-    gd   - Git diff
-    gD   - Git diff --cached
-    gdt  - Git diff yesterday
-    gL   - Git log (--pretty=oneline --graph)
+Pull / pushs
+------------
 
-    gs   - git status
-    gss  - git status --short
+glo  - Git pulL Origin
+gho  - Git pusH Origin
+gloc - Git pulL Origin Current 
+ghoc - Git pusH Origin Current
+glo  - Git pulL Origin
+gho  - Git pusH Origin
+gl   - Git pulL
+gh   - Git pusH
+ght  - Git pusH tags
+ghto - Git pusH tags origin
 
-    gsma - git submodule add
-    gsmi - git submodule init
-    gsmu - git submodule update
+Diffs and logs
+--------------
 
-    gf   - git fetch
+gd   - Git diff
+gD   - Git diff --cached
+gdt  - Git diff yesterday
 
-    gS   - git stash
-    gp   - git stash pop 
+gL   - Git log (--pretty=oneline --graph)
 
-    ga   - git add
-    gc   - git commit
-    gcA  - git commit --amend
-    gca  - git commit -a
-    gcm  - git commit -m
-    gcam - git commit -a -m
+Status
+------
 
-    gcl  - git clone
+gs   - git status
+gss  - git status --short
 
-    gC   - git cola
+Submodules
+----------
 
-    gb   - git branch
-    gba  - git branch -a
-    gbd  - git branch -d
-    gbD  - git branch -D
-    gch  - git checkout
-    gchb - git checkout -b
-    gcht - git checkout -t
-    gchm - git checkout master
+gsma - git submodule add
+gsmi - git submodule init
+gsmu - git submodule update
 
-    gm   - git merge
-    gmm  - git merge master
+gsmag(project_name, user_name=theosp)      - Git Submodule Add GitHub
 
-    gmv  - git mv
-    grm  - git rm
+Fetch
+-----
 
-    gra  - git remote add
+gf   - git fetch
 
-    gi   - git init 
+The stash
+---------
 
-    gt   - git tag
-    gtl  - git tag -l
-    gtd  - git tag -d
+gS   - git stash
+gp   - git stash pop 
 
-Plumbing:
-    grp  - git rev-parse
-    grph - git rev-parse HEAD
+The index and commits
+---------------------
 
-Git Functions: 
-    gig(project_name, user_name=theosp)        - Git Init Github
-    gclg(project_name, user_name=theosp)       - Git Clone GitHub
-    gta(tag_name, message=tag_name, commit="") - Git Tag Annotated
-    gsmag(project_name, user_name=theosp)      - Git Submodule Add GitHub
-    gtdr(tag_name, remote="origin")            - Git Tag Delete (from) Remote
+ga   - git add
+gc   - git commit
+gcA  - git commit --amend
+gca  - git commit -a
+gcm  - git commit -m
+gcam - git commit -a -m
+
+Clones
+------
+
+gcl  - git clone
+
+gclg(project_name, user_name=theosp)       - Git Clone GitHub
+
+Helpers
+-------
+
+gC   - git cola
+
+Branches
+--------
+
+gb   - git branch
+gba  - git branch -a
+gbd  - git branch -d
+gbD  - git branch -D
+gch  - git checkout
+gchb - git checkout -b
+gcht - git checkout -t
+gchm - git checkout master
+
+Merges
+------
+
+gm   - git merge
+gmm  - git merge master
+
+Files move/remove
+-----------------
+
+gmv  - git mv
+grm  - git rm
+
+Remotes
+-------
+
+gra  - git remote add
+
+Init
+----
+
+gi   - git init 
+
+gig(project_name, user_name=theosp)        - Git Init Github
+
+Tags
+----
+
+gt   - git tag
+gtl  - git tag -l
+gtd  - git tag -d
+
+gtdr(tag_name, remote="origin")            - Git Tag Delete (from) Remote
+gta(tag_name, message=tag_name, commit="") - Git Tag Annotated
+
+Plumbings
+---------
+
+grp  - git rev-parse
+grph - git rev-parse HEAD
+
 EOF
 }
 
