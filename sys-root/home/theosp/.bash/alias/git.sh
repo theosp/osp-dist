@@ -83,6 +83,7 @@ gb   - git branch
 gba  - git branch -a
 gbd  - git branch -d
 gbD  - git branch -D
+gbm  - git branch -m (move)
 gch  - git checkout
 gchb - git checkout -b
 gcht - git checkout -t
@@ -190,6 +191,7 @@ alias gb='g branch' # git branch
 alias gba='gb -a' # git branch -a
 alias gbd='gb -d' # git branch -d
 alias gbD='gb -D' # git branch -D
+alias gbm='gb -m' # git branch -m
 alias gch='g checkout' # git checkout
 alias gchb='gch -b' # git checkout -b
 alias gcht='gch -t' # git checkout -t
