@@ -164,7 +164,7 @@ alias gdt='g diff --since="9 hours"' # Git diff yesterday
 alias gL='g log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
 
 alias gs='g status' # git status
-alias gss='g status --short' # git status --short
+alias gss='gs --short' # git status --short
 
 alias gsma='g submodule add' # git submodule add
 alias gsmi='g submodule init' # git submodule init
@@ -173,14 +173,14 @@ alias gsmu='g submodule update' # git submodule update
 alias gf='g fetch' # git fetch
 
 alias gS='g stash' # git stash
-alias gp='g stash pop' # git pop 
+alias gp='gS pop' # git pop 
 
 alias ga='g add' # git add
 alias gc='g commit' # git commit
-alias gcA='g commit --amend' # git commit --amend
-alias gca='g commit -a' # git commit -a
-alias gcm='g commit -m' # git commit -m
-alias gcam='g commit -a -m' # git commit -a -m
+alias gcA='gc --amend' # git commit --amend
+alias gca='gc -a' # git commit -a
+alias gcm='gc -m' # git commit -m
+alias gcam='gca -m' # git commit -a -m
 
 alias gcl='g clone' # git clone
 
@@ -188,15 +188,15 @@ alias gC='g cola' # git cola
 
 alias gb='g branch' # git branch
 alias gba='gb -a' # git branch -a
-alias gbd='g branch -d' # git branch -d
-alias gbD='g branch -D' # git branch -D
+alias gbd='gb -d' # git branch -d
+alias gbD='gb -D' # git branch -D
 alias gch='g checkout' # git checkout
-alias gchb='g checkout -b' # git checkout -b
-alias gcht='g checkout -t' # git checkout -t
-alias gchm='g checkout master' # git checkout master
+alias gchb='gch -b' # git checkout -b
+alias gcht='gch -t' # git checkout -t
+alias gchm='gch master' # git checkout master
 
 alias gm='g merge' # git merge
-alias gmm='g merge master' # git merge master
+alias gmm='gm master' # git merge master
 
 alias gmv='g mv' # git mv
 alias grm='g rm' # git rm
@@ -206,8 +206,8 @@ alias gra='g remote add' # git remote add
 alias gi='g init' # git init
 
 alias gt='g tag' # git tag
-alias gtl='g tag -l' # git tag -l
-alias gtd='g tag -d' # git tag -d
+alias gtl='gt -l' # git tag -l
+alias gtd='gt -d' # git tag -d
 
 # plumbing
 alias grp='g rev-parse' # git rev-parse
