@@ -13,7 +13,98 @@ snippet global
 	global.${1:prop} = $1;
 snippet st
 	var self = this;
-snippet jconstructor
+snippet jquery_child_constructor
+	/*
+	$.${1:ConstructorName}
+
+	AUTHOR: Daniel Chcouri <333222@gmail.com>
+
+	RERUIRES: Node.js's EventEmitter
+	          Daniel Chcouri's ModesManager
+	          Daniel Chcouri's theosp_common_js (theosp.js)
+	*/
+	(function ($) {
+	    $.$1 = function (parent, options) {
+	        var self = this;
+
+			self.elements = {
+				parent: $(parent);
+			};
+
+	        if (typeof options === 'undefined') {
+	            options = {};
+	        }
+	        self.options = theosp.object.clone(self.options); // clone the prototypical options
+	        $.extend(self.options, options);
+
+	        self.modes_manager = new $.ModesManager({modes_prefix: self.options.css_prefix});
+
+	        self.init();
+	    };
+
+	    $.$1.prototype = new EventEmitter();
+	    $.$1.prototype.constructor = $.$1;
+
+	    $.$1.prototype.$ = function (selector, context) {
+	        var self = this;
+
+	        selector = theosp.string.supplant(selector, {
+	    	    prefix: self.options.css_prefix,
+		        id: self.id
+	        });
+
+	        return $(selector, context);
+	    };
+
+	    $.$1.prototype.options = {
+	        // meta_options
+	        css_prefix: '$1-',
+
+			// options
+	    };
+
+	    $.$1.prototype.init = function () {
+	        var self = this;
+
+	        // Set events that were passed via the options object
+	        for (var event in self.options.events) {
+	            if (self.options.events.hasOwnProperty(event)) {
+	                self.on(event, self.options.events[event]);
+	            }
+	        }
+
+			self.initDom();
+	    };
+
+	    $.$1.prototype.initDom = function () {
+	        var self = this;
+
+	        self.elements.parent.append(
+	            theosp.string.supplant(
+	                (
+	                 '<div class="|prefix|${2:underScoresConstructorName}_container">' +
+	                     '<div class="|prefix|$2">' +
+	                     '</div>' +
+					 '</div>'
+	                ), {prefix: self.options.css_prefix
+	                }
+	            )
+	        );
+	    };
+
+	    $.fn.extend({
+	    	${3:lowerCamelCasedConstructorName}: function (options) {
+	            var $3Objects = [];
+
+	            this.each(function () {
+	                $3Objects.push(new $.$1(this, options));
+	    		});
+
+	            return $3Objects;
+	        }
+	    });
+	})(jQuery);
+snippet jquery_constructor
 	/*
 	$.${1:ConstructorName}
 
