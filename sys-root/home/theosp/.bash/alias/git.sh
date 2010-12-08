@@ -104,7 +104,7 @@ grm  - git rm
 Remotes
 -------
 
-gra  - git remote add
+gRa  - git remote add
 
 Init
 ----
@@ -203,7 +203,7 @@ alias gmm='gm master' # git merge master
 alias gmv='g mv' # git mv
 alias grm='g rm' # git rm
 
-alias gra='g remote add' # git remote add
+alias gRa='g remote add' # git remote add
 
 alias gi='g init' # git init
 
