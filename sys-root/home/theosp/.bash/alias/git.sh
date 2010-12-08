@@ -110,8 +110,9 @@ gRa  - git remote add
 Reset
 -----
 
-gr   - git reset
-grh  - git reset HEAD
+gr    - git reset
+grh   - git reset HEAD
+grsh1 - git reset --soft HEAD^1
 
 Init
 ----
@@ -215,6 +216,7 @@ alias gRa='gR add' # git remote add
 
 alias gr='git reset'
 alias grh='gr HEAD'
+alias grsh1='gr --soft HEAD^1'
 
 alias gi='g init' # git init
 
