@@ -23,6 +23,7 @@ Diffs and logs
 --------------
 
 gd   - Git diff
+gdp  - Git diff --no-prefix (p is for patch since its output can be used by patch -p0)
 gdh1 - Git diff HEAD^1
 gD   - Git diff --cached
 gdt  - Git diff yesterday
@@ -168,6 +169,7 @@ alias ght='gh --tags' # Git pusH tags
 alias ghto='gh --tags origin' # Git pusH tags to origin
 
 alias gd='g diff --color' # Git diff
+alias gdp='gd --no-color --no-prefix'
 alias gdh1='gd HEAD^1' # Git diff
 alias gD='gd --cached' # Git diff --cached
 alias gdt='gd --since="9 hours"' # Git diff yesterday
