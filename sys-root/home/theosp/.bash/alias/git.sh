@@ -23,6 +23,7 @@ Diffs and logs
 --------------
 
 gd   - Git diff
+gdh1 - Git diff HEAD^1
 gD   - Git diff --cached
 gdt  - Git diff yesterday
 
@@ -167,8 +168,9 @@ alias ght='gh --tags' # Git pusH tags
 alias ghto='gh --tags origin' # Git pusH tags to origin
 
 alias gd='g diff --color' # Git diff
-alias gD='g diff --color --cached' # Git diff --cached
-alias gdt='g diff --since="9 hours"' # Git diff yesterday
+alias gdh1='gd HEAD^1' # Git diff
+alias gD='gd --cached' # Git diff --cached
+alias gdt='gd --since="9 hours"' # Git diff yesterday
 
 alias gL='g log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
 
