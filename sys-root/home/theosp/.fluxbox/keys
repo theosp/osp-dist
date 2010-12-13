@@ -43,7 +43,7 @@ Mod1 g :Workspace 3 # g(imp) workspace
 Mod1 s g :MacroCmd {Workspace 3} {ExecCommand gimp}
 
 Mod1 v :Workspace 4 # v(irtuals) workspace
-Mod1 s v :MacroCmd {Workspace 4} {ExecCommand virtualbox}
+Mod1 s v :MacroCmd {Workspace 4} {ExecCommand VirtualBox}
 
 Mod1 s t :MacroCmd {ExecCommand pymorfix}
 
