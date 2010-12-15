@@ -28,7 +28,7 @@ snippet jquery_child_constructor
 	        var self = this;
 
 			self.elements = {
-				parent: $(parent);
+				parent: $(parent)
 			};
 
 	        if (typeof options === 'undefined') {
@@ -58,7 +58,7 @@ snippet jquery_child_constructor
 
 	    $.$1.prototype.options = {
 	        // meta_options
-	        css_prefix: '$1-',
+	        css_prefix: '$1-'
 
 			// options
 	    };
@@ -145,7 +145,7 @@ snippet jquery_constructor
 
 	    $.$1.prototype.options = {
 	        // meta_options
-	        css_prefix: '$1-',
+	        css_prefix: '$1-'
 
 			// options
 	    };
@@ -154,6 +154,46 @@ snippet jquery_constructor
 	        var self = this;
 	    };
 	})(jQuery);
+snippet constructor
+	/*
+	${1:ConstructorName}
+
+	AUTHOR: Daniel Chcouri <333222@gmail.com>
+
+	RERUIRES: Node.js's EventEmitter
+	          Daniel Chcouri's theosp_common_js (theosp.js)
+	*/
+
+	(function () {
+	    $1 = function (options) {
+	    	var self = this;
+
+	    	if (typeof options === 'undefined') {
+	    		options = {};
+	    	}
+	    	self.options = theosp.object.clone(self.options); // clone the prototypical options
+	    	theosp.object.extend(self.options, options);
+
+	    	self.init();
+	    };
+
+	    $1.prototype = new EventEmitter();
+	    $1.prototype.constructor = $1;
+
+	    $1.prototype.options = {
+	    };
+
+	    $1.prototype.init = function () {
+	    	var self = this;
+	    };
+
+	    // If this script has been loaded using CommonJS's
+	    if (typeof module === 'object' && typeof module.exports === 'object') {
+	        exports.$1 = $1;
+	    } else {
+	        this.$1 = $1;
+	    }
+	})();
 # }}}
 
 # functions {{{

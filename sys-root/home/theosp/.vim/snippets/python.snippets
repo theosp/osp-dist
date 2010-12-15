@@ -4,3 +4,57 @@ snippet log
 snippet debug
 	import logging
 	logging.debug(${1:var})
+
+snippet gae_api
+	#!/usr/bin/env python
+	
+	from google.appengine.ext import webapp, db
+	from google.appengine.ext.webapp.util import run_wsgi_app
+	
+	from django.utils import simplejson as json
+	
+	from datetime import datetime, date
+	class JsonEncoder(json.JSONEncoder):
+	    def default(self, obj):
+	        if isinstance(obj, datetime):
+	            return '**new Date(%i,%i,%i,%i,%i,%i)' % (obj.year,
+	                                                      obj.month-1,
+	                                                      obj.day,
+	                                                      obj.hour,
+	                                                      obj.minute,
+	                                                      obj.second)
+	
+	        if isinstance(obj, date):
+	            return '**new Date(%i,%i,%i)' % (obj.year,
+	                                             obj.month-1,
+	                                             obj.day)
+	
+	        if isinstance(obj, db.Model):
+	            dict_representation = {}
+	            for field in obj.fields():
+	                dict_representation[field] = getattr(obj, field)
+	
+	            return dict_representation
+	
+	        return obj.__dict__
+	
+	
+	class Default(webapp.RequestHandler):
+		"""Default serves the paths we don't have particular mapping for
+		"""
+
+	    def get(self):
+	        if self.request.path[-1] != '/':
+	            return self.redirect(self.request.path + '/', permanent=True)
+	
+	        self.error(404)
+	
+	application = webapp.WSGIApplication([
+	    ('.*', Default),
+	], debug=True)
+	
+	def main():
+	    run_wsgi_app(application)
+	
+	if __name__ == '__main__':
+	    main()
