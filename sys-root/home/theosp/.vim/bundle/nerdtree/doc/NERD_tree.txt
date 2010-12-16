@@ -249,7 +249,7 @@ B.......Toggle whether the bookmark table is displayed...........|NERDTree-B|
 
 q.......Close the NERDTree window................................|NERDTree-q|
 A.......Zoom (maximize/minimize) the NERDTree window.............|NERDTree-A|
-?.......Toggle the display of the quick help.....................|NERDTree-?|
+he......Toggle the display of the quick help.....................|NERDTree-he|
 
 ------------------------------------------------------------------------------
                                                                   *NERDTree-o*
@@ -557,8 +557,8 @@ Applies to: no restrictions.
 Maximize (zoom) and minimize the NERDtree window.
 
 ------------------------------------------------------------------------------
-                                                                  *NERDTree-?*
-Default key: ?
+                                                                 *NERDTree-he*
+Default key: he
 Map option: NERDTreeMapHelp
 Applies to: no restrictions.
 
@@ -953,7 +953,7 @@ NERDTreeAddKeyMap({options})                             *NERDTreeAddKeyMap()*
     "key" - the trigger key for the new mapping
     "callback" - the function the new mapping will be bound to
     "quickhelpText" - the text that will appear in the quickhelp (see
-    |NERDTree-?|)
+    |NERDTree-he|)
 
     Example: >
         call NERDTreeAddKeyMap({
