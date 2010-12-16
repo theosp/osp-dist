@@ -68,6 +68,6 @@ sudo chmod a+rw /var/log/vim
 
 case "$(lsb_release -s -i)" in
     "Ubuntu")
-        sudo aptitude install tree curl screen ipython
+        sudo aptitude install tree curl screen ipython ruby
     ;;
 esac
