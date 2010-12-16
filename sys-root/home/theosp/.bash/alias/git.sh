@@ -10,12 +10,16 @@ Pull / pushs
 
 glo  - Git pulL Origin
 gho  - Git pusH Origin
+ghfo - Git pusH Force Origin
+       Can be used to cancel pushes by:
+       ghfo [commit_to_revert_to]:master
 gloc - Git pulL Origin Current 
 ghoc - Git pusH Origin Current
 glo  - Git pulL Origin
 gho  - Git pusH Origin
 gl   - Git pulL
 gh   - Git pusH
+ghf  - Git pusH Force
 ght  - Git pusH tags
 ghto - Git pusH tags origin
 
@@ -147,6 +151,8 @@ alias gl='g pull' # Git pulL
 alias gh='g push' # Git pusH
 alias glo='gl origin' # Git pulL Origin
 alias gho='gh origin' # Git pusH Origin
+alias ghf='gh -f' # Git pusH Force
+alias ghfo='ghf origin' # Git pusH Force Origin
 
 # alias ghoc
 # alias gloc
