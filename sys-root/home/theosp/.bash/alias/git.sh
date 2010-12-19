@@ -110,9 +110,11 @@ grm  - git rm
 Remotes
 -------
 
-gR   - git remote
-gRa  - git remote add
-gRao - git remote add origin
+gR    - git remote
+gRa   - git remote add
+gRao  - git remote add origin
+
+gRaog(project_name, user_name=theosp) - git remote add origin Github
 
 Reset
 -----
@@ -126,7 +128,7 @@ Init
 
 gi   - git init 
 
-gig(project_name, user_name=theosp)        - Git Init Github
+gig(project_name, user_name=theosp) - Git Init Github
 
 Tags
 ----
@@ -225,6 +227,15 @@ alias grm='g rm' # git rm
 alias gR='g remote' # git remote add
 alias gRa='gR add' # git remote add
 alias gRao='gRa origin' # git remote add origin
+
+# Git Remote Add Origin Github - gRaog(project_name, user_name=theosp)
+gRaog ()
+{
+    project_name="$1"
+    user_name="${2:-theosp}"
+
+    gRao "git@github.com:${user_name}/${project_name}.git"
+}
 
 alias gr='git reset'
 alias grh='gr HEAD'
