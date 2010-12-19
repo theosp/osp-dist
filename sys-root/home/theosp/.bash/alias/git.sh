@@ -106,6 +106,7 @@ Files move/remove
 
 gmv  - git mv
 grm  - git rm
+grmr - git rm -r
 
 Remotes
 -------
@@ -223,6 +224,7 @@ alias gmm='gm master' # git merge master
 
 alias gmv='g mv' # git mv
 alias grm='g rm' # git rm
+alias grmr='grm -r' # git rm -r
 
 alias gR='g remote' # git remote add
 alias gRa='gR add' # git remote add
