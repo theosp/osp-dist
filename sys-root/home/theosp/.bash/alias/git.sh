@@ -47,7 +47,7 @@ gsma - git submodule add
 gsmi - git submodule init
 gsmu - git submodule update
 
-gsmag(project_name, user_name=theosp)      - Git Submodule Add GitHub
+gsmag(project_name, path=., user_name=theosp)      - Git Submodule Add GitHub
 
 Fetch
 -----
@@ -278,13 +278,14 @@ gclg ()
     gcl git@github.com:"$user_name"/"$project_name".git
 }
 
-# Git Submodule Add GitHub - gsmag(project_name, user_name=theosp)
+# Git Submodule Add GitHub - gsmag(project_name, path=., user_name=theosp)
 gsmag ()
 {
     project_name="$1"
-    user_name="${2:-theosp}"
+    path="${2:-.}"
+    user_name="${3:-theosp}"
 
-    gsma git@github.com:"$user_name"/"$project_name".git
+    gsma git@github.com:"$user_name"/"$project_name".git "$path"
 }
 
 # Git Tag Annotated - gta(tag_name, message=tag_name, commit="")
