@@ -43,6 +43,7 @@ gss  - git status --short
 Submodules
 ----------
 
+gsm  - git submodule
 gsma - git submodule add
 gsmi - git submodule init
 gsmu - git submodule update
@@ -189,6 +190,7 @@ alias gL='g log --pretty=oneline --graph' # Git log (--pretty=oneline --graph)
 alias gs='g status' # git status
 alias gss='gs --short' # git status --short
 
+alias gsm='g submodule' # git submodule
 alias gsma='g submodule add' # git submodule add
 alias gsmi='g submodule init' # git submodule init
 alias gsmu='g submodule update' # git submodule update
