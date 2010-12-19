@@ -112,6 +112,7 @@ Remotes
 
 gR   - git remote
 gRa  - git remote add
+gRao - git remote add origin
 
 Reset
 -----
@@ -223,6 +224,7 @@ alias grm='g rm' # git rm
 
 alias gR='g remote' # git remote add
 alias gRa='gR add' # git remote add
+alias gRao='gRa origin' # git remote add origin
 
 alias gr='git reset'
 alias grh='gr HEAD'
