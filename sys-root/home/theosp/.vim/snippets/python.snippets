@@ -8,6 +8,17 @@ snippet debug
 snippet gae_api
 	#!/usr/bin/env python
 	
+	###########################################################
+	# Solve bug: http://groups.google.com/group/google-appengine-python/browse_thread/thread/e3a9d8b8be36870d/5dc96ab56b889dc6?pli=1
+	# Remove the standard version of Django and put version 1.1
+	import os
+	
+	os.environ['DJANGO_SETTINGS_MODULE'] = 'razoss_dock.settings'
+	if not os.path.exists(os.path.abspath(os.path.dirname(__file__)) + '/../non_gae_indicator'):
+	    from appengine_django import InstallAppengineHelperForDjango
+	    InstallAppengineHelperForDjango(version='1.1')
+	###########################################################
+	
 	from google.appengine.ext import webapp, db
 	from google.appengine.ext.webapp.util import run_wsgi_app
 	
@@ -16,33 +27,21 @@ snippet gae_api
 	from datetime import datetime, date
 	class JsonEncoder(json.JSONEncoder):
 	    def default(self, obj):
-	        if isinstance(obj, datetime):
-	            return '**new Date(%i,%i,%i,%i,%i,%i)' % (obj.year,
-	                                                      obj.month-1,
-	                                                      obj.day,
-	                                                      obj.hour,
-	                                                      obj.minute,
-	                                                      obj.second)
+	        """Example for type encoder definition
 	
 	        if isinstance(obj, date):
 	            return '**new Date(%i,%i,%i)' % (obj.year,
 	                                             obj.month-1,
 	                                             obj.day)
-	
-	        if isinstance(obj, db.Model):
-	            dict_representation = {}
-	            for field in obj.fields():
-	                dict_representation[field] = getattr(obj, field)
-	
-	            return dict_representation
+	        """
 	
 	        return obj.__dict__
 	
 	
 	class Default(webapp.RequestHandler):
-		"""Default serves the paths we don't have particular mapping for
-		"""
-
+	    """Default serves the paths we don't have particular mapping for
+	    """
+	
 	    def get(self):
 	        if self.request.path[-1] != '/':
 	            return self.redirect(self.request.path + '/', permanent=True)
