@@ -43,10 +43,12 @@ gss  - git status --short
 Submodules
 ----------
 
-gsm  - git submodule
-gsma - git submodule add
-gsmi - git submodule init
-gsmu - git submodule update
+gsm   - git submodule
+gsma  - git submodule add
+gsmi  - git submodule init
+gsmu  - git submodule update
+gsmur - git submodule update recursive
+gsmir - git submodule init recursive
 
 gsmag(project_name, path=., user_name=theosp)      - Git Submodule Add GitHub
 
@@ -191,9 +193,11 @@ alias gs='g status' # git status
 alias gss='gs --short' # git status --short
 
 alias gsm='g submodule' # git submodule
-alias gsma='g submodule add' # git submodule add
-alias gsmi='g submodule init' # git submodule init
-alias gsmu='g submodule update' # git submodule update
+alias gsma='gsm add' # git submodule add
+alias gsmi='gsm init' # git submodule init
+alias gsmu='gsm update' # git submodule update
+alias gsmur='gsmu --recursive' # git submodule update
+alias gsmir='gsmur --init' # git submodule init (recursive)
 
 alias gf='g fetch' # git fetch
 
