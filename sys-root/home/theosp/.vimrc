@@ -141,7 +141,7 @@
         " <preview window flag> [<fileformat>/<filetype>/<syntax>] \
         " [<line>/<column>/<percentage through file in lines>] \
         " <fugitive plugin git status>
-        set statusline=%F%m%r%h%w\ [%{&ff}/%{&ft}/%{&syntax}]\ [%l,%v\|%p%%]\ %{fugitive#statusline()}
+        set statusline=%F%m%r%h%w\ [%{&ff}/%{&ft}/%{&syntax}]\ [%l,%v\|%p%%]
     " </statusline>
 " </settings>
 
