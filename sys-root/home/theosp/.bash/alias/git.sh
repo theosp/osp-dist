@@ -272,7 +272,7 @@ gig ()
     ga README
     gcm 'first commit'
     g remote add origin git@github.com:"$user_name"/"$project_name".git
-    ghom
+    ghoc
 }
 
 # Git Clone GitHub - gclg(project_name, user_name=theosp)
