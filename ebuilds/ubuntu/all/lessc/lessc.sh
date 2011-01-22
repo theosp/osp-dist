@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo aptitude install rubygems1.8
+gem uninstall less
 
-sudo gem install less
+curl http://npmjs.org/install.sh | sh 
 
-sudo ln -s /var/lib/gems/1.8/bin/lessc /usr/local/bin
+npm install less
