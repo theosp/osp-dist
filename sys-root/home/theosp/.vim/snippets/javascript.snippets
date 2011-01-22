@@ -325,4 +325,24 @@ snippet or
 	|| ${1}
 # }}}
 
+# vim related snippets {{{
+
+# folds {{{
+snippet {{
+	// ${1:foldname} {{{
+snippet }}
+	// }}}
+snippet {}
+	// ${1:foldname} {{{
+	${2}
+	// }}}
+# }}}
+
+# modline {{{
+snippet vmod
+	// vim:fdm=marker:fmr={{{,}}}:
+# }}}
+
+# }}}
+
 # vim:foldmethod=marker:
