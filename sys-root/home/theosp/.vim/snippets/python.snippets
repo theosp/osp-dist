@@ -57,3 +57,23 @@ snippet gae_api
 	
 	if __name__ == '__main__':
 	    main()
+
+# vim related snippets {{{
+
+# folds {{{
+snippet {{
+	# ${1:foldname} {{{
+snippet c}
+	# }}}
+snippet {}
+	# ${1:foldname} {{{
+	${2}
+	# }}}
+# }}}
+
+# modline {{{
+snippet vmod
+	# vim:fdm=marker:fmr={{{,}}}:
+# }}}
+
+# }}}
