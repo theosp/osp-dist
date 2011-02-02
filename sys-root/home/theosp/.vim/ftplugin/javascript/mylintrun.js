@@ -24,11 +24,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var stdin = process.openStdin();
+var stdin = process.openStdin(),
+    body = "";
+
 stdin.setEncoding('utf8');
 stdin.on('data', function (chunk) {
-    body = chunk;
-
+    body += chunk;
+}
+stdin.on('end', function () {
     // require jslint
     var path = require('path');
     var jslint = require(path.dirname(__filename) + '/fulljslint.js');
