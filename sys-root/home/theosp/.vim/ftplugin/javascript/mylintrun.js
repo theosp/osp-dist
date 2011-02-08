@@ -30,7 +30,7 @@ var stdin = process.openStdin(),
 stdin.setEncoding('utf8');
 stdin.on('data', function (chunk) {
     body += chunk;
-}
+});
 stdin.on('end', function () {
     // require jslint
     var path = require('path');
