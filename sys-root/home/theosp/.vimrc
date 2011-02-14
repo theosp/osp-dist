@@ -178,9 +178,9 @@
     " </f>
 
     " <folding>
-        noremap <silent> <S-F> :call ToggleFold()<CR>
-        noremap f zA
-        noremap <space> za
+        nnoremap <silent> <S-F> :call ToggleFold()<CR>
+        nnoremap f zA
+        nnoremap <space> za
         vnoremap <space> zf
     " </folding>
 
