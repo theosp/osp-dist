@@ -214,14 +214,26 @@ snippet pr
 	};
 # }}}
 
-# for blocks {{{
-# for in
+# for {{{
+
+# forin: loop over objects {{{
 snippet forin
 	for (var ${1:item} in ${2:object}) {
 		if ($2.hasOwnProperty($1)) {
 			${3}
 		}
 	}
+# }}}
+
+# for: loop over arrays {{{
+snippet for
+	for (var ${2:i} = 0; $2 < ${1:Things}.length; $2${3:++}) {
+		var ${5:item} = ${4:$1[$2]};
+
+		${6}
+	}
+# }}}
+
 # }}}
 
 # Ifs {{{
@@ -240,6 +252,13 @@ snippet ifud
 	if (typeof ${1:obj} === 'undefined') {
 		${2}
 	}
+# if undefined default
+snippet ifudd
+	if (typeof ${1:obj} === 'undefined') {
+		$1 = ${2:""};
+	}
+
+	${3}
 # if true
 snippet ift
 	if (${1:obj} === true) {
@@ -368,5 +387,6 @@ snippet tfs
 	    '</table>' +
 	'</fieldset>' +
 # }}}
-
+snippet clear
+	'<div class="clear"></div>' +
 # vim:foldmethod=marker:
