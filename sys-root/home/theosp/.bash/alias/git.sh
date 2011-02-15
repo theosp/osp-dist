@@ -263,7 +263,9 @@ gig ()
 {
     user_project_name="$1"
 
-    mkdir "$project_name"
+    project_name="${user_project_name#*/}"
+
+    mkdir "${project_name}"
     cd "$project_name"
     gi
     touch README
