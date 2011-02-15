@@ -1,5 +1,7 @@
 #!/bin/bash
 
+shopt -s expand_aliases
+
 ghelp () {
     cat <<EOF
 Git Shortcuts
