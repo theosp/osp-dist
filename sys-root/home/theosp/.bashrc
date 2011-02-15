@@ -1,5 +1,6 @@
-# If not running interactively or under vim, don't do anything
-[ -z "$PS1" ] && [ -z "$UNDER_VIM" ] && return
+# Do nothing, unless interactive mode, or the user explicitly tells us he wants
+# to, or under vim
+[ -z "$PS1" ] && [ -z "$UNDER_VIM" ] && [ -z "$BASHRC_INTERACTIVE_MODE_INIT" ] && return
 
 # source script_pwd which is essential for bupler's init
 . ~/.bash/function/script_pwd.sh
