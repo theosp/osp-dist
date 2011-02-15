@@ -50,7 +50,7 @@ gsmu  - git submodule update
 gsmur - git submodule update recursive
 gsmir - git submodule init recursive
 
-gsmag(project_name, path=., user_name=theosp)      - Git Submodule Add GitHub
+gsmag(user_name/project_name, path=.)      - Git Submodule Add GitHub
 
 Fetch
 -----
@@ -78,7 +78,7 @@ Clones
 
 gcl  - git clone
 
-gclg(project_name, user_name=theosp)       - Git Clone GitHub
+gclg(user_name/project_name)       - Git Clone GitHub
 
 Helpers
 -------
@@ -118,7 +118,7 @@ gR    - git remote
 gRa   - git remote add
 gRao  - git remote add origin
 
-gRaog(project_name, user_name=theosp) - git remote add origin Github
+gRaog(user_name/project_name) - git remote add origin Github
 
 Reset
 -----
@@ -132,7 +132,7 @@ Init
 
 gi   - git init 
 
-gig(project_name, user_name=theosp) - Git Init Github
+gig(user_name/project_name) - Git Init Github
 
 Tags
 ----
@@ -236,13 +236,12 @@ alias gR='g remote' # git remote add
 alias gRa='gR add' # git remote add
 alias gRao='gRa origin' # git remote add origin
 
-# Git Remote Add Origin Github - gRaog(project_name, user_name=theosp)
+# Git Remote Add Origin Github - gRaog(user_name/project_name)
 gRaog ()
 {
-    project_name="$1"
-    user_name="${2:-theosp}"
+    user_project_name="$1"
 
-    gRao "git@github.com:${user_name}/${project_name}.git"
+    gRao "git@github.com:${user_project_name}.git"
 }
 
 alias gr='git reset'
@@ -259,11 +258,10 @@ alias gtd='gt -d' # git tag -d
 alias grp='g rev-parse' # git rev-parse
 alias grph='g rev-parse HEAD' # git rev-parse HEAD
 
-# Git Init Github - gig(project_name, user_name=theosp)
+# Git Init Github - gig(user_name/project_name)
 gig ()
 {
-    project_name="$1"
-    user_name="${2:-theosp}"
+    user_project_name="$1"
 
     mkdir "$project_name"
     cd "$project_name"
@@ -271,27 +269,25 @@ gig ()
     touch README
     ga README
     gcm 'first commit'
-    g remote add origin git@github.com:"$user_name"/"$project_name".git
+    g remote add origin git@github.com:"$user_project_name".git
     ghoc
 }
 
-# Git Clone GitHub - gclg(project_name, user_name=theosp)
+# Git Clone GitHub - gclg(user_name/project_name)
 gclg ()
 {
-    project_name="$1"
-    user_name="${2:-theosp}"
+    user_project_name="$1"
 
-    gcl git@github.com:"$user_name"/"$project_name".git
+    gcl git@github.com:"$user_project_name".git
 }
 
-# Git Submodule Add GitHub - gsmag(project_name, path=., user_name=theosp)
+# Git Submodule Add GitHub - gsmag(user_name/project_name, path=.)
 gsmag ()
 {
-    project_name="$1"
+    user_project_name="$1"
     path="${2:-.}"
-    user_name="${3:-theosp}"
 
-    gsma git@github.com:"$user_name"/"$project_name".git "$path"
+    gsma git@github.com:"$user_project_name".git "$path"
 }
 
 # Git Tag Annotated - gta(tag_name, message=tag_name, commit="")
