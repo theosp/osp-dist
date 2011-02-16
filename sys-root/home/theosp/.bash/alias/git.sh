@@ -52,7 +52,7 @@ gsmu  - git submodule update
 gsmur - git submodule update recursive
 gsmir - git submodule init recursive
 
-gsmag(user_name/project_name, path=.)      - Git Submodule Add GitHub
+gsmag(user_name/project_name, path=., read_only=0) - Git Submodule Add GitHub
 
 Fetch
 -----
@@ -285,13 +285,19 @@ gclg ()
     gcl git@github.com:"$user_project_name".git
 }
 
-# Git Submodule Add GitHub - gsmag(user_name/project_name, path=.)
+# Git Submodule Add GitHub - gsmag(user_name/project_name, path=., read_only=0)
 gsmag ()
 {
     user_project_name="$1"
     path="${2:-.}"
+    read_only="${3:-1}"
 
-    gsma git@github.com:"$user_project_name".git "$path"
+    if (( "$read_only" == 0 )); then
+        gsma git@github.com:"$user_project_name".git "$path"
+    else
+        gsma https://github.com/"$user_project_name".git "$path"
+    fi
+
 }
 
 # Git Tag Annotated - gta(tag_name, message=tag_name, commit="")
