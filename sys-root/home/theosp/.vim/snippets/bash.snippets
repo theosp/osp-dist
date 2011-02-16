@@ -1,3 +1,4 @@
+# ifs {{{
 snippet if
 	if [[ ${1:condition} ]]; then
 	    ${2}
@@ -6,3 +7,20 @@ snippet ifz
 	if [[ -z "$${1:variable}" ]]; then
 	    ${2}
 	fi
+# }}}
+
+# vim meta {{{
+
+# folds {{{
+snippet {{
+	# ${1:foldname} {{{
+snippet c}
+	# }}}
+snippet {}
+	# ${1:foldname} {{{
+	${2}
+	# }}}
+
+# }}}
+
+# }}}
