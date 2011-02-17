@@ -134,7 +134,7 @@ Init
 
 gi   - git init 
 
-gig(user_name/project_name) - Git Init Github
+gig(user_name/project_name, path) - Git Init Github
 
 Tags
 ----
@@ -260,21 +260,23 @@ alias gtd='gt -d' # git tag -d
 alias grp='g rev-parse' # git rev-parse
 alias grph='g rev-parse HEAD' # git rev-parse HEAD
 
-# Git Init Github - gig(user_name/project_name)
+# Git Init Github - gig(user_name/project_name, path)
 gig ()
 {
     user_project_name="$1"
 
-    project_name="${user_project_name#*/}"
+    path="${2:-${user_project_name#*/}}"
 
-    mkdir "${project_name}"
-    cd "$project_name"
+    mkdir "${path}"
+    pushd . > /dev/null
+    cd "$path"
     gi
     touch README
     ga README
     gcm 'first commit'
     g remote add origin git@github.com:"$user_project_name".git
     ghoc
+    popd > /dev/null
 }
 
 # Git Clone GitHub - gclg(user_name/project_name)
