@@ -294,7 +294,7 @@ gsmag ()
     path="${2:-.}"
     read_only="${3:-1}"
 
-    if (( "$read_only" == 0 )); then
+    if (( "$read_only" == 1 )); then
         gsma git@github.com:"$user_project_name".git "$path"
     else
         gsma https://github.com/"$user_project_name".git "$path"
