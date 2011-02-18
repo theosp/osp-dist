@@ -9,6 +9,28 @@ snippet ifz
 	fi
 # }}}
 
+# fors {{{
+
+# for {{{
+snippet for
+	n=${#${1:array_name}[*]}
+	for (( i=0; i < n; i += 1 )); do
+	    item="${$1[i]}"
+	done
+	unset i n item
+# }}}
+
+# lfor - local for {{{
+snippet lfor
+	local i n=${#${1:array_name}[*]} item
+	for (( i=0; i < n; i += 1 )); do
+	    item="${$1[i]}"
+	done
+	unset i n item
+# }}}
+
+# }}}
+
 # vim meta {{{
 
 # folds {{{
@@ -24,3 +46,5 @@ snippet {}
 # }}}
 
 # }}}
+
+# vim:fdm=marker:fmr={{{,}}}:
