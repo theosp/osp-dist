@@ -295,11 +295,10 @@ gsmag ()
     read_only="${3:-1}"
 
     if (( "$read_only" == 1 )); then
-        gsma git@github.com:"$user_project_name".git "$path"
-    else
         gsma https://github.com/"$user_project_name".git "$path"
+    else
+        gsma git@github.com:"$user_project_name".git "$path"
     fi
-
 }
 
 # Git Tag Annotated - gta(tag_name, message=tag_name, commit="")
