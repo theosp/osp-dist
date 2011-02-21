@@ -17,23 +17,23 @@ bupler.import git
 
 prompt_command_git_status ()
 {
-    local result="$(style.fcolor 4)$(style.bold)$(git.current_branch)"
+    local result="\[$(style.fcolor 4)$(style.bold)\]$(git.current_branch)"
     local status=($(git.status))
 
     if (( ${status[1]} == 1 )) || (( ${status[2]} == 2 )) || (( ${status[3]} == 3 )) || (( ${status[4]} == 4 )) || (( ${status[5]} == 5 ))
     then
         #echo "staged changes"
-        result+="$(style.fcolor 2)$(style.bold)●$(style.reset)"
+        result+="\[$(style.fcolor 2)$(style.bold)\]●\[$(style.reset)\]"
     fi
     if (( ${status[6]} == 1 )) || (( ${status[7]} == 1 ))
     then
         #echo "unstaged changes"
-        result+="$(style.fcolor 3)$(style.bold)●$(style.reset)"
+        result+="\[$(style.fcolor 3)$(style.bold)\]●\[$(style.reset)\]"
     fi
     if (( ${status[0]} == 1 ))
     then
         #echo "untracked changes"
-        result+="$(style.fcolor 1)$(style.bold)●$(style.reset)"
+        result+="\[$(style.fcolor 1)$(style.bold)\]●\[$(style.reset)\]"
     fi
 
     echo "$result"
@@ -47,7 +47,7 @@ then
 
         if git.is_rep > /dev/null
         then
-            export PS1="\$(style.fcolor 2)\$(style.bold)\u@\h \$(style.fcolor 4)\$(style.bold)\W [\$(style.reset)\$(prompt_command_git_status)\$(style.fcolor 4)\$(style.bold)] \$ \$(style.reset)"
+                export PS1="\[\033[01;32m\]\u@\h \[\033[01;34m\]\W [\[\033[00m\]\$(prompt_command_git_status)\[\033[01;34m\]] \$ \[\033[00m\]"
         else
             if [ "\$(/usr/bin/whoami)" = 'root' ]
             then
