@@ -80,7 +80,7 @@ Clones
 
 gcl  - git clone
 
-gclg(user_name/project_name)       - Git Clone GitHub
+gclg(user_name/project_name, path=., read_only=0) - Git Clone GitHub
 
 Helpers
 -------
@@ -279,19 +279,25 @@ gig ()
     popd > /dev/null
 }
 
-# Git Clone GitHub - gclg(user_name/project_name)
+# Git Clone GitHub - gclg(user_name/project_name, path=., read_only=0)
 gclg ()
 {
     user_project_name="$1"
+    path="${2:-${user_project_name#*/}}"
+    read_only="${3:-1}"
 
-    gcl git@github.com:"$user_project_name".git
+    if (( "$read_only" == 1 )); then
+        gcl https://github.com/"$user_project_name".git "$path"
+    else
+        gcl git@github.com:"$user_project_name".git "$path"
+    fi
 }
 
 # Git Submodule Add GitHub - gsmag(user_name/project_name, path=., read_only=0)
 gsmag ()
 {
     user_project_name="$1"
-    path="${2:-.}"
+    path="${2:-${user_project_name#*/}}"
     read_only="${3:-1}"
 
     if (( "$read_only" == 1 )); then
