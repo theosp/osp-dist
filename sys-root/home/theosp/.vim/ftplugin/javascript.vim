@@ -1,5 +1,5 @@
 " <S-e> sudo execute the code using node.js {{{
-nnoremap <buffer> <silent> <S-e> :w<Cr>:!sudo node %<Cr>
+nnoremap <buffer> <silent> <S-e> :w<Cr>:!node %<Cr>
 " }}}
 
 " <S-c> for Checking the code with jslint {{{
