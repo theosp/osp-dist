@@ -284,7 +284,7 @@ gclg ()
 {
     user_project_name="$1"
     path="${2:-${user_project_name#*/}}"
-    read_only="${3:-1}"
+    read_only="${3:-0}"
 
     if (( "$read_only" == 1 )); then
         gcl https://github.com/"$user_project_name".git "$path"
