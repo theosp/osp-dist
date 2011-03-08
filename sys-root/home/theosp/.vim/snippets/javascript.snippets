@@ -197,6 +197,14 @@ snippet constructor
 # }}}
 
 # functions {{{
+
+# closure function {{{
+snippet cfun
+	(function (${1:var1, var2}) {
+		${2}
+	})($1);
+# }}}
+
 # Anonymous function
 snippet afun
 	function () {
