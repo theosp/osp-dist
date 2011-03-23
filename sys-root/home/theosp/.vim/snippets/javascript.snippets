@@ -1,9 +1,76 @@
 snippet #!
 	#!/usr/bin/env node
 
-# commands {{{
+# logs {{{
+
 snippet log
 	console.log(${1:var});
+
+# conditioned logs {{{
+snippet clog
+	if (typeof console !== "undefined") {
+	    console.log(${1:var});
+	}
+
+snippet alog
+	if (typeof console !== "undefined") {
+	    console.log(${1:var});
+	} else {
+	    alert($1);
+	}
+# }}}
+
+# }}}
+
+# debugs {{{
+
+# if debug {{{
+snippet ifdeb
+	// if debug mode: ${1:what do you do here?} {{{
+	if (typeof debug !== "undefined" && (debug.length === 0 || debug.indexOf(${2:debug_category}) !== -1)) {
+	    ${3:stuffs for debug mode}
+	} else {
+	    ${4:stuffs for normal mode}
+	}
+	// }}}
+# }}}
+
+# debug variable {{{
+snippet debv
+	// Debug variable: ${1:var} {{{
+	if (typeof debug !== "undefined" && (debug.length === 0 || debug.indexOf(${2:debug_category}) !== -1)) {
+	    if (typeof console !== 'undefined') {
+	        console.log("$1: " + JSON.stringify($1));
+	    } else {
+	        alert("$1: " + JSON.stringify($1));
+	    }
+	}
+	// }}}
+# }}}
+
+# debug location {{{
+snippet debl
+	// Debug location: ${1:location} {{{
+	if (typeof debug !== "undefined" && (debug.length === 0 || debug.indexOf(${2:debug_category}) !== -1)) {
+	    if (typeof console !== 'undefined') {
+	        console.log("Location: $1");
+	    } else {
+	        alert("Location: $1");
+	    }
+	}
+	// }}}
+# }}}
+
+# self debug variable {{{
+snippet sdebv
+	self.debugVariable("${1:var}", $1);
+# }}}
+
+# self debug location {{{
+snippet sdebl
+	self.debugLocation("${1:location_name}");
+# }}}
+
 # }}}
 
 # Shortcuts {{{
@@ -317,6 +384,8 @@ snippet else
 # }}}
 
 # Types Tests {{{
+snippet isdef
+	typeof ${1:var} !== 'undefined'${2}
 snippet isobj
 	typeof ${1:var} === 'object'${2}
 snippet isnum
@@ -329,6 +398,8 @@ snippet isarray
 	theosp.array.isArray(${1:var});
 snippet isnull
 	${1:var} === null
+snippet notdef
+	typeof ${1:var} === 'undefined'${2}
 snippet notobj
 	typeof ${1:var} !== 'object'${2}
 snippet notnum
