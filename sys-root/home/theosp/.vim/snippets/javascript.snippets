@@ -38,11 +38,14 @@ snippet ifdeb
 # debug variable {{{
 snippet debv
 	// Debug variable: ${1:var} {{{
+	var debug_message = "$1: " + JSON.stringify($1);
 	if (typeof debug !== "undefined" && theosp.array.isArray(debug) && (debug.length === 0 || theosp.array.indexOf(${2:debug_category}, debug) !== -1)) {
-	    if (typeof console !== 'undefined') {
-	        console.log("$1: " + JSON.stringify($1));
+		if ($("#theosp_debug").length !== 0) {
+	        $("#theosp_debug").append(debug_message + "<br />");
+		} else if (typeof console !== 'undefined') {
+	        console.log(debug_message);
 	    } else {
-	        alert("$1: " + JSON.stringify($1));
+	        alert(debug_message);
 	    }
 	}
 	// }}}
@@ -51,11 +54,14 @@ snippet debv
 # debug location {{{
 snippet debl
 	// Debug location: ${1:location} {{{
+	var debug_message = "Location: $1";
 	if (typeof debug !== "undefined" && theosp.array.isArray(debug) && (debug.length === 0 || theosp.array.indexOf(${2:debug_category}, debug) !== -1)) {
-	    if (typeof console !== 'undefined') {
-	        console.log("Location: $1");
+		if ($("#theosp_debug").length !== 0) {
+	        $("#theosp_debug").append(debug_message + "<br />");
+		} else if (typeof console !== 'undefined') {
+	        console.log(debug_message);
 	    } else {
-	        alert("Location: $1");
+	        alert(debug_message);
 	    }
 	}
 	// }}}
@@ -455,6 +461,12 @@ snippet tti
 	'<tr>' +
 	    '<td><label for="|prefix|${1:lower_cased_name}">${2:Human readable name}</label></td>' +
 	    '<td><input id="|prefix|$1" class="${3:input_class}" type="text" value="|$1|" /></td>' +
+	'</tr>' +
+# Table Text Area 
+snippet tta
+	'<tr>' +
+	    '<td><label for="|prefix|${1:lower_cased_name}">${2:Human readable name}</label></td>' +
+	    '<td><textarea id="|prefix|$1" class="${3:textarea_class}">|$1|</textarea></td>' +
 	'</tr>' +
 # Table Field Set
 snippet tfs
