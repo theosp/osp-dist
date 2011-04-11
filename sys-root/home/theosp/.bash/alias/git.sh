@@ -68,12 +68,13 @@ gp   - git stash pop
 The index and commits
 ---------------------
 
-ga   - git add
-gc   - git commit
-gcA  - git commit --amend
-gca  - git commit -a
-gcm  - git commit -m
-gcam - git commit -a -m
+ga    - git add
+gc    - git commit
+gcA   - git commit --amend
+gcAdn - git commit --amend --date="now"
+gca   - git commit -a
+gcm   - git commit -m
+gcam  - git commit -a -m
 
 Clones
 ------
@@ -209,6 +210,7 @@ alias gp='gS pop' # git pop
 alias ga='g add' # git add
 alias gc='g commit' # git commit
 alias gcA='gc --amend' # git commit --amend
+alias gcAdn='gcA --date="`date -R`"' # git commit --amend --date="now"
 alias gca='gc -a' # git commit -a
 alias gcm='gc -m' # git commit -m
 alias gcam='gca -m' # git commit -a -m
