@@ -11,6 +11,7 @@ Pull / pushs
 ------------
 
 glo  - Git pulL Origin
+gloa - Git pulL Origin - all branches
 gho  - Git pusH Origin
 ghfo - Git pusH Force Origin
        Can be used to cancel pushes by:
@@ -153,6 +154,12 @@ Plumbings
 grp  - git rev-parse
 grph - git rev-parse HEAD
 
+Custom
+------
+
+ghtR - Git pusH tags ramiraz
+ghRc - Git pusH ramiraz Current
+
 EOF
 }
 
@@ -163,7 +170,7 @@ alias glo='gl origin' # Git pulL Origin
 alias gho='gh origin' # Git pusH Origin
 alias ghf='gh -f' # Git pusH Force
 alias ghfo='ghf origin' # Git pusH Force Origin
-
+ 
 # alias ghoc
 # alias gloc
 if type bupler.import &> /dev/null
@@ -175,6 +182,12 @@ then
         gho "$(git.current_branch)"
     }
 
+    # ghRc - Git pusH ramiraz Current
+    ghRc ()
+    {
+        gh ramiraz "$(git.current_branch)"
+    }
+
     gloc ()
     {
         glo "$(git.current_branch)"
@@ -183,6 +196,7 @@ fi
 
 alias ght='gh --tags' # Git pusH tags
 alias ghto='gh --tags origin' # Git pusH tags to origin
+alias ghtR='gh --tags ramiraz' # Git pusH tags to ramiraz
 
 alias gd='g diff --color' # Git diff
 alias gdp='gd --no-color --no-prefix'
@@ -331,6 +345,23 @@ gtdr ()
     remote="${2:-origin}"
 
     gh "$remote" :"$tag_name"
+}
+
+# Git Pull Origin - All
+gloa ()
+{
+    for branch in $(gb | awk 'BEGIN {FS = " "} {if ($1 != "*") {print $1} else {print $2} }');
+    do
+        gch "$branch"
+        gloc
+
+        if (( $? != 0 ))
+        then
+            break
+        fi
+    done
+
+    gchm
 }
 
 # vim:ft=bash:
