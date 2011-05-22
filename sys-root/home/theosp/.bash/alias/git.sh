@@ -158,6 +158,7 @@ Custom
 ------
 
 ghtR - Git pusH tags ramiraz
+ghR - Git pusH ramiraz
 ghRc - Git pusH ramiraz Current
 
 EOF
@@ -167,6 +168,7 @@ alias g='git' # Git
 alias gl='g pull' # Git pulL
 alias gh='g push' # Git pusH
 alias glo='gl origin' # Git pulL Origin
+alias ghR='gh ramiraz' # Git pusH Origin
 alias gho='gh origin' # Git pusH Origin
 alias ghf='gh -f' # Git pusH Force
 alias ghfo='ghf origin' # Git pusH Force Origin
@@ -185,7 +187,7 @@ then
     # ghRc - Git pusH ramiraz Current
     ghRc ()
     {
-        gh ramiraz "$(git.current_branch)"
+        ghR "$(git.current_branch)"
     }
 
     gloc ()
