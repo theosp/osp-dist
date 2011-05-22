@@ -456,20 +456,11 @@ snippet vmod
 # }}}
 
 # Razoss snippets {{{
-# Table Text Input
-snippet tti
-	'<tr>' +
-	    '<td><label for="|prefix|${1:lower_cased_name}">${2:Human readable name}</label></td>' +
-	    '<td><input id="|prefix|$1" class="${3:input_class}" type="text" value="|$1|" /></td>' +
-	'</tr>' +
-# Table Text Area 
-snippet tta
-	'<tr>' +
-	    '<td><label for="|prefix|${1:lower_cased_name}">${2:Human readable name}</label></td>' +
-	    '<td><textarea id="|prefix|$1" class="${3:textarea_class}">|$1|</textarea></td>' +
-	'</tr>' +
-# Table Field Set
-snippet tfs
+
+# admin editors {{{
+
+# Razoss Editor FieldSet {{{
+snippet refs
 	'<fieldset>' +
 	    '<legend>${1:Name}</legend>' +
 	    '<table>' +
@@ -478,6 +469,73 @@ snippet tfs
 	        '</tbody>' +
 	    '</table>' +
 	'</fieldset>' +
+# }}}
+
+# inputs {{{
+
+# text inputs {{{
+
+# Razoss Editor Text (Input) {{{
+snippet reti
+	'<tr>' +
+	    '<td><label for="|prefix|${1:lower_cased_name}">${2:Human readable name}</label></td>' +
+	    '<td><input id="|prefix|$1" class="${3:input_class}" type="text" value="|$1|" /></td>' +
+	'</tr>' +
+# }}}
+
+# Razoss Editor TextArea {{{
+snippet reta
+	'<tr>' +
+	    '<td><label for="|prefix|${1:lower_cased_name}">${2:Human readable name}</label></td>' +
+	    '<td><textarea id="|prefix|$1" class="${3:textarea_class}">|$1|</textarea></td>' +
+	'</tr>' +
+# }}}
+
+# Razoss load Int {{{
+
+# }}}
+
+# Razoss load String {{{
+
+# }}}
+
+# }}}
+
+# checkbox {{{
+
+# Razoss Editor Checkbox {{{
+snippet rec
+	'<tr>' +
+	    '<td><label for="|prefix|${1:lower_cased_name}">${2:Human readable name}</label></td>' +
+	    '<td><input id="|prefix|$1" class="${3:input_class}" type="checkbox" /></td>' +
+	'</tr>' +
+# }}}
+
+# Razoss Init Checkbox {{{
+snippet reic
+	// $1 checkbox initiation {{{
+	if (self.element_options.${1:option_name} === true) {
+	    self.$("#|prefix|$1").attr("checked", "checked");
+	}
+	// }}}
+# }}}
+
+# Razoss Load Checkbox {{{
+snippet relc
+	self.element_options.${1:option_name} = self.$('#|prefix|$1').is(':checked');
+# }}}
+
+# }}}
+
+# }}}
+
+# Razoss Set Supplant Value {{{
+snippet rssv
+	${1:option_name}: self.options.$1,
+# }}}
+
+# }}}
+
 # }}}
 snippet clear
 	'<div class="clear"></div>' +
