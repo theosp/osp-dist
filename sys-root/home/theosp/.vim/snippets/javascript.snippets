@@ -427,6 +427,17 @@ snippet notin
 	!(${1:property} in ${2:obj})
 # }}}
 
+# supplant {{{
+snippet sup
+	theosp.string.supplant(
+	    (
+		 "${1}"
+	    ), {prefix: self.options.css_prefix,
+	    }
+	)
+# }}}
+
+
 # Boolean Operators {{{
 snippet and
 	&& ${1}
@@ -445,7 +456,14 @@ snippet {}
 	// ${1:foldname} {{{
 	${2}
 	// }}}
-
+snippet {}c
+	// constructor {{{
+	${2}
+	// }}}
+snippet {}pc
+	// prototypical chain {{{
+	${2}
+	// }}}
 # }}}
 
 # modline {{{
