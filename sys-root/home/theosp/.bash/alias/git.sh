@@ -122,6 +122,7 @@ gR    - git remote
 gRa   - git remote add
 gRao  - git remote add origin
 
+gRag(remote_name, user_name/project_name)
 gRaog(user_name/project_name) - git remote add origin Github
 
 Reset
@@ -255,6 +256,15 @@ alias grmr='grm -r' # git rm -r
 alias gR='g remote' # git remote add
 alias gRa='gR add' # git remote add
 alias gRao='gRa origin' # git remote add origin
+
+# Git Remote Add Github - gRag(remote_name, user_name/project_name)
+gRag ()
+{
+    remote_name="$1"
+    user_project_name="$2"
+
+    gRa "${remote_name}" "git@github.com:${user_project_name}.git"
+}
 
 # Git Remote Add Origin Github - gRaog(user_name/project_name)
 gRaog ()
