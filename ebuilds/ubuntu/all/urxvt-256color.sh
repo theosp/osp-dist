@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install ncurses-term
+
 apt-get source rxvt-unicode
 sudo apt-get build-dep rxvt-unicode
 cd rxvt-unicode*
