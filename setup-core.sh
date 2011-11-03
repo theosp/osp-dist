@@ -10,10 +10,12 @@ link () {
     local path="$1"
     local target="${path/\/home\/theosp/$HOME}"
 
-    if [[ ! -e $target ]]
+    if [[ -e $target ]]
     then
-        ln -s "$SCRIPT_PWD/sys-root$path" "$target"
+        mv "$target" "$target-backup"
     fi
+
+    ln -s "$SCRIPT_PWD/sys-root$path" "$target"
 }
 
 copy () {
