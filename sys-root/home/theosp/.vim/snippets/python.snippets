@@ -3,7 +3,13 @@ snippet log
 
 snippet debug
 	import logging
+	logging.debug("*************************************************")
 	logging.debug(${1:var})
+	logging.debug("*************************************************")
+
+snippet error 
+	import logging
+	logging.error(${1:var})
 
 snippet gae_api
 	#!/usr/bin/env python
