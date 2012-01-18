@@ -43,4 +43,6 @@ do
     . "$i/main.sh"
 done
 
+PATH+=":~/node_modules/.bin/"
+
 clear
