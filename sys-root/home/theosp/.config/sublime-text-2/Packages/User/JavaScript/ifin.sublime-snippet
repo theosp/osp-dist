@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+if (${1:prop} in ${2:obj}) {
+	${2}
+}
+]]></content>
+<tabTrigger>ifin</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

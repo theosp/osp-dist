@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+if (typeof console !== "undefined") {
+    console.log(${1:var});
+} else {
+    alert($1);
+}
+]]></content>
+<tabTrigger>alog</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

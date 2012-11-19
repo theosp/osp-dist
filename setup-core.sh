@@ -53,6 +53,9 @@ link /home/theosp/.bashrc-exports
 link /home/theosp/.bashrc-locale
 link /home/theosp/.screenrc
 
+mkdir -p /home/theosp/.config/sublime-text-2/Packages
+link /home/theosp/.config/sublime-text-2/Packages/User
+
 mkdir -p ~/.ssh # -p to avoid stderr if exists
 if [[ -e ~/.ssh/authorized_keys ]]
 then

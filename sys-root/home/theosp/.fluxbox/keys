@@ -35,6 +35,7 @@ Mod1 s 4 :ExecCommand xcalc
 ! Desktops navigation and programs that bound to specific desktop
 Mod1 x :Workspace 1 # x(term) workspace
 Mod1 s x :MacroCmd {Workspace 1} {ExecCommand urxvt -e screen}
+Mod1 s s :ExecCommand sublime
 
 Mod1 f :Workspace 2 # f(irefox) workspace
 Mod1 s f :MacroCmd {Workspace 2} {ExecCommand google-chrome}

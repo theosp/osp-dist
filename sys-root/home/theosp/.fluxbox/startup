@@ -16,7 +16,7 @@ nm-applet &
 #
 # In vim <C-c> should be used instead.
 # Everywhere else <c-[> can be used.
-xmodmap -e "keycode 9 = space"
+# xmodmap -e "keycode 9 = space"
 
 # Make right the right alt function as an alt
 # http://www.damnsmalllinux.org/f/topic-3-10-7050-0.html

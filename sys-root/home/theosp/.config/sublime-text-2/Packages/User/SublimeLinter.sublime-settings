@@ -1,0 +1,9 @@
+{
+    "javascript_linter": "jslint",
+
+    "jslint_options":
+    {
+        "indent": 1,
+        "white": false
+    }
+}

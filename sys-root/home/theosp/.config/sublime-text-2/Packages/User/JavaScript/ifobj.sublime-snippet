@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+if (typeof ${1:obj} === 'object') {
+	${2}
+}
+]]></content>
+<tabTrigger>ifobj</tabTrigger>
+      <scope>source.js</scope>
+</snippet>
+<snippet>
+    <content><![CDATA[
+typeof ${1:var} === 'object'${2}
+]]></content>
+<tabTrigger>ifobj</tabTrigger>
+      <scope>source.js</scope>
+</snippet>
