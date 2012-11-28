@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+if (typeof console !== "undefined") {
+    console.log(JSON.stringify(${1:var}));
+} else {
+    alert(JSON.stringify($1));
+}
+]]></content>
+<tabTrigger>jlog</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

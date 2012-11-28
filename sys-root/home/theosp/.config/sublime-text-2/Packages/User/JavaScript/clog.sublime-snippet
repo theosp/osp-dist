@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+if (typeof console !== "undefined") {
+    console.log(${1:var});
+}
+]]></content>
+<tabTrigger>clog</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

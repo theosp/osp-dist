@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+width: ${1:100}px;
+height: ${2:100}px;
+]]></content>
+<tabTrigger>dim</tabTrigger>
+      <scope>source.css.less</scope>
+</snippet>

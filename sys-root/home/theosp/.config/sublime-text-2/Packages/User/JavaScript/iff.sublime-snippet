@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+if (${1:obj} === false) {
+	${2}
+}
+]]></content>
+<tabTrigger>iff</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

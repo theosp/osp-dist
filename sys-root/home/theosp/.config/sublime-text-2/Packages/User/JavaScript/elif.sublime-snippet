@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+else if (${1}) {
+	${2}
+}
+]]></content>
+<tabTrigger>elif</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

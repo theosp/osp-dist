@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+typeof ${1:var} !== 'string'${2}
+]]></content>
+<tabTrigger>notstr</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

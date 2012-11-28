@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+if (${1:obj} !== null) {
+	${2}
+}
+]]></content>
+<tabTrigger>ifnotnull</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

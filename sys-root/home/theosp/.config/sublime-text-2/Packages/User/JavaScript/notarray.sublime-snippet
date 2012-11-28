@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+!theosp.array.isArray(${1:var});
+]]></content>
+<tabTrigger>notarray</tabTrigger>
+      <scope>source.js</scope>
+</snippet>

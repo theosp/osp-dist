@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+if (typeof ${1:obj} !== 'undefined') {
+	${2}
+}
+]]></content>
+<tabTrigger>ifd</tabTrigger>
+      <scope>source.js</scope>
+</snippet>
