@@ -444,7 +444,13 @@ snippet sup
 	)
 # }}}
 
-
+snippet jv0
+	href="javascript:void(0);" ${1}
+snippet $
+	$("${1:selector}").${2:method}(${3:args});
+snippet "
+	"${1:content}"
+#
 # Boolean Operators {{{
 snippet and
 	&& ${1}
@@ -564,4 +570,7 @@ snippet rssv
 # }}}
 snippet clear
 	'<div class="clear"></div>' +
+
+snippet div 
+	<div class="${1}"></div>
 # vim:foldmethod=marker:
