@@ -1,3 +1,13 @@
+! fluxbox-update_configs added '(workspace=[current])' to (Next|Prev)(Window|Group)
+! check lines marked by 'FBCV13' if they are correctly updated
+!mouse actions added by fluxbox-update_configs
+OnTitlebar Mouse1 :MacroCmd {Focus} {Raise} {ActivateTab}
+!mouse actions added by fluxbox-update_configs
+OnTitlebar Move1 :StartMoving
+OnLeftGrip Move1 :StartResizing bottomleft
+OnRightGrip Move1 :StartResizing bottomright
+OnWindowBorder Move1 :StartMoving
+
 !mouse actions added by fluxbox-update_configs
 OnTitlebar Mouse2 :StartTabbing
 
@@ -22,8 +32,8 @@ OnDesktop Mouse5 :PrevWorkspace
 Mod1 F4 :Close
 Mod1 F2 :ExecCommand fbrun
 
-Mod1 Tab :NextWindow
-Mod1 Shift Tab :PrevWindow
+Mod1 Tab :NextWindow (workspace=[current]) !! FBCV13 !!
+Mod1 Shift Tab :PrevWindow (workspace=[current]) !! FBCV13 !!
 
 ! Programs we don't bind to specific desktop
 Mod1 s e :ExecCommand gedit
@@ -55,3 +65,5 @@ Mod1 l :RightWorkspace
 Mod1 h :LeftWorkspace
 
 Mod1 r :Maximize
+
+Mod1 m {ExecCommand echo 1 > daniel}

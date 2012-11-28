@@ -1,7 +1,10 @@
 {
-	"auto_upgrade_last_run": 1353314851,
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"Build on Save",
+		"LESS",
+		"LESS-build",
 		"Package Control",
 		"SublimeLinter",
 		"Theme - Soda"
