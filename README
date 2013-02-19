@@ -1,0 +1,4 @@
+Bootstrap
+=========
+
+bash <(wget -qO- https://raw.github.com/theosp/osp-dist/master/bootstrap.sh)
