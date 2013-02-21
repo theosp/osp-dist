@@ -1,0 +1,12 @@
+install gimp and vim, design sublime interface
+
+Install Package control:
+http://wbond.net/sublime_packages/package_control/installation
+
+Install and activate the soda theme (Theme - Soda):
+https://github.com/buymeasoda/soda-theme/
+
+Install color schemes (drop to ./Packages/User):
+http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip
+
+
