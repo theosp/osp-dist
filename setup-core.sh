@@ -66,6 +66,6 @@ sudo chmod a+rw /var/log/vim
 case "$(lsb_release -s -i)" in
     "Ubuntu")
         sudo apt-get install aptitude
-        sudo aptitude install tree curl screen ipython ruby ruby-dev openjdk-6-jre build-essential g++
+        sudo aptitude install tree curl screen ipython ruby ruby-dev openjdk-6-jre build-essential g++ gcc
     ;;
 esac
