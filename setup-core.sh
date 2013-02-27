@@ -56,14 +56,6 @@ link /home/theosp/.screenrc
 mkdir -p /home/theosp/.config/sublime-text-2/Packages
 link /home/theosp/.config/sublime-text-2/Packages/User
 
-mkdir -p ~/.ssh # -p to avoid stderr if exists
-if [[ -e ~/.ssh/authorized_keys ]]
-then
-    # create backup for ~/.ssh/authorized_keys before copy our
-    mv ~/.ssh/authorized_keys "$HOME/.ssh/authorized_keys-`date +%Y-%m-%d-%k:%M`~"
-fi
-copy /home/theosp/.ssh/authorized_keys
-
 sudo locale-gen he_IL.UTF-8
 sudo locale-gen en_US.UTF-8
 
