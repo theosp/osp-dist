@@ -24,8 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var stdin = process.openStdin(),
+var stdin = process.stdin,
     body = "";
+
+//stdin.setRawMode(true);
+stdin.resume();
 
 stdin.setEncoding('utf8');
 stdin.on('data', function (chunk) {
@@ -68,4 +71,3 @@ stdin.on('end', function () {
         }
     }
 });
-
