@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Fluxbox VBox Fix by flinx
+
+sleep 1
+
+if [ -x /usr/bin/VBoxClient ]; then
+    /usr/bin/VBoxClient --clipboard
+    /usr/bin/VBoxClient --display
+    /usr/bin/VBoxClient --seamless
+fi

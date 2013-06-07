@@ -24,4 +24,6 @@ xmodmap -e "remove mod4 = Mode_switch"
 xmodmap -e "keycode 108 = Alt_R Alt_R Alt_R"
 xmodmap -e "add mod1 = Alt_R"
 
+/home/theosp/.fluxbox/vbox_fix &
+
 exec /usr/bin/fluxbox
