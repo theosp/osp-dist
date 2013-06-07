@@ -2,7 +2,7 @@
 
 # Fluxbox VBox Fix by flinx
 
-sleep 1
+sleep 3
 
 if [ -x /usr/bin/VBoxClient ]; then
     /usr/bin/VBoxClient --clipboard
