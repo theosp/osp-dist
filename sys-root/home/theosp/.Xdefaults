@@ -61,7 +61,7 @@ urxvt*scrollBar:      false
 urxvt*underLine:      on
 
 urxvt.perl-ext-common: default,matcher
-urxvt.urlLauncher: firefox
+urxvt.urlLauncher: google-chrome
 urxvt.matcher.button: 1
 
 ! transparency
