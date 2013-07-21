@@ -27,23 +27,23 @@ xmodmap -e "add mod1 = Alt_R"
 # Special mapping to my mac keyboard
 # A resource that helped me to figure out how to actually work with
 # xmodmap: http://askubuntu.com/questions/70931/how-to-set-right-alt-to-work-as-a-winsuper-key
-#xmodmap -e "keycode 108 = Control_R Control_R Control_R"
-#xmodmap -e "keycode 133 = Alt_L Alt_L Alt_L"
-#xmodmap -e "keycode 134 = Alt_R Alt_R Alt_R"
-#
-#xmodmap -e "remove mod1 = Meta_L"
-#xmodmap -e "remove mod4 = Super_L"
-#xmodmap -e "remove mod4 = Super_R"
-#xmodmap -e "remove mod4 = Hyper_L"
-#
-#xmodmap -e "remove mod1 = Control_R"
-#xmodmap -e "add control = Control_R"
-#
-#xmodmap -e "remove mod4 = Alt_R"
-#xmodmap -e "add mod1 = Alt_R"
-#
-#xmodmap -e "remove mod4 = Alt_L"
-#xmodmap -e "add mod1 = Alt_L"
+xmodmap -e "keycode 108 = Control_R Control_R Control_R"
+xmodmap -e "keycode 133 = Alt_L Alt_L Alt_L"
+xmodmap -e "keycode 134 = Alt_R Alt_R Alt_R"
+
+xmodmap -e "remove mod1 = Meta_L"
+xmodmap -e "remove mod4 = Super_L"
+xmodmap -e "remove mod4 = Super_R"
+xmodmap -e "remove mod4 = Hyper_L"
+
+xmodmap -e "remove mod1 = Control_R"
+xmodmap -e "add control = Control_R"
+
+xmodmap -e "remove mod4 = Alt_R"
+xmodmap -e "add mod1 = Alt_R"
+
+xmodmap -e "remove mod4 = Alt_L"
+xmodmap -e "add mod1 = Alt_L"
 
 /home/theosp/.fluxbox/vbox_fix &
 
