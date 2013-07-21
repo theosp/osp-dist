@@ -41,6 +41,7 @@ Mod1 s b :ExecCommand transmission # Bittorent
 Mod1 s i :ExecCommand urxvt -e ipython
 Mod1 s r :ExecCommand urxvt -e irb
 Mod1 s n :ExecCommand urxvt -e node
+Mod1 s a :ExecCommand /home/theosp/.fluxbox/vbox_fix # a stands for adjust
 Mod1 s 3 :ExecCommand xchat
 Mod1 s 4 :ExecCommand xcalc
 
@@ -50,8 +51,8 @@ Mod1 s x :MacroCmd {Workspace 1} {ExecCommand urxvt -e screen}
 Mod1 s s :ExecCommand sublime
 
 Mod1 f :Workspace 2 # f(irefox) workspace
-Mod1 s f :MacroCmd {Workspace 2} {ExecCommand google-chrome}
-Mod1 s c :MacroCmd {Workspace 2} {ExecCommand google-chrome}
+Mod1 s f :MacroCmd {Workspace 2} {ExecCommand google-chrome --disable-accelerated-compositing}
+Mod1 s c :MacroCmd {Workspace 2} {ExecCommand google-chrome --disable-accelerated-compositing}
 
 Mod1 g :Workspace 3 # g(imp) workspace
 Mod1 s g :MacroCmd {Workspace 3} {ExecCommand gimp}

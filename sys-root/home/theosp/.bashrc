@@ -45,4 +45,9 @@ done
 
 PATH+=":~/node_modules/.bin/"
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source $HOME/.rvm/scripts/rvm
+shopt -q login_shell && rvm use 1.9.2
+
 clear
