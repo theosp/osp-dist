@@ -29,7 +29,7 @@ sudoCopy () {
 
 case "$(lsb_release -s -i)" in
     "Ubuntu")
-        sudo aptitude install git-cola kdiff3 fluxbox eterm xchat rxvt-unicode-256color
+        sudo aptitude install git-cola kdiff3 fluxbox eterm xchat rxvt-unicode-256color network-manager-gnome
         # we need eterm since fluxbox uses its background setter
     ;;
 esac
