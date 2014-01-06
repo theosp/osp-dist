@@ -44,6 +44,7 @@ Mod1 s n :ExecCommand urxvt -e node
 Mod1 s a :ExecCommand /home/theosp/.fluxbox/vbox_fix # a stands for adjust
 Mod1 s 3 :ExecCommand xchat
 Mod1 s 4 :ExecCommand xcalc
+Mod1 s w :ExecCommand wireshark
 
 ! Desktops navigation and programs that bound to specific desktop
 Mod1 x :Workspace 1 # x(term) workspace
