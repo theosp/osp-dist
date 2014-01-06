@@ -39,6 +39,7 @@ Mod1 Shift Tab :PrevWindow (workspace=[current]) !! FBCV13 !!
 Mod1 s e :ExecCommand gedit
 Mod1 s b :ExecCommand transmission # Bittorent
 Mod1 s i :ExecCommand urxvt -e ipython
+Mod1 s p :ExecCommand urxvt -e perl -d -e 1
 Mod1 s r :ExecCommand urxvt -e irb
 Mod1 s n :ExecCommand urxvt -e node
 Mod1 s 3 :ExecCommand xchat
