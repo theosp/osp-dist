@@ -24,12 +24,16 @@ xmodmap -e "remove mod4 = Mode_switch"
 xmodmap -e "keycode 108 = Alt_R Alt_R Alt_R"
 xmodmap -e "add mod1 = Alt_R"
 
-# Special mapping to my mac keyboard
+# Special mapping for my mac keyboard
 # A resource that helped me to figure out how to actually work with
 # xmodmap: http://askubuntu.com/questions/70931/how-to-set-right-alt-to-work-as-a-winsuper-key
 xmodmap -e "keycode 108 = Control_R Control_R Control_R"
 xmodmap -e "keycode 133 = Alt_L Alt_L Alt_L"
 xmodmap -e "keycode 134 = Alt_R Alt_R Alt_R"
+
+# I need an Insert key to do Shift-Inserts, so I remap the F9 key which I never
+# use to Insert
+xmodmap -e "keycode 75 = Insert Insert Insert"
 
 xmodmap -e "remove mod1 = Meta_L"
 xmodmap -e "remove mod4 = Super_L"
