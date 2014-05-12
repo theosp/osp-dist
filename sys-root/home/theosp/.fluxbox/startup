@@ -18,7 +18,7 @@ nm-applet &
 # Everywhere else <c-[> can be used.
 # xmodmap -e "keycode 9 = space"
 
-# Make right the right alt function as an alt
+# Right alt should output Alt_R and not Alt
 # http://www.damnsmalllinux.org/f/topic-3-10-7050-0.html
 xmodmap -e "remove mod4 = Mode_switch"
 xmodmap -e "keycode 108 = Alt_R Alt_R Alt_R"
