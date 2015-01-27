@@ -10,45 +10,6 @@ fi
 
 nm-applet &
 
-# I've found the use of the <esc> key to be inefficient (it's too far), but
-# since my fingers are so used to it, in order to get rid of the habit of using
-# it I've decided to disable it by remapping it to space.
-#
-# In vim <C-c> should be used instead.
-# Everywhere else <c-[> can be used.
-# xmodmap -e "keycode 9 = space"
-
-# Right alt should output Alt_R and not Alt
-# http://www.damnsmalllinux.org/f/topic-3-10-7050-0.html
-xmodmap -e "remove mod4 = Mode_switch"
-xmodmap -e "keycode 108 = Alt_R Alt_R Alt_R"
-xmodmap -e "add mod1 = Alt_R"
-
-# Special mapping for my mac keyboard
-# A resource that helped me to figure out how to actually work with
-# xmodmap: http://askubuntu.com/questions/70931/how-to-set-right-alt-to-work-as-a-winsuper-key
-xmodmap -e "keycode 108 = Control_R Control_R Control_R"
-xmodmap -e "keycode 133 = Alt_L Alt_L Alt_L"
-xmodmap -e "keycode 134 = Alt_R Alt_R Alt_R"
-
-# I need an Insert key to do Shift-Inserts, so I remap the F9 key which I never
-# use to Insert
-xmodmap -e "keycode 75 = Insert Insert Insert"
-
-xmodmap -e "remove mod1 = Meta_L"
-xmodmap -e "remove mod4 = Super_L"
-xmodmap -e "remove mod4 = Super_R"
-xmodmap -e "remove mod4 = Hyper_L"
-
-xmodmap -e "remove mod1 = Control_R"
-xmodmap -e "add control = Control_R"
-
-xmodmap -e "remove mod4 = Alt_R"
-xmodmap -e "add mod1 = Alt_R"
-
-xmodmap -e "remove mod4 = Alt_L"
-xmodmap -e "add mod1 = Alt_L"
-
 /home/theosp/.fluxbox/vbox_fix &
 
 exec /usr/bin/fluxbox

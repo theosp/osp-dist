@@ -8,4 +8,33 @@ if [ -x /usr/bin/VBoxClient ]; then
     /usr/bin/VBoxClient --clipboard
     /usr/bin/VBoxClient --display
     /usr/bin/VBoxClient --seamless
+    
+    setxkbmap -layout us,il -option grp:toggle
+
+    # Fix key mappings
+    
+    # Map Control keys
+    xmodmap -e "keycode 37 = Control_L Control_L Control_L"
+    xmodmap -e "keycode 108 = Control_R Control_R Control_R"
+    
+    # Map Alt keys
+    xmodmap -e "keycode 133 = Alt_L Alt_L Alt_L"
+    xmodmap -e "keycode 134 = Alt_R Alt_R Alt_R"
+    
+    # I need an Insert key to do Shift-Inserts, so I remap the F9 key which I never
+    # use to Insert
+    xmodmap -e "keycode 75 = Insert Insert Insert"
+    
+    # Clear & update modifiers
+    xmodmap -e "clear Control"
+    xmodmap -e "clear Mod1"
+    xmodmap -e "clear Mod4"
+    xmodmap -e "add control = Control_L Control_R"
+    xmodmap -e "add Mod1 = Alt_R Alt_L"
+    
+    # Resources that helped to figure xmodmap
+    # * http://askubuntu.com/questions/70931/how-to-set-right-alt-to-work-as-a-winsuper-key
+    # * http://www.damnsmalllinux.org/f/topic-3-10-7050-0.html
+    # Note if you get this error from xmodmap: X Error of failed request:  BadValue
+    # the key you try to add to a modifier is already assigned to another
 fi
