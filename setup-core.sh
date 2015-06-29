@@ -67,6 +67,6 @@ case "$(lsb_release -s -i)" in
     "Ubuntu")
         sudo apt-get update
         sudo apt-get install aptitude
-        sudo aptitude install tree curl screen ipython ruby ruby-dev openjdk-6-jre build-essential g++ gcc
+        sudo aptitude install tree curl screen ipython ruby ruby-dev openjdk-6-jre build-essential g++ gcc vim
     ;;
 esac
