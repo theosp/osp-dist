@@ -5,11 +5,12 @@ youtube () {
 
     output_folder="$PWD"
 
-    mkdir -p ~/youtube
-
     file_name=$(curl "$url" | sed -n 's/.*<title>\(.*\) - YouTube<\/title>.*/\1/Ip' | sed -n 's/[^a-zA-Z]\+/-/Ipg' | tr '[:upper:]' '[:lower:]')
 
     file_name="$file_name.mp4"
+
+    echo $output_folder
+    echo $file_name
 
     docker run -it --rm -v "$output_folder:/tmp" jbergknoff/youtube-dl -o "/tmp/$file_name" "$url"
 
