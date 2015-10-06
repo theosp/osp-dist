@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if (( 0 == $(uname -a | grep Mac | wc -l) )); then
+if [ "$(uname -s)" != "Darwin" ]; then
     alias ls='ls --color=auto'
 fi
 
