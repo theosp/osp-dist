@@ -379,9 +379,9 @@ gloa ()
 # Git Update (including submoudles update)
 gup ()
 {
-    repository_path="${1:-.}"
+    branch="${1:-master}"
+    repository_path="${2:-.}"
     repository_path="$(readlink -f ${repository_path})"
-    branch="${2:-master}"
 
     echo "Checkout \`$branch\` branch of repository: $repository_path"
 
