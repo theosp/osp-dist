@@ -387,12 +387,12 @@ gup ()
 
     if ! cd "$repository_path"; then
         echo "Repository $repository_path doesn't exist"
-        exit 1
+        return 1
     fi
      
     if ! git checkout "$branch"; then
         echo "Failed to checkout $branch"
-        exit 1
+        return 1
     fi
 
     git pull origin "$branch"
