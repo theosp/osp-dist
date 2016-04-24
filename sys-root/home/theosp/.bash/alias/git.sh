@@ -397,8 +397,7 @@ gup ()
 
     git pull origin "$branch"
 
-    git submodule init
-    git submodule update --recursive
+    git submodule update --init --recursive
 }
 
 export -f gig gclg gsmag gup
