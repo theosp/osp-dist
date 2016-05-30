@@ -395,6 +395,8 @@ gup ()
         return 1
     fi
 
+    git fetch
+
     git pull origin "$branch"
 
     git submodule update --init --recursive
