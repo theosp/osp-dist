@@ -2,7 +2,7 @@
 
 shopt -s nocasematch
 
-apt-get update
+sudo apt-get update
 
 echo -n "Need SSH key (Y/n)? "
 IFS= read -r gen_ssh
