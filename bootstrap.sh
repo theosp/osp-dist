@@ -2,6 +2,8 @@
 
 shopt -s nocasematch
 
+apt-get update
+
 echo -n "Need SSH key (Y/n)? "
 IFS= read -r gen_ssh
 if [[ "$gen_ssh" =~ [y] ]]
