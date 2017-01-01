@@ -29,7 +29,7 @@ sudoCopy () {
 
 case "$(lsb_release -s -i)" in
     "Ubuntu")
-        sudo aptitude install git-cola kdiff3 fluxbox eterm xchat rxvt-unicode-256color network-manager-gnome gimp giggle synaptic ksnapshot
+        sudo aptitude install rxvt-unicode-256color synaptic git-cola fluxbox eterm network-manager-gnome gimp 
     ;;
 esac
 

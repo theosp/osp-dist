@@ -376,4 +376,32 @@ gloa ()
     gchm
 }
 
+# Git Update (including submoudles update)
+gup ()
+{
+    branch="${1:-master}"
+    repository_path="${2:-.}"
+    repository_path="$(readlink -f ${repository_path})"
+
+    echo "Checkout \`$branch\` branch of repository: $repository_path"
+
+    if ! cd "$repository_path"; then
+        echo "Repository $repository_path doesn't exist"
+        return 1
+    fi
+     
+    if ! git checkout "$branch"; then
+        echo "Failed to checkout $branch"
+        return 1
+    fi
+
+    git fetch
+
+    git pull origin "$branch"
+
+    git submodule update --init --recursive
+}
+
+export -f gig gclg gsmag gup
+
 # vim:ft=bash:
