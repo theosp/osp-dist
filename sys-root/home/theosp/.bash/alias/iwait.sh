@@ -1,17 +1,37 @@
 #!/bin/bash
 
 iwait () {
-    # Usage example:
-    #
-    #   $ iwait file-name/dir-name ./command-to-execute arg1 arg2...
+    if [[ -z "$1" ]]; then
+        cat <<EOF
 
-    # Usage example2, more than one command to execute:
-    #
-    #   $ iwait file-name/dir-name /bin/bash -c './command-to-execute-2 arg1 arg2...; ./command-to-execute-1 arg1 arg2...; ...'
+# iwait
+
+## Usage example:
+
+  $ iwait file-name/dir-name ./command-to-execute arg1 arg2...
+
+## Usage example2, more than one command to execute:
+
+  $ iwait file-name/dir-name /bin/bash -c './command-to-execute-2 arg1 arg2...; ./command-to-execute-1 arg1 arg2...; ...'
+
+EOF
+
+        return 1
+    fi
 
     watched_path="$1" # Note, if a folder provided symbolic links under it are not traversed.
 
     shift # All the other arguments are considered the command to execute
+
+    echo 
+    echo ">>> Performing action for first time:"
+    echo 
+
+    "${@}"
+
+    echo 
+    echo ">>> Init inotifywait:"
+    echo 
 
     # We use while without -m to avoid exit inotifywait from exit/stop watchin
     # the file when move_self happens (this is the way vim saves files)
