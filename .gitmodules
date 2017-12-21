@@ -1,3 +1,6 @@
 [submodule "bupler-lib"]
 	path = bupler-lib
 	url = https://github.com/theosp/bupler-lib.git
+[submodule "sys-root/home/theosp/.bash/bash-helpers"]
+	path = sys-root/home/theosp/.bash/bash-helpers
+	url = git@github.com:theosp/bash-helpers.git
