@@ -16,7 +16,7 @@ lrs () {
    local max_length="${max_length:-"350"}"
    local path="${3:-.}"
 
-   rs "$needle" "$path" | sed -e "s/\([^:]*:[^:]*:\).\{$max_length\}.*/\\1 <<<Too Long line replaced > $max_length >>>/g"
+   rs "$needle" "$path" | platformSed -e "s/\([^:]*:[^:]*:\).\{$max_length\}.*/\\1 <<<Too Long line replaced > $max_length >>>/g"
 
    if [[ ! $LRS_QUIET == "true" ]]; then
        echo ""

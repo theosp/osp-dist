@@ -71,7 +71,7 @@
         set backspace=2
         set magic " Allows pattern matching with special characters. (Example :%s/,/ /g)
         set modeline " Enable modelines
-        set shell=/bin/bash\ -l\ -O\ expand_aliases
+        set shell=/usr/bin/env\ bash\ -l\ -O\ expand_aliases
     " </general>
 
     " <bash_like_tab_completion>

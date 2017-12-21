@@ -1,3 +1,22 @@
+#/usr/bin/env bash
+
+#############################################
+# Potential issues on mac
+#
+# 1. Make sure you are using the right bash version, https://johndjameson.com/blog/updating-your-shell-with-homebrew/
+#    $ bash --version # make sure v4
+#    $ which bash
+#    $ sudo -s
+#    $ # assuming /usr/local/bin/bash is what got returned by `which bash`
+#    $ echo /usr/local/bin/bash >> /etc/shells
+#    $ chsh -s /usr/local/bin/bash
+#    $ # do the same for your user as well
+# 2. Locale issue
+#    $ locale -a # will print all available locales, make sure you are using
+#    available locale
+#
+#############################################
+
 # Do nothing, unless interactive mode, or the user explicitly tells us he wants
 # to, or under vim
 [ -z "$PS1" ] && [ -z "$UNDER_VIM" ] && [ -z "$BASHRC_INTERACTIVE_MODE_INIT" ] && return
@@ -21,6 +40,12 @@ cd - > /dev/null
 
 # load aliases
 for i in ~/.bash/alias/*
+do
+    . "$i"
+done
+
+# load bash-helpers
+for i in ~/.bash/bash-helpers/*
 do
     . "$i"
 done
