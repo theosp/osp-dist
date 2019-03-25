@@ -19,7 +19,7 @@ rewrite_commit_date () {
     local date temp_branch="temp-rebasing-branch"
     local current_branch="$(git rev-parse --abbrev-ref HEAD)"
 
-    if [[ -z "$commit" ]]; then
+    if [[ -z "$date_timestamp" ]]; then
         date="$(date -R)"
     else
         date="$(date -R --date "@$date_timestamp")"
