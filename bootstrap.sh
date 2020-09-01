@@ -36,7 +36,7 @@ esac
 
 echo -n "Press enter when you are ready to clone..."
 read
-git clone git@github.com:theosp/osp-dist.git
+git clone https://github.com/theosp/osp-dist.git
 cd osp-dist
 
 echo -n "Installation type ([c]ore/[d]esktop/[N]one)?"
