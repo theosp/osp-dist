@@ -45,7 +45,7 @@ do
 done
 
 # load bash-helpers
-for i in ~/.bash/bash-helpers/*
+for i in ~/.bash/bash-helpers/functions/*
 do
     . "$i"
 done
