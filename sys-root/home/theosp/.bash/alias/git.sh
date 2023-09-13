@@ -25,6 +25,7 @@ gh   - Git pusH
 ghf  - Git pusH Force
 ght  - Git pusH tags
 ghto - Git pusH tags origin
+gcp - Git Cherry Pick
 
 Diffs and logs
 --------------
@@ -200,6 +201,7 @@ fi
 alias ght='gh --tags' # Git pusH tags
 alias ghto='gh --tags origin' # Git pusH tags to origin
 alias ghtR='gh --tags ramiraz' # Git pusH tags to ramiraz
+alias gcp='g cherry-pick'
 
 alias gd='g diff --color' # Git diff
 alias gdp='gd --no-color --no-prefix'
